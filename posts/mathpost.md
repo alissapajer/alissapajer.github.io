@@ -1,0 +1,17 @@
+title: mathpost
+date: 2021-05-01
+
+This post is to test math
+
+$$x = y^z$$
+
+but can it do $i=n^{line}$ math?
+$$\int_{foo}^{bar} \delta d\delta = \infty \Pi_i \Sigma 3$$
+
+
+another eqn
+
+$$f(x) = \int_{-\infty}^{\infty} \hat{f} (\Upsilon) e^{2\pi i x \xi}$$
+
+
+add some more text
