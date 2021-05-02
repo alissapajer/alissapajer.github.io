@@ -11,6 +11,8 @@ ARTICLE_URL="posts/{slug}.html"
 ARTICLE_SAVE_AS="posts/{slug}.html"
 DISPLAY_CATEGORIES_ON_MENU=False
 DEFAULT_CATEGORY='misc'
+STATIC_PATHS=['images','extra']
+EXTRA_PATH_METADATA={'extra/favicon.ico': {'path': 'favicon.ico'}}
 
 #PLUGINS=['page-hierarchy']
 
