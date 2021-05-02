@@ -1,6 +1,8 @@
 ---
 title: Insights into Church-Rosser
-author: LuneTron
+author: Alissa Pajer
+save_as: posts/2013-03-26-churchrosser.html
+url: posts/2013-03-26-churchrosser.html
 ---
 
 *This post was originally published on the precog.com engineering blog.*

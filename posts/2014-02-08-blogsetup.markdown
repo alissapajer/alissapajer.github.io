@@ -1,7 +1,11 @@
 ---
 title: Blog Setup
-author: LuneTron
+author: Alissa Pajer
+save_as: posts/2014-02-08-blogsetup.html
+url: posts/2014-02-08-blogsetup.html
 ---
+
+Edit 2021-05-01: This blog is no longer generated with Hackyll. It is generated with Pelican.
 
 When I started my search for a static site generator, I first came across [Jekyll](https://github.com/jekyll/jekyll). I'm not particularly excited about learning Ruby, but I am excited about learning Haskell.
 ![HaskellRuby](/images/HaskellRuby.png "HaskellRuby")

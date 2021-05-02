@@ -1,6 +1,8 @@
 ---
 title: Haskell Fixity
-author: LuneTron
+author: Alissa Pajer
+save_as: posts/2014-03-15-haskellfixity.html
+url: posts/2014-03-15-haskellfixity.html
 ---
 
 Let's consider some Haskell. Here's a function:
@@ -62,7 +64,7 @@ So even if we remove this infix ambiguity by defining a set of non-ambiguous inf
 In all fairness, fixity isn't entirely secret. In ghci you can inquire about the fixity of any function using `:info`. For example:
 ```
 *Main> :info (++)
-(++) :: [a] -> [a] -> [a] 	-- Defined in `GHC.Base'
+(++) :: [a] -> [a] -> [a]   -- Defined in `GHC.Base'
 infixr 5 ++
 ```
 Here we learn that `(++)` has right associativity with precedence level 5. Why is the associativity right, and not left or neutral? Recall that `(++)` has time complexity that is linear in the length of its *first* argument. A quick picture shows clearly that performing a series of `(++)` infix applications is more efficient if you do so assuming right associativity. Thus, Haskell exposes an implementation detail of a function through that function's fixity. Yikes that seems dangerous. What if the implementation details change? This is the sort of hole that bugs crawl out of.

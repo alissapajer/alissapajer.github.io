@@ -1,6 +1,8 @@
 ---
 title: Category Theory at Strange Loop 2013
-author: LuneTron
+author: Alissa Pajer
+save_as: posts/2014-02-19-categorytheorystrangeloop.html
+url: posts/2014-02-19-categorytheorystrangeloop.html
 ---
 
 ![diagram](/images/diagram.png "diagram")

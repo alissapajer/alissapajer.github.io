@@ -1,9 +1,9 @@
 ---
-title: 2016-03-26-lambdaconf
+title: Thoughts on LambdaConf 2016
 author: Alissa Pajer
+save_as: posts/2016-03-26-lambdaconf.html
+url: posts/2016-03-26-lambdaconf.html
 ---
-
-Thoughts on LambdaConf 2016
 
 This article is written in response to the article <a href="http://degoes.net/articles/lambdaconf-inclusion">Wrestling With Inclusion at LambdaConf</a>. Twitter hashtag #lambdaconf.
 

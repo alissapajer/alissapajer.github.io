@@ -123,16 +123,15 @@
     <li><article class="hentry">
         <header> 
             <h2 class="entry-title">
-                <a href="/posts/2016-03-26-lambdaconf.html" rel="bookmark" title="Permalink to 2016-03-26-lambdaconf">
-                    2016-03-26-lambdaconf</a>
+                <a href="/posts/2016-03-26-lambdaconf.html" rel="bookmark" title="Permalink to Thoughts on LambdaConf 2016">
+                    Thoughts on LambdaConf 2016</a>
             </h2> 
         </header>
         <footer class="post-info">
             <abbr class="published" title="2016-03-26T00:00:00+00:00"> Sat 26 March 2016 </abbr>
             <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
         </footer><!-- /.post-info -->
-        <!--<div class="entry-content"> <p>Thoughts on LambdaConf 2016</p>
-<p>This article is written in response to the article <a href="http://degoes.net/articles/lambdaconf-inclusion">Wrestling With Inclusion at LambdaConf</a>. Twitter hashtag #lambdaconf.</p>
+        <!--<div class="entry-content"> <p>This article is written in response to the article <a href="http://degoes.net/articles/lambdaconf-inclusion">Wrestling With Inclusion at LambdaConf</a>. Twitter hashtag #lambdaconf.</p>
 <p>We need to understand the consequences of our decisions. You decide to take an action, and then consequences follow. In this case, a racist speaker was given a speaking slot at a tech conference. That was the action. What are the consequences?</p>
 <p>Racism is not to be taken lightly. Period. Racist words, spoken or written, are detrimentally painful to their targets. You don’t just recover from being told you are subhuman. This isn’t a mild injury, and the cumulative effects of racism at the individual and the institutional level traumatize people and deny them entry into society. A racist speaker being given a speaking slot at a conference must be seen in this light.</p>
 <p>Now, it must also be acknowledged that there is fear and pain on all sides of this discussion. Racism stems from fear of the “other”, and this is often assumed to be fear of someone because they are different, but really it’s the fear that they are the same. If you define your identity as opposed to someone else’s, if you define whiteness as not-blackness or blackness as not-whiteness, then your identity is threatened when the other group is acknowledged to be similar to you. We hold our identities so near and dear that we often take measures that deny others humanity only so we don’t have to change. To be clear, I’m not advocating for color-blindness; I’m advocating that a strong notion of “other” births fear.</p>
@@ -145,6 +144,318 @@
 <p>Then the question remains, how do you disagree with a community that you are not allowed to join? How do you discuss ideas with people who disagree with you? Doesn’t ostracism make the divides between us even greater? In this situation, ostracism only recognizes a divide that is already there, deep in society. One could, in theory, view a tech conference as a place to build a bridge across the abyss, a place where people from all sides can come together and find common ground in technology. The problem is, the divide is too great even for this. You cannot just forget about racism for the day, when a prominent racist is sitting right in front of you.</p>
 <p>So I call to all people on all sides who have the desire and the willingness to have the hard conversations, to do so and to do so frequently. But we must always remember that some people do not wish to engage in such conversations, and that is their right. And as such, if someone says they don’t want to talk to you, the conversation is over. There are many issues along which people become divided, and the depths of those divides vary greatly. Each divide is unique, and some can be bridged successfully at a tech conference, some cannot.</p>
 <p>There is no censorship happening here, no impingement on free speech. The excluded person may still express their views at other conferences and in other communities, and you are still free to engage them individually in discussion. You can create a community and invite everyone, no restrictions, just know that everyone won’t show up. In the end, we must recognize that some communities are constructed to allow us, and others are constructed to reject us. Choose your viewpoints, and then shape a set of communities, or choose your communities, and then recognize that you must hold certain viewpoints. And then by all means, adapt, learn, and admit to being wrong! You can always change your mind.</p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-06-19-scalavariance.html" rel="bookmark" title="Permalink to Notions of Variance in Scala">
+                    Notions of Variance in Scala</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-06-19T00:00:00+00:00"> Thu 19 June 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>Here is a <a href="https://gist.github.com/alissapajer/50c912d739346c1f00dd">github gist</a> with some exercises explaining variance of functors in Scala. Additionally, it explains variance of types over their type parameters.</p>
+<p>I also wrote up a <a href="/images/FunctorMorphismPreservationProof.pdf">proof</a> that a given functor implementation preserves morphism composition.</p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-03-15-haskellfixity.html" rel="bookmark" title="Permalink to Haskell Fixity">
+                    Haskell Fixity</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-03-15T00:00:00+00:00"> Sat 15 March 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>Let's consider some Haskell. Here's a function:</p>
+<div class="highlight"><pre><span></span><code><span class="n">zipSum</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="p">(</span><span class="n">Num</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"></span>
+<span class="n">zipSum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zipWith</span><span class="w"> </span><span class="p">(</span><span class="o">+</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+
+<p>This function will zip the two provided lists and then sum the pairs of elements, returning a single list of <code>Num</code>. For example: </p>
+<div class="highlight"><pre><span></span><code><span class="err">*Main&gt; zipSum [1,2,3,4] [3,4]</span>
+<span class="err">[4,6]</span>
+</code></pre></div>
+
+<p>Great, so what happens if we apply <code>zipSum</code> as an infix function and also apply a list concatenation.</p>
+<div class="highlight"><pre><span></span><code><span class="o">*</span><span class="n">Main</span><span class="o">&gt;</span> <span class="err">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="err">]</span> <span class="o">++</span> <span class="err">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="err">]</span> <span class="n">`zipSum`</span> <span class="err">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="err">]</span>
+<span class="err">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="err">]</span>
+</code></pre></div>
+
+<p>Interesting, so it looks like <code>zipSum</code> takes precedence over <code>(++)</code>, when we've applied them both as infix operators. Example noted. Now let's write our own list concat function called <code>myConcat</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">myConcat</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"></span>
+<span class="n">myConcat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+
+<p>We can perform "the same" function applications again, using our new <code>myConcat</code> function:</p>
+<div class="highlight"><pre><span></span><code><span class="o">*</span><span class="n">Main</span><span class="o">&gt;</span> <span class="err">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="err">]</span> <span class="n">`myConcat`</span> <span class="err">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="err">]</span> <span class="n">`zipSum`</span> <span class="err">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="err">]</span>
+<span class="err">[</span><span class="mi">14</span><span class="p">,</span><span class="mi">16</span><span class="err">]</span>
+</code></pre></div>
+
+<p>Ummm, so what just happened? That is not the same result we computed last time. This time, the list concatenation took precedence. Thus, and this is surprising, <code>(++)</code> and <code>myConcat</code> are not acting equivalently in this seemingly equivalent situation.</p>
+<p>Now, let's take a step back into math and think about what it means for two functions to be equal. Two functions <code>f</code> and <code>g</code> are defined to be equal if they have the same domain, and for each element <code>x</code> in their domain, <code>f(x) = g(x)</code>. Now, consider our two functions <code>(++)</code> and <code>myConcat</code>. These functions have identical type signatures, and hence the same domain. And since <code>myConcat</code> is effectively just a wrapping around <code>(++)</code>, then for any lists <code>l1</code> and <code>l2</code> of the same type, </p>
+<div class="highlight"><pre><span></span><code><span class="n">l1</span> <span class="o">++</span> <span class="n">l2</span> <span class="o">==</span> <span class="n">l1</span> <span class="n">`myConcat`</span> <span class="n">l2</span>
+</code></pre></div>
+
+<p>Thus, by this definition of function equality, <code>myConcat</code> and <code>(++)</code> are equal functions. But we have just seen that, when applied as infix operators in conjunction with <code>zipSum</code>, they do not operate equivalently! It seems our definition of a function isn't correct. Or that we're actually not dealing with functions. So what's going on?</p>
+<p>Well, the problem we're dealing with here is the inherent ambiguity of infix operators. By using a function as an infix operator, we're using it in a way that lambda calculus doesn't define. Hence we need to provide our own custom infix operator rules in order for infix operators to make sense.</p>
+<p>To evaluate an expression like </p>
+<div class="highlight"><pre><span></span><code><span class="err">4 + 5 * 6 * 7</span>
+</code></pre></div>
+
+<p>we need to first decide on some evaluation rules. For example, we could assume that all infix operators have the same precedence and that they are all left associative. In that case, the above expression would be evaluated as </p>
+<div class="highlight"><pre><span></span><code><span class="err">(((4 + 5) * 6) * 7)</span>
+</code></pre></div>
+
+<p>That's one solution. But from the high level view of a function, that solution is really just as arbitrary as assigning a random fixity to every operator.</p>
+<p>Now it's worth noting that if we choose not to assume any rules when given a series of infix function applications, then the only sane thing left to do would be to assume that we can apply the operations in any order. But a simple example of numeric addition and multiplication shows us that this approach can trivially yield non-equal results from the same initial expresion. This cannot possibly be the correct solution.</p>
+<p>So even if we remove this infix ambiguity by defining a set of non-ambiguous infix evaluation rules, these rules are still arbitrary from the point of view of a function that only knows its type signature. Specifying the infix precedence and associativity of a function adds semantic meaning to a type signature that otherwise knew nothing about its implementation. In short, function behavior should not be governed by a secret fixity, not present in its type signature. (A language which can specify fixity in the type signature? Now you have my attention!)</p>
+<p>In all fairness, fixity isn't entirely secret. In ghci you can inquire about the fixity of any function using <code>:info</code>. For example:</p>
+<div class="highlight"><pre><span></span><code><span class="o">*</span><span class="n">Main</span><span class="o">&gt;</span><span class="w"> </span><span class="err">:</span><span class="n">info</span><span class="w"> </span><span class="p">(</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="p">(</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w">   </span><span class="o">--</span><span class="w"> </span><span class="n">Defined</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="err">`</span><span class="n">GHC</span><span class="p">.</span><span class="n">Base</span><span class="err">&#39;</span><span class="w"></span>
+<span class="n">infixr</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">++</span><span class="w"></span>
+</code></pre></div>
+
+<p>Here we learn that <code>(++)</code> has right associativity with precedence level 5. Why is the associativity right, and not left or neutral? Recall that <code>(++)</code> has time complexity that is linear in the length of its <em>first</em> argument. A quick picture shows clearly that performing a series of <code>(++)</code> infix applications is more efficient if you do so assuming right associativity. Thus, Haskell exposes an implementation detail of a function through that function's fixity. Yikes that seems dangerous. What if the implementation details change? This is the sort of hole that bugs crawl out of.</p>
+<p>Though, should it really be up to the programmer to know the time complexity of <code>(++)</code> and write their code accordingly? In some situations it seems quite tempting to encode function implementation details with fixity, because then we can write <code>3 + 4 * 5</code> and have it parse as <code>3 + (4 * 5)</code>, as expected. But I will maintain my point that hardcoding implementation details or implementation semantics into the behavior of functions is impure and dangerous. In the simple cases, functions will do what we expect. In more complex code, we'll introduce bugs.</p>
+<p>I want types that are implementation agnostic and possible to reason about without additional information. Haskell functions used as infix operators don't provide that. So what world are we left in if</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="n">`op1`</span> <span class="n">y</span> <span class="n">`op2`</span> <span class="n">z</span>
+</code></pre></div>
+
+<p>always generates a parser error? Well, that would be a world full of parentheses! The user would be required to add parentheses around their infix operators always, and without exception, until all ambiguity is resolved.</p>
+<p>Let's again consider the case of numeric addition and multiplication. These operations have a universally accepted precedence, which is entirely sensical when you think of <code>5 * 3</code> as <code>5 + 5 + 5</code>. So can't we at least maintain this precedence for these numeric operations? I say, nah. The Haskell functions <code>(+)</code> and <code>(*)</code> really should know nothing of their semantics. There is no reason <code>(*)</code> should take precendece over <code>(+)</code>, unless you consider the meaning of its implementaion in the larger context of math.</p>
+<p>So, lesson learned: equal functions can be defined with non-equal infix operators. (Recall the example of <code>zipSum</code> used with both <code>(++)</code> and <code>myConcat</code>.) There is of course an obvious solution to this problem: never use Haskell infix operators. What do we lose? Readability. What do we gain? Correctness. And in all reality, a series of three or more infix applications really should be broken into shorter expressions anyway.</p>
+<p><strong>Update:</strong> The original version of <code>zipSum</code> looked like this:</p>
+<div class="highlight"><pre><span></span><code><span class="n">zipSum</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="p">(</span><span class="n">Num</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"></span>
+<span class="n">zipSum</span><span class="w"> </span><span class="n">xs</span><span class="w"> </span><span class="n">ys</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">map</span><span class="w"> </span><span class="n">summed</span><span class="w"> </span><span class="p">(</span><span class="n">zip</span><span class="w"> </span><span class="n">xs</span><span class="w"> </span><span class="n">ys</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="k">where</span><span class="w"> </span><span class="n">summed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">\</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+</code></pre></div>
+
+<p>Thanks to <a href="https://twitter.com/puffnfresh">\@puffnfresh</a> for pointing out that we can use <code>zipWith</code> to implement this function.</p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-02-22-haskellflip.html" rel="bookmark" title="Permalink to Haskell Flip">
+                    Haskell Flip</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-02-22T00:00:00+00:00"> Sat 22 February 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>How can we change the order of the arguments to a function? After I answered this question, I realized it's actually a very odd question to ask.</p>
+<p>I'm working my way though <a href="http://learnyouahaskell.com/">Learn You a Haskell for Great Good</a>, and in the <a href="http://learnyouahaskell.com/higher-order-functions#curried-functions">Curried Functions</a> section, the author describes the Haskell function <code>flip</code> like so: <em>"Flip simply takes a function and returns a function that is like our original function, only the first two arguments are flipped."</em> Without scrolling down further, I decided to implement <code>flip</code> based on this sentence alone.</p>
+<p>I started with the type signature </p>
+<div class="highlight"><pre><span></span><code><span class="err">myFlip :: (a -&gt; b -&gt; c) -&gt; (b -&gt; a -&gt; c)</span>
+</code></pre></div>
+
+<p>and my first attempt at implementation trailed off rather quickly:</p>
+<div class="highlight"><pre><span></span><code><span class="err">myFlip f = ...</span>
+</code></pre></div>
+
+<p>Given only a function <code>f :: a -&gt; b -&gt; c</code>, and nothing to apply to it, I had reached a dead end, so I decided to implement <code>f</code>, and then <code>flip</code> this implementation. I wanted the type variables <code>a</code>, <code>b</code>, and <code>c</code> to be distinct so I could easily keep track of them. Here's my function:</p>
+<div class="highlight"><pre><span></span><code><span class="err">myImpl :: Char -&gt; Bool -&gt; String</span>
+<span class="err">myImpl char bool = char : (show bool)</span>
+</code></pre></div>
+
+<p>And now to flip it!</p>
+<div class="highlight"><pre><span></span><code><span class="err">flippedMyImpl :: Bool -&gt; Char -&gt; String</span>
+<span class="err">flippedMyImpl bool char = myImpl char bool</span>
+</code></pre></div>
+
+<p>Well, that is simple enough. The types lead way! And suddenly I realized that I just might have access to type variables <code>a</code> and <code>b</code>. But I needed to implement the full signature of <code>myFlip</code> using these specific types to fully understand. I combined <code>myImpl</code> and <code>flippedMyImpl</code> to produce</p>
+<div class="highlight"><pre><span></span><code><span class="err">flipWithTypes :: (Char -&gt; Bool -&gt; String) -&gt; Bool -&gt; Char -&gt; String</span>
+<span class="err">flipWithTypes f bool char = f char bool</span>
+</code></pre></div>
+
+<p>My key realization was that I could remove the parentheses around <code>(Bool -&gt; Char -&gt; String)</code> without changing the type signature. Once I did this, I realized that I had access to two more function arguments! Before removing the parentheses, my mind had written off <code>(b -&gt; a -&gt; c)</code> as an impenetrable block.</p>
+<p>Once I wrote this last implementation, it was immediately clear that I had just written a non-parametric version of <code>myFlip</code>. There is nothing special about the types I had chosen; they could just as easily be type variables. And so we arrive at our solution:</p>
+<div class="highlight"><pre><span></span><code><span class="err">myFlip :: (a -&gt; b -&gt; c) -&gt; b -&gt; a -&gt; c</span>
+<span class="err">myFlip f y x = f x y</span>
+</code></pre></div>
+
+<p>To implement <code>myFlip</code>, we needed to determine how the function would handle itself when fully applied. But our goal in writing <code>myFlip</code> is to return another (partially applied) function with type <code>b -&gt; a -&gt; c</code>. The key to the implementation of <code>flip</code> that wasn't obvious at first is that we need to provide a full implementation in order to later partially apply it.</p>
+<p>In doing this exercise, my conception of a function changed. Now when I think of a function, I think of something linear, something in which each parameter must be applied in its prescribed order. And if that order is to be broken, another function must be applied to faciliate this change in order.</p>
+<p>Really, <code>flip</code> is a formalization of how we handle the permutations of function application orders in Haskell. In math, we've seen that given a function <code>f(x,y,z)</code>, we can consider <code>g(y,z) = f(3,y,z)</code> or <code>h(y) = f(5,y,6)</code> without any concern, because the order in which we provide values for our variables doesn't matter.</p>
+<p>But since in Haskell all functions take exactly one parameter, and thus multi-parameter functions are a semantic illusion, one must make explicit how to pass in parameters in a different order. Hence we arrive at the <code>flip</code> function.</p>
+<p>To tie up this post, it's odd, from a non-functional point of view, to ask how we can flip the order of function arguments because the question assumes that function arguments have an order in the first place! Though, once you recall the definitions of lambda calculus and think about different reduction rules, the fact that functions innately order their parameters seems almost intuitive. And then I realized: <a href="http://en.wikipedia.org/wiki/Church%E2%80%93Rosser_theorem">Church-Rosser</a>. And guess what? I've already written a <a href="/posts/2013-03-26-churchrosser.html">blog post</a> about that.</p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-02-19-categorytheorystrangeloop.html" rel="bookmark" title="Permalink to Category Theory at Strange Loop 2013">
+                    Category Theory at Strange Loop 2013</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-02-19T00:00:00+00:00"> Wed 19 February 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p><img alt="diagram" src="/images/diagram.png" title="diagram">
+Back in September 2013 I gave a talk titled "Category Theory: An Abstraction for Anything" at the <a href="https://thestrangeloop.com/">Strange Loop Conference</a>. A few days ago, the <a href="http://www.infoq.com/presentations/category-theory">video</a> for my talk was released. </p>
+<p>Additionally, I wrote a <a href="http://engineering.richrelevance.com/closing-the-loop-on-category-theory-polymorphism-currying-and-more/">blog post</a> about this talk that was published on my employer's blog. </p>
+<p>Here's the talk abstract, reproduced from the <a href="https://thestrangeloop.com/sessions/category-theory-an-abstraction-for-anything">Strange Loop website</a>:</p>
+<p><em>Category theory provides a mathematically sound foundation on which we can create collections of objects and express morphisms between them. Together, along with a few simple rules, a collection of objects and morphisms forms a category to which we can apply many useful results, such as the uniqueness of an identity morphism. Furthermore, once we have a category in hand, we can formally explore the relationships it has with other categories, deducing powerful and practical abstractions.</em></p>
+<p><em>The power of category theory lies in the relative simplicity and accessibility of its definitions. From just a handful of straightforward concepts, we can formalize many concrete ideas such as directed acyclic graphs, currying, polymorphic functions, and Haskell itself. This talk will introduce the basics of category theory, while simultaneously diving into specific programming-related examples of categories, functors, and natural transformations. In addition to exploring profound and beautiful concepts, this talk aims to provide you with the tools necessary to recognize category-theoretical patterns in your own programming projects.</em></p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-02-08-blogsetup.html" rel="bookmark" title="Permalink to Blog Setup">
+                    Blog Setup</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-02-08T00:00:00+00:00"> Sat 08 February 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>Edit 2021-05-01: This blog is no longer generated with Hackyll. It is generated with Pelican.</p>
+<p>When I started my search for a static site generator, I first came across <a href="https://github.com/jekyll/jekyll">Jekyll</a>. I'm not particularly excited about learning Ruby, but I am excited about learning Haskell.
+<img alt="HaskellRuby" src="/images/HaskellRuby.png" title="HaskellRuby">
+This quickly led me to <a href="http://jaspervdj.be/hakyll/">Hakyll</a>. Hakyll is easy to install with <code>cabal</code>, though the first time I installed it I had an old version of <code>cabal</code>, and thus installed an apparently very old version of Hakyll. I remedied this as follows: </p>
+<div class="highlight"><pre><span></span><code>$ ghc-pkg unregister hakyll
+$ cabal update
+$ cabal install hakyll
+</code></pre></div>
+
+<p>From there I followed the <a href="http://jaspervdj.be/hakyll/tutorials.html">Tutorials</a> on the Hakyll site and found them clear and up to date. Once I built the <a href="http://jaspervdj.be/hakyll/tutorials/01-installation.html#building-the-example-site">Example Site</a> locally, it was time to move the example code to <a href="http://pages.github.com/">github pages</a>. Blogging without version control was out of the question!</p>
+<p>The most confusing part of github pages is the <a href="https://help.github.com/articles/user-organization-and-project-pages">difference</a> between User Pages and Project Pages. The difference is mostly confusing because you can have a <code>gh-pages</code> branch in the repo <code>username/username.github.io</code>. In that case github needs to make an undocumented choice about which branch to use. I decided to use User Pages, which is why you can find my blog at <code>http://alissapajer.github.io</code>. This means that content from my <code>master</code> branch will be used to build my website. Here is where things get a bit tricky.</p>
+<p><strong>Problem:</strong></p>
+<p>I need the contents of my site in the directory <code>alissapajer.github.io/</code> on the <code>master</code> branch. But Hakyll generates the website itself in <code>alissapajer.github.io/_site/</code>, and places the Haskell code, markdown, and various other files in the top level directory. And of course I need to version control everything, generated and not!</p>
+<p><strong>Solution:</strong></p>
+<p>I created a <code>source</code> branch, which contains both the manually-created and the generated files. When I make a change to my website, I always commit on the <code>source</code> branch, and I never manually edit files on <code>master</code>. The idea is that <code>source</code> will contain all of my code, and <code>master</code> will contain just the generated files. Now all we need to do is to copy the contents of the <code>_site/</code> directory to the <code>master</code> branch. </p>
+<p>To perform this copy, I use <a href="https://github.com/davisp/ghp-import">ghp-import</a> as follows, run from the <code>source</code> branch:</p>
+<div class="highlight"><pre><span></span><code><span class="err">$</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="nn">_site</span><span class="o">/</span> <span class="o">-</span><span class="n">b</span> <span class="n">master</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;commit message&quot;</span>
+</code></pre></div>
+
+<p>There is an optional flag to push to <code>master</code>, but I have been pushing manually so I can review the changes first. And that's it! The only thing I still need to do is the redirect to a domain I own. This is done using a <code>CNAME</code> file on the <code>master</code> branch. Since my <code>master</code> branch is auto-generated I'll need to add this <code>CNAME</code> in such a way that it's not deleted when I commit to <code>master</code>. </p>
+<p>The only weird thing is that <code>source</code> and <code>master</code> will permanently diverge.</p>
+<p><strong>Tips:</strong></p>
+<p>While editing the webiste, I run</p>
+<div class="highlight"><pre><span></span><code>$ ./site watch
+</code></pre></div>
+
+<p>This command registers changes to the <code>_site/</code> directory and publishes the up-to-date website to <code>http://127.0.0.1:8000/</code>. Very useful for immediate feedback!</p>
+<p>Also, Hakyll allows you to write all your blog posts in markdown. I've found this <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a> essential.</p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-02-03-siteproperties.html" rel="bookmark" title="Permalink to Site Properties">
+                    Site Properties</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-02-03T00:00:00+00:00"> Mon 03 February 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>This site contains all the things that don't contain themselves.</p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2013-03-26-churchrosser.html" rel="bookmark" title="Permalink to Insights into Church-Rosser">
+                    Insights into Church-Rosser</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2013-03-26T00:00:00+00:00"> Tue 26 March 2013 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p><em>This post was originally published on the precog.com engineering blog.</em></p>
+<p>Untyped lambda calculus is powerful. In fact, every computable function can be encoded into lambda calculus, and thus so can every bit of Scala code you've ever written. Though, anything more complicated than your basic combinator would be almost indecipherable in its lambda calculus form. As an example, here's what the addition combinator for the Church numerals <code>c_n = λfx.fn(x)</code> looks like in lambda calculus: </p>
+<div class="highlight"><pre><span></span><code><span class="err">A+ = λxypq.xp(ypq)</span>
+</code></pre></div>
+
+<p>At first glance it's by no means obvious that you're looking at a way to add natural numbers.</p>
+<p><strong>Introductory Definitions:</strong></p>
+<p>Before we jump into some more examples, let's step back a minute so I can provide a quick and basic introduction to untyped lambda calculus. The rules are easily accessible, and given that lambda calculus is Turing complete, their simplicity astounds me. (As a side note, because cellular automata are really cool, Conway's Game of Life is another easily definable Turing complete system.)</p>
+<p>Now, as promised, the introduction: We define the set <code>𝚲</code> inductively as follows. Let <code>V</code> be a set of variables <code>v'</code>, <code>v''</code>, etc.</p>
+<div class="highlight"><pre><span></span><code><span class="err">(i) If x ∈ V, then x ∈ 𝚲.</span>
+<span class="err">(ii) If M,N ∈ 𝚲, then MN ∈ 𝚲.</span>
+<span class="err">(iii) If x ∈ V and M ∈ 𝚲, then λx.M ∈ 𝚲.</span>
+</code></pre></div>
+
+<p>In (ii), <code>MN</code> denotes application, and you should think of <code>M</code> as a method applied to <code>N</code>. In (iii), the syntax <code>λx.M</code> denotes an abstraction, i.e. a function <code>x -&gt; M</code>, where <code>M</code> is not required to depend on <code>x</code>. The most interesting terms in lambda calculus will include an abstraction followed by an application, like so:</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="err">λ</span><span class="n">x</span><span class="p">.</span><span class="n">M</span><span class="p">)</span><span class="n">N</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="nl">x</span> <span class="p">:</span><span class="o">=</span> <span class="n">N</span><span class="p">]</span>
+</code></pre></div>
+
+<p>where <code>N</code> is substituted for every free instance of <code>x</code> in <code>M</code>. This is known formally as β-reduction. In psuedo lambda calculus, (psuedo because integers are not terms in <code>V</code>), we can consider the example </p>
+<div class="highlight"><pre><span></span><code><span class="err">(λx.(2*x + 3))4 = 2*4 + 3 = 11</span>
+</code></pre></div>
+
+<p><strong>Some Intuitions:</strong></p>
+<p>So what's the benefit of thinking about lambda calculus? For me, lambda calculus provides the structure to represent the core of what a function really is: a rule that gets us from one bit of knowledge to another. And if we want to prove something about functions (functions in a generic sense), lambda calculus is the perfect place to come. So what should we prove? Well, intuitively we'd hope that, no matter the strategy (e.g. call by name, call by value, etc.) we use to evaluate our function, we obtain the same result. But wait! Can this always be true? What if our function is an ill-thought-out recursion that loops until we overflow the stack? Can we really guarantee that every call to a function will return a unique result, no matter what strategy we use to evaluate it? The answer is yes, with an added assumption.</p>
+<p>To understand what this assumption should be, consider the famous <code>Ω</code>-combinator: </p>
+<div class="highlight"><pre><span></span><code><span class="err">Ω = (λx.xx)(λx.xx)</span>
+</code></pre></div>
+
+<p>Furthermore consider the lambda term <code>(λx.z)Ω</code>. If we evaluate this term using a call-by-name strategy, then it's simply equal to the constant <code>z</code>, since <code>λx.z</code> is a constant function. But if we use a call-by-value strategy, then we'll never be able to further reduce it, since when we apply <code>λx.xx</code> to itself we again obtain <code>Ω</code>. So what we really want to prove is this: If we β-reduce a lambda term until we cannot reduce it any further, then that final reduced term is unique. Said more formally: If a lambda term has a normal form, then that normal form is unique.</p>
+<p><strong>Introduction to Church-Rosser:</strong></p>
+<p><img alt="ChurchRosserRight" src="/images/ChurchRosser1.png" title="ChurchRosser1">
+In summary, we cannot just pick an evaluation strategy and expect it to yield the same results as all other evaluation strategies, because, as the <code>Ω</code>-combinator example showed us, a given evaluation strategy may never terminate. But, there is something we can prove for certain: a lambda term has at most one normal form. In order to prove this, we'll outline the proof of a more general theorem, known as the Church-Rosser Theorem. In picture form, it looks like the image to the right, where solid arrows are assumptions and dotted arrows are to be proven.</p>
+<p>In word form it states: If a term <code>M</code> β-reduces to two terms <code>N1</code> and <code>N2</code>, then there exists some <code>N3</code> such that <code>N1</code> and <code>N2</code> each β-reduce to it.</p>
+<p>Given Church-Rosser, our desired statement follows directly. If we let <code>N1</code> and <code>N2</code> in the diagram above be distinct normal forms of <code>M</code>, then by Church-Rosser there exists some <code>N3</code> such that <code>N1</code> and <code>N2</code> each β-reduce to it. But a normal form term can only β-reduce to itself, and thus <code>N1 = L</code> and <code>N2 = L</code>. Thus <code>M</code> has at most one normal form, since <code>N1 = N2</code>. </p>
+<p>Interestingly, we can also use Church-Rosser to prove the consistency of lambda calculus, that is, that true does not equal false. We define: </p>
+<div class="highlight"><pre><span></span><code><span class="err">T = λxy.x</span>
+<span class="err">F = λxy.y</span>
+</code></pre></div>
+
+<p>Note that <code>T</code> and <code>F</code> are written as an iterated abstraction, meaning that the abstraction is one of multiple variables (in this case <code>x</code> and <code>y</code>). Iterated abstraction is right associative; for example</p>
+<div class="highlight"><pre><span></span><code><span class="err">λxyz.xyz</span>
+</code></pre></div>
+
+<p>is shorthand for</p>
+<div class="highlight"><pre><span></span><code><span class="err">λx.(λy.(λz.xyz))</span>
+</code></pre></div>
+
+<p>Now to understand these definitions, if <code>K</code> is a lambda term that equals either <code>T</code> or <code>F</code>, the lambda term <code>KPQ</code> is a way to represent “if <code>K</code> then <code>P</code> else <code>Q</code>”. If <code>T = F</code>, then we’d be able to perform a series of reductions connecting <code>T</code> and <code>F</code>. But since <code>T</code> and <code>F</code> are both normal forms, we cannot perform such reductions. Thus <code>T</code> does not equal <code>F</code>.</p>
+<p><strong>Strip Lemma Basics:</strong></p>
+<p><img alt="ChurchRosserRight" src="/images/ChurchRosser2.png" title="ChurchRosser2">
+Now in order to prove Church-Rosser, we'll prove a lemma first, namely the Strip Lemma. This lemma states that, if <code>M</code> β-reduces to <code>N1</code> in a single step, and <code>M</code> β-reduces to <code>N2</code> in any finite number of steps, there exists an <code>N3</code> such that <code>N1</code> and <code>N2</code> each β-reduce to it. In diagram form, we have the diagram to the right, where a single arrow represents a single β-reduction, and a double arrow represents any finite number of β-reductions. </p>
+<p>Note that once we've proven the Strip Lemma, Church-Rosser follows immediately by induction on the natural numbers. (First prove the statement for <code>n=1</code>. Then prove that if the statement holds for an arbitrary <code>n</code>, it holds for <code>n+1</code>.) To see this visually, imagine filling in the Church-Rosser diagram with these strips. </p>
+<p>Proceeding with the proof of the Strip Lemma, the correct question to ask is, how do we obtain a candidate <code>N3</code>? Well, we know that <code>M</code> β-reduces to <code>N1</code> in a single step, so we'll consider this redex and mark it in <code>M</code>. Now as we perform the multiple reductions on <code>M</code> that ultimately reduce to <code>N2</code>, we track this marked lambda term until we reach <code>N2</code>. We now perform the β-reduction on this marked term in <code>N2</code>, and that produces our candidate <code>N3</code>.</p>
+<p>Let's make this idea of marking more formal with some notation. Specifically, to keep track of a certain redex, we'll underline it like this: <code>(<ins>λ</ins>x.M)N</code>, and we'll keep that lambda underlined until we β-reduce it. With this new notation, here’s an example of the Strip Lemma with actual lambda terms. (We’ll introduce <code>φ</code> in a couple of paragraphs; for now just think of it as a β-reduction.)</p>
+<p><img alt="" src="/images/ChurchRosser3.png" title="ChurchRosser3"></p>
+<p><strong>Details of the Proof:</strong></p>
+<p>Given that we now allow underlined lambdas in our set of allowed terms, what does this new set look like formally? Let's call it <code><ins>𝚲</ins></code>. We'll define it inductively, as we defined <code>𝚲</code> earlier. The first three parts of the definition will be analogous to before, defining variables, application, and abstraction. In the fourth part we will include underlined lambdas only in the case when we have an abstraction followed by an application. This is because the only lambda-terms we need to trace are ones we know will be β-reduced.</p>
+<pre><code>(i) If x ∈ V, then x ∈ <ins>𝚲</ins>.
+(ii) If M,N ∈ <ins>𝚲</ins>, then MN ∈ <ins>𝚲</ins>.
+(iii) If x ∈ V and M ∈ <ins>𝚲</ins>, then λx.M ∈ <ins>𝚲</ins>. 
+(iv) If x ∈ V and M, N ∈ <ins>𝚲</ins>, then (<ins>λ</ins>x.M)N ∈ <ins>𝚲</ins>.
+</code></pre>
+
+<p>Consider the following diagram. Note that the front rectangle is the same as the diagram in the statement of the Strip Lemma. The other terms, namely <code>M'</code> and <code>N2'</code>, we construct for purposes of the proof.</p>
+<p><img alt="" src="/images/ChurchRosser4.png" title="ChurchRosser4"></p>
+<p>We construct <code>M'</code> to be equivalent to <code>M</code>, except that in it we underlined the <code>λ</code> that was reduced to obtain <code>N1</code>. The function <code>ψ: <ins>𝚲</ins> -&gt; 𝚲</code> simply erases all underlines, so that</p>
+<pre><code>ψ((<ins>λ</ins>x.M)N) = (λx.ψ(M))ψ(N)</code></pre>
+
+<p>We can now apply beta-reductions to <code>M'</code>, analogous to those applied to <code>M</code>, in order to obtain <code>N2'</code>. And now to formally obtain <code>N3</code>, we apply the function <code>φ: <ins>𝚲</ins> -&gt; 𝚲</code> to <code>N2'</code>. And what is <code>φ</code>? <code>φ</code> is exactly what you'd expect: a function that β-reduces all underlined terms and keeps all others the same, meaning that</p>
+<pre><code>φ((<ins>λ</ins>x.M)N) = φ(M)[x := φ(N)]</code></pre>
+
+<p>Now that we have our candidate <code>N3</code>, we only need to prove that we can draw solid lines in place of the dotted ones. I will outline a proof showing that <code>N2</code> β-reduces to <code>N3</code> and will leave the other part of the proof as an exercise for the reader. We will outline a proof of the following diagram, which is the front triangle in the previous diagram.</p>
+<p><img alt="" src="/images/ChurchRosser5.png" title="ChurchRosser5"></p>
+<p>In order to prove this, we will use the method of structural induction. Recall that initially we constructed <code>𝚲</code> inductively. Thus in order to prove something general about all elements of <code>𝚲</code>, we can use an induction technique that mimics the way in which we define <code>𝚲</code>. This is called induction on the structure of <code>𝚲</code>. Though note that in our case, <code>A ∈ <ins>𝚲</ins></code>, so we'll use induction on the structure of <code><ins>𝚲</ins></code>.</p>
+<p>First, the base case:</p>
+<p>(i) Let <code>A = x</code> for some <code>x ∈ V</code>. Then <code>ψ(x) = x</code> and <code>φ(x) = x</code>. And thus since <code>x</code> β-reduces to <code>x</code>, we're done.</p>
+<p>For the next three cases, we assume the statement holds for the individual terms in <code><ins>𝚲</ins></code>, and prove that it holds for their application (or abstraction).</p>
+<p>(ii) Let <code>A = PQ</code> for <code>P, Q ∈ V</code>. Assume that <code>ψ(P)</code> β-reduces to <code>φ(P)</code> and that <code>ψ(Q)</code> β-reduces to <code>φ(Q)</code>. By the definitions of <code>ψ</code> and <code>φ</code>, show that <code>ψ(PQ)</code> β-reduces to <code>φ(PQ)</code>.
+(iii) Let <code>A = λx.P</code> for <code>P ∈ V</code>. Assume that <code>ψ(P)</code> β-reduces to <code>φ(P)</code>. Using the definitions, show that <code>ψ(λx.P)</code> β-reduces to <code>φ(λx.P)</code>
+(iv) Let <code>A = (<ins>λ</ins>x.P)Q</code> for <code>P, Q ∈ V</code>. Assume the statement holds for <code>P</code> and <code>Q</code>. Show that <code>ψ(A)</code> β-reduces to <code>φ(A)</code>.</p>
+<p>And that's the outline of the proof of the Strip Lemma! </p>
+<p><strong>Conclusion:</strong></p>
+<p>In summary, we gave the definition for a lambda-term, considered the <code>Ω</code>-combinator as an example of a lambda-term without a normal form, and outlined a proof of the Church-Rosser Theorem. So what does Church-Rosser tell us? If a term has a normal form, then that normal form is unique. This means that if we evaluate a function using two different strategies, the results will be equal. Of course, this doesn't guarantee that every evaluation strategy will terminate. But one thing we know for certain: if we do obtain a result, then that result is unique. </p> </div>--><!-- /.entry-content   not article.summary--> 
     </article></li>
     <hr width=100%>
 </ul><!-- /#posts-list -->
