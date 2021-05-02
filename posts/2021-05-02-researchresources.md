@@ -1,5 +1,4 @@
 title: Research Resources
-author: Alissa Pajer
 tags: math
 
 ## TDA Background
@@ -12,8 +11,15 @@ tags: math
 - [Introductory Topological Data Analysis](https://arxiv.org/abs/2004.04108)
     - **date**: Apr 2020
     - **author**: Dayten Sheffar
-    - **keywords**: metric topology, $p$-norm, $\infty$-norm, abstract simplexes, simplicial complexes, homeomorphic and homotopy equivalence, nerve theorem, mapper algorithm, betti numbers, persistent homology
-    - **summary**: high-level introduction to TDA
+    - **summary**: high-level introduction to: metric topology, $p$-norm, $\infty$-norm, abstract simplexes, simplicial complexes, homeomorphic and homotopy equivalence, nerve theorem, mapper algorithm, betti numbers, persistent homology
+
+- [Persistent Homology](https://pub.ist.ac.at/~edels/Papers/2016-B-01-PersDM.pdf)
+    - **author**: Herbert Edelsbrunner and Dmitriy Morozov
+    - **summary**: glossary of all things persistent homology
+
+- [Persistent Homology: Theory and Practice](https://pub.ist.ac.at/~edels/Papers/2012-P-11-PHTheoryPractice.pdf)
+    - **author**: Herbert Edelsbrunner, Dmitriy Morozov
+    - **summary**: persistent homology survey of methods and applications
 
 ## TDA Theory: Stability
 
