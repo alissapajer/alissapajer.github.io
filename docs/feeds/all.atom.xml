@@ -1,5 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Alissa Pajer's Blorg</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-03-26T00:00:00+00:00</updated><entry><title>2016-03-26-lambdaconf</title><link href="/2016-03-26-lambdaconf.html" rel="alternate"></link><published>2016-03-26T00:00:00+00:00</published><updated>2016-03-26T00:00:00+00:00</updated><author><name>Alissa Pajer</name></author><id>tag:None,2016-03-26:/2016-03-26-lambdaconf.html</id><summary type="html">&lt;p&gt;Thoughts on LambdaConf 2016&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Alissa Pajer's Blorg</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2021-05-01T00:00:00+00:00</updated><entry><title>mathpost</title><link href="/mathpost.html" rel="alternate"></link><published>2021-05-01T00:00:00+00:00</published><updated>2021-05-01T00:00:00+00:00</updated><author><name>Alissa Pajer</name></author><id>tag:None,2021-05-01:/mathpost.html</id><summary type="html">&lt;p&gt;This post is to test math&lt;/p&gt;
+&lt;div class="math"&gt;$$x = y^z$$&lt;/div&gt;
+&lt;p&gt;but can it do &lt;span class="math"&gt;\(i=n^{line}\)&lt;/span&gt; math?
+&lt;/p&gt;
+&lt;div class="math"&gt;$$\int_{foo}^{bar} \delta d\delta = \infty \Pi_i \Sigma 3$$&lt;/div&gt;
+&lt;p&gt;another eqn&lt;/p&gt;
+&lt;div class="math"&gt;$$f(x) = \int_{-\infty}^{\infty} \hat{f} (\Upsilon) e^{2\pi i x \xi}$$&lt;/div&gt;
+&lt;p&gt;add some more text&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById …&lt;/script&gt;&lt;script type='text/javascript'&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><content type="html">&lt;p&gt;This post is to test math&lt;/p&gt;
+&lt;div class="math"&gt;$$x = y^z$$&lt;/div&gt;
+&lt;p&gt;but can it do &lt;span class="math"&gt;\(i=n^{line}\)&lt;/span&gt; math?
+&lt;/p&gt;
+&lt;div class="math"&gt;$$\int_{foo}^{bar} \delta d\delta = \infty \Pi_i \Sigma 3$$&lt;/div&gt;
+&lt;p&gt;another eqn&lt;/p&gt;
+&lt;div class="math"&gt;$$f(x) = \int_{-\infty}^{\infty} \hat{f} (\Upsilon) e^{2\pi i x \xi}$$&lt;/div&gt;
+&lt;p&gt;add some more text&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="misc"></category></entry><entry><title>2016-03-26-lambdaconf</title><link href="/2016-03-26-lambdaconf.html" rel="alternate"></link><published>2016-03-26T00:00:00+00:00</published><updated>2016-03-26T00:00:00+00:00</updated><author><name>Alissa Pajer</name></author><id>tag:None,2016-03-26:/2016-03-26-lambdaconf.html</id><summary type="html">&lt;p&gt;Thoughts on LambdaConf 2016&lt;/p&gt;
 &lt;p&gt;This article is written in response to the article &lt;a href="http://degoes.net/articles/lambdaconf-inclusion"&gt;Wrestling With Inclusion at LambdaConf&lt;/a&gt;. Twitter hashtag #lambdaconf.&lt;/p&gt;
 &lt;p&gt;We need to understand the consequences of our decisions. You decide to take an action, and then consequences follow. In this case, a racist speaker was given a speaking …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Thoughts on LambdaConf 2016&lt;/p&gt;
 &lt;p&gt;This article is written in response to the article &lt;a href="http://degoes.net/articles/lambdaconf-inclusion"&gt;Wrestling With Inclusion at LambdaConf&lt;/a&gt;. Twitter hashtag #lambdaconf.&lt;/p&gt;
@@ -14,4 +152,234 @@
 &lt;p&gt;Additionally, it should be pointed out that a community can decide whether it separates behavior outside that community from behavior within it. For example, a conference may accept a speaker on the grounds that they not discuss their moral viewpoints at the conference. Or, a conference may decide that morals cannot be separated from the individual, even if they agree to only talk about tech. Both of these decisions exclude people, and the outrage I see on both sides stems from the terrifying reality of exclusion and loneliness.&lt;/p&gt;
 &lt;p&gt;Then the question remains, how do you disagree with a community that you are not allowed to join? How do you discuss ideas with people who disagree with you? Doesn’t ostracism make the divides between us even greater? In this situation, ostracism only recognizes a divide that is already there, deep in society. One could, in theory, view a tech conference as a place to build a bridge across the abyss, a place where people from all sides can come together and find common ground in technology. The problem is, the divide is too great even for this. You cannot just forget about racism for the day, when a prominent racist is sitting right in front of you.&lt;/p&gt;
 &lt;p&gt;So I call to all people on all sides who have the desire and the willingness to have the hard conversations, to do so and to do so frequently. But we must always remember that some people do not wish to engage in such conversations, and that is their right. And as such, if someone says they don’t want to talk to you, the conversation is over. There are many issues along which people become divided, and the depths of those divides vary greatly. Each divide is unique, and some can be bridged successfully at a tech conference, some cannot.&lt;/p&gt;
-&lt;p&gt;There is no censorship happening here, no impingement on free speech. The excluded person may still express their views at other conferences and in other communities, and you are still free to engage them individually in discussion. You can create a community and invite everyone, no restrictions, just know that everyone won’t show up. In the end, we must recognize that some communities are constructed to allow us, and others are constructed to reject us. Choose your viewpoints, and then shape a set of communities, or choose your communities, and then recognize that you must hold certain viewpoints. And then by all means, adapt, learn, and admit to being wrong! You can always change your mind.&lt;/p&gt;</content><category term="misc"></category></entry></feed>
+&lt;p&gt;There is no censorship happening here, no impingement on free speech. The excluded person may still express their views at other conferences and in other communities, and you are still free to engage them individually in discussion. You can create a community and invite everyone, no restrictions, just know that everyone won’t show up. In the end, we must recognize that some communities are constructed to allow us, and others are constructed to reject us. Choose your viewpoints, and then shape a set of communities, or choose your communities, and then recognize that you must hold certain viewpoints. And then by all means, adapt, learn, and admit to being wrong! You can always change your mind.&lt;/p&gt;</content><category term="misc"></category></entry><entry><title>Notions of Variance in Scala</title><link href="/notions-of-variance-in-scala.html" rel="alternate"></link><published>2014-06-19T00:00:00+00:00</published><updated>2014-06-19T00:00:00+00:00</updated><author><name>LuneTron</name></author><id>tag:None,2014-06-19:/notions-of-variance-in-scala.html</id><content type="html">&lt;p&gt;Here is a &lt;a href="https://gist.github.com/alissapajer/50c912d739346c1f00dd"&gt;github gist&lt;/a&gt; with some exercises explaining variance of functors in Scala. Additionally, it explains variance of types over their type parameters.&lt;/p&gt;
+&lt;p&gt;I also wrote up a &lt;a href="/images/FunctorMorphismPreservationProof.pdf"&gt;proof&lt;/a&gt; that a given functor implementation preserves morphism composition.&lt;/p&gt;</content><category term="misc"></category></entry><entry><title>Haskell Fixity</title><link href="/haskell-fixity.html" rel="alternate"></link><published>2014-03-15T00:00:00+00:00</published><updated>2014-03-15T00:00:00+00:00</updated><author><name>LuneTron</name></author><id>tag:None,2014-03-15:/haskell-fixity.html</id><summary type="html">&lt;p&gt;Let's consider some Haskell. Here's a function:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;zipSum&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Num&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;zipSum&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;zipWith&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This function will zip the two provided lists and then sum the pairs of elements, returning a single list of &lt;code&gt;Num&lt;/code&gt;. For example: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;*Main&amp;gt; zipSum [1,2,3,4] [3,4]&lt;/span&gt;
+&lt;span class="err"&gt;[4,6]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Great, so …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Let's consider some Haskell. Here's a function:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;zipSum&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Num&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;zipSum&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;zipWith&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This function will zip the two provided lists and then sum the pairs of elements, returning a single list of &lt;code&gt;Num&lt;/code&gt;. For example: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;*Main&amp;gt; zipSum [1,2,3,4] [3,4]&lt;/span&gt;
+&lt;span class="err"&gt;[4,6]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Great, so what happens if we apply &lt;code&gt;zipSum&lt;/code&gt; as an infix function and also apply a list concatenation.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;Main&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="err"&gt;]&lt;/span&gt; &lt;span class="o"&gt;++&lt;/span&gt; &lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="err"&gt;]&lt;/span&gt; &lt;span class="n"&gt;`zipSum`&lt;/span&gt; &lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="err"&gt;]&lt;/span&gt;
+&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;13&lt;/span&gt;&lt;span class="err"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Interesting, so it looks like &lt;code&gt;zipSum&lt;/code&gt; takes precedence over &lt;code&gt;(++)&lt;/code&gt;, when we've applied them both as infix operators. Example noted. Now let's write our own list concat function called &lt;code&gt;myConcat&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;myConcat&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;myConcat&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;We can perform "the same" function applications again, using our new &lt;code&gt;myConcat&lt;/code&gt; function:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;Main&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="err"&gt;]&lt;/span&gt; &lt;span class="n"&gt;`myConcat`&lt;/span&gt; &lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="err"&gt;]&lt;/span&gt; &lt;span class="n"&gt;`zipSum`&lt;/span&gt; &lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="err"&gt;]&lt;/span&gt;
+&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="err"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ummm, so what just happened? That is not the same result we computed last time. This time, the list concatenation took precedence. Thus, and this is surprising, &lt;code&gt;(++)&lt;/code&gt; and &lt;code&gt;myConcat&lt;/code&gt; are not acting equivalently in this seemingly equivalent situation.&lt;/p&gt;
+&lt;p&gt;Now, let's take a step back into math and think about what it means for two functions to be equal. Two functions &lt;code&gt;f&lt;/code&gt; and &lt;code&gt;g&lt;/code&gt; are defined to be equal if they have the same domain, and for each element &lt;code&gt;x&lt;/code&gt; in their domain, &lt;code&gt;f(x) = g(x)&lt;/code&gt;. Now, consider our two functions &lt;code&gt;(++)&lt;/code&gt; and &lt;code&gt;myConcat&lt;/code&gt;. These functions have identical type signatures, and hence the same domain. And since &lt;code&gt;myConcat&lt;/code&gt; is effectively just a wrapping around &lt;code&gt;(++)&lt;/code&gt;, then for any lists &lt;code&gt;l1&lt;/code&gt; and &lt;code&gt;l2&lt;/code&gt; of the same type, &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;l1&lt;/span&gt; &lt;span class="o"&gt;++&lt;/span&gt; &lt;span class="n"&gt;l2&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;l1&lt;/span&gt; &lt;span class="n"&gt;`myConcat`&lt;/span&gt; &lt;span class="n"&gt;l2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Thus, by this definition of function equality, &lt;code&gt;myConcat&lt;/code&gt; and &lt;code&gt;(++)&lt;/code&gt; are equal functions. But we have just seen that, when applied as infix operators in conjunction with &lt;code&gt;zipSum&lt;/code&gt;, they do not operate equivalently! It seems our definition of a function isn't correct. Or that we're actually not dealing with functions. So what's going on?&lt;/p&gt;
+&lt;p&gt;Well, the problem we're dealing with here is the inherent ambiguity of infix operators. By using a function as an infix operator, we're using it in a way that lambda calculus doesn't define. Hence we need to provide our own custom infix operator rules in order for infix operators to make sense.&lt;/p&gt;
+&lt;p&gt;To evaluate an expression like &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;4 + 5 * 6 * 7&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;we need to first decide on some evaluation rules. For example, we could assume that all infix operators have the same precedence and that they are all left associative. In that case, the above expression would be evaluated as &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;(((4 + 5) * 6) * 7)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That's one solution. But from the high level view of a function, that solution is really just as arbitrary as assigning a random fixity to every operator.&lt;/p&gt;
+&lt;p&gt;Now it's worth noting that if we choose not to assume any rules when given a series of infix function applications, then the only sane thing left to do would be to assume that we can apply the operations in any order. But a simple example of numeric addition and multiplication shows us that this approach can trivially yield non-equal results from the same initial expresion. This cannot possibly be the correct solution.&lt;/p&gt;
+&lt;p&gt;So even if we remove this infix ambiguity by defining a set of non-ambiguous infix evaluation rules, these rules are still arbitrary from the point of view of a function that only knows its type signature. Specifying the infix precedence and associativity of a function adds semantic meaning to a type signature that otherwise knew nothing about its implementation. In short, function behavior should not be governed by a secret fixity, not present in its type signature. (A language which can specify fixity in the type signature? Now you have my attention!)&lt;/p&gt;
+&lt;p&gt;In all fairness, fixity isn't entirely secret. In ghci you can inquire about the fixity of any function using &lt;code&gt;:info&lt;/code&gt;. For example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;Main&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Defined&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="n"&gt;GHC&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Base&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;infixr&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Here we learn that &lt;code&gt;(++)&lt;/code&gt; has right associativity with precedence level 5. Why is the associativity right, and not left or neutral? Recall that &lt;code&gt;(++)&lt;/code&gt; has time complexity that is linear in the length of its &lt;em&gt;first&lt;/em&gt; argument. A quick picture shows clearly that performing a series of &lt;code&gt;(++)&lt;/code&gt; infix applications is more efficient if you do so assuming right associativity. Thus, Haskell exposes an implementation detail of a function through that function's fixity. Yikes that seems dangerous. What if the implementation details change? This is the sort of hole that bugs crawl out of.&lt;/p&gt;
+&lt;p&gt;Though, should it really be up to the programmer to know the time complexity of &lt;code&gt;(++)&lt;/code&gt; and write their code accordingly? In some situations it seems quite tempting to encode function implementation details with fixity, because then we can write &lt;code&gt;3 + 4 * 5&lt;/code&gt; and have it parse as &lt;code&gt;3 + (4 * 5)&lt;/code&gt;, as expected. But I will maintain my point that hardcoding implementation details or implementation semantics into the behavior of functions is impure and dangerous. In the simple cases, functions will do what we expect. In more complex code, we'll introduce bugs.&lt;/p&gt;
+&lt;p&gt;I want types that are implementation agnostic and possible to reason about without additional information. Haskell functions used as infix operators don't provide that. So what world are we left in if&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;`op1`&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;`op2`&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;always generates a parser error? Well, that would be a world full of parentheses! The user would be required to add parentheses around their infix operators always, and without exception, until all ambiguity is resolved.&lt;/p&gt;
+&lt;p&gt;Let's again consider the case of numeric addition and multiplication. These operations have a universally accepted precedence, which is entirely sensical when you think of &lt;code&gt;5 * 3&lt;/code&gt; as &lt;code&gt;5 + 5 + 5&lt;/code&gt;. So can't we at least maintain this precedence for these numeric operations? I say, nah. The Haskell functions &lt;code&gt;(+)&lt;/code&gt; and &lt;code&gt;(*)&lt;/code&gt; really should know nothing of their semantics. There is no reason &lt;code&gt;(*)&lt;/code&gt; should take precendece over &lt;code&gt;(+)&lt;/code&gt;, unless you consider the meaning of its implementaion in the larger context of math.&lt;/p&gt;
+&lt;p&gt;So, lesson learned: equal functions can be defined with non-equal infix operators. (Recall the example of &lt;code&gt;zipSum&lt;/code&gt; used with both &lt;code&gt;(++)&lt;/code&gt; and &lt;code&gt;myConcat&lt;/code&gt;.) There is of course an obvious solution to this problem: never use Haskell infix operators. What do we lose? Readability. What do we gain? Correctness. And in all reality, a series of three or more infix applications really should be broken into shorter expressions anyway.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; The original version of &lt;code&gt;zipSum&lt;/code&gt; looked like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;zipSum&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Num&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;zipSum&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;xs&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ys&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;map&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;summed&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;zip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;xs&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ys&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;where&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;summed&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://twitter.com/puffnfresh"&gt;\@puffnfresh&lt;/a&gt; for pointing out that we can use &lt;code&gt;zipWith&lt;/code&gt; to implement this function.&lt;/p&gt;</content><category term="misc"></category></entry><entry><title>Haskell Flip</title><link href="/haskell-flip.html" rel="alternate"></link><published>2014-02-22T00:00:00+00:00</published><updated>2014-02-22T00:00:00+00:00</updated><author><name>LuneTron</name></author><id>tag:None,2014-02-22:/haskell-flip.html</id><summary type="html">&lt;p&gt;How can we change the order of the arguments to a function? After I answered this question, I realized it's actually a very odd question to ask.&lt;/p&gt;
+&lt;p&gt;I'm working my way though &lt;a href="http://learnyouahaskell.com/"&gt;Learn You a Haskell for Great Good&lt;/a&gt;, and in the &lt;a href="http://learnyouahaskell.com/higher-order-functions#curried-functions"&gt;Curried Functions&lt;/a&gt; section, the author describes the Haskell …&lt;/p&gt;</summary><content type="html">&lt;p&gt;How can we change the order of the arguments to a function? After I answered this question, I realized it's actually a very odd question to ask.&lt;/p&gt;
+&lt;p&gt;I'm working my way though &lt;a href="http://learnyouahaskell.com/"&gt;Learn You a Haskell for Great Good&lt;/a&gt;, and in the &lt;a href="http://learnyouahaskell.com/higher-order-functions#curried-functions"&gt;Curried Functions&lt;/a&gt; section, the author describes the Haskell function &lt;code&gt;flip&lt;/code&gt; like so: &lt;em&gt;"Flip simply takes a function and returns a function that is like our original function, only the first two arguments are flipped."&lt;/em&gt; Without scrolling down further, I decided to implement &lt;code&gt;flip&lt;/code&gt; based on this sentence alone.&lt;/p&gt;
+&lt;p&gt;I started with the type signature &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;myFlip :: (a -&amp;gt; b -&amp;gt; c) -&amp;gt; (b -&amp;gt; a -&amp;gt; c)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;and my first attempt at implementation trailed off rather quickly:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;myFlip f = ...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Given only a function &lt;code&gt;f :: a -&amp;gt; b -&amp;gt; c&lt;/code&gt;, and nothing to apply to it, I had reached a dead end, so I decided to implement &lt;code&gt;f&lt;/code&gt;, and then &lt;code&gt;flip&lt;/code&gt; this implementation. I wanted the type variables &lt;code&gt;a&lt;/code&gt;, &lt;code&gt;b&lt;/code&gt;, and &lt;code&gt;c&lt;/code&gt; to be distinct so I could easily keep track of them. Here's my function:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;myImpl :: Char -&amp;gt; Bool -&amp;gt; String&lt;/span&gt;
+&lt;span class="err"&gt;myImpl char bool = char : (show bool)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And now to flip it!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;flippedMyImpl :: Bool -&amp;gt; Char -&amp;gt; String&lt;/span&gt;
+&lt;span class="err"&gt;flippedMyImpl bool char = myImpl char bool&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Well, that is simple enough. The types lead way! And suddenly I realized that I just might have access to type variables &lt;code&gt;a&lt;/code&gt; and &lt;code&gt;b&lt;/code&gt;. But I needed to implement the full signature of &lt;code&gt;myFlip&lt;/code&gt; using these specific types to fully understand. I combined &lt;code&gt;myImpl&lt;/code&gt; and &lt;code&gt;flippedMyImpl&lt;/code&gt; to produce&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;flipWithTypes :: (Char -&amp;gt; Bool -&amp;gt; String) -&amp;gt; Bool -&amp;gt; Char -&amp;gt; String&lt;/span&gt;
+&lt;span class="err"&gt;flipWithTypes f bool char = f char bool&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;My key realization was that I could remove the parentheses around &lt;code&gt;(Bool -&amp;gt; Char -&amp;gt; String)&lt;/code&gt; without changing the type signature. Once I did this, I realized that I had access to two more function arguments! Before removing the parentheses, my mind had written off &lt;code&gt;(b -&amp;gt; a -&amp;gt; c)&lt;/code&gt; as an impenetrable block.&lt;/p&gt;
+&lt;p&gt;Once I wrote this last implementation, it was immediately clear that I had just written a non-parametric version of &lt;code&gt;myFlip&lt;/code&gt;. There is nothing special about the types I had chosen; they could just as easily be type variables. And so we arrive at our solution:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;myFlip :: (a -&amp;gt; b -&amp;gt; c) -&amp;gt; b -&amp;gt; a -&amp;gt; c&lt;/span&gt;
+&lt;span class="err"&gt;myFlip f y x = f x y&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;To implement &lt;code&gt;myFlip&lt;/code&gt;, we needed to determine how the function would handle itself when fully applied. But our goal in writing &lt;code&gt;myFlip&lt;/code&gt; is to return another (partially applied) function with type &lt;code&gt;b -&amp;gt; a -&amp;gt; c&lt;/code&gt;. The key to the implementation of &lt;code&gt;flip&lt;/code&gt; that wasn't obvious at first is that we need to provide a full implementation in order to later partially apply it.&lt;/p&gt;
+&lt;p&gt;In doing this exercise, my conception of a function changed. Now when I think of a function, I think of something linear, something in which each parameter must be applied in its prescribed order. And if that order is to be broken, another function must be applied to faciliate this change in order.&lt;/p&gt;
+&lt;p&gt;Really, &lt;code&gt;flip&lt;/code&gt; is a formalization of how we handle the permutations of function application orders in Haskell. In math, we've seen that given a function &lt;code&gt;f(x,y,z)&lt;/code&gt;, we can consider &lt;code&gt;g(y,z) = f(3,y,z)&lt;/code&gt; or &lt;code&gt;h(y) = f(5,y,6)&lt;/code&gt; without any concern, because the order in which we provide values for our variables doesn't matter.&lt;/p&gt;
+&lt;p&gt;But since in Haskell all functions take exactly one parameter, and thus multi-parameter functions are a semantic illusion, one must make explicit how to pass in parameters in a different order. Hence we arrive at the &lt;code&gt;flip&lt;/code&gt; function.&lt;/p&gt;
+&lt;p&gt;To tie up this post, it's odd, from a non-functional point of view, to ask how we can flip the order of function arguments because the question assumes that function arguments have an order in the first place! Though, once you recall the definitions of lambda calculus and think about different reduction rules, the fact that functions innately order their parameters seems almost intuitive. And then I realized: &lt;a href="http://en.wikipedia.org/wiki/Church%E2%80%93Rosser_theorem"&gt;Church-Rosser&lt;/a&gt;. And guess what? I've already written a &lt;a href="/posts/2013-03-26-churchrosser.html"&gt;blog post&lt;/a&gt; about that.&lt;/p&gt;</content><category term="misc"></category></entry><entry><title>Category Theory at Strange Loop 2013</title><link href="/category-theory-at-strange-loop-2013.html" rel="alternate"></link><published>2014-02-19T00:00:00+00:00</published><updated>2014-02-19T00:00:00+00:00</updated><author><name>LuneTron</name></author><id>tag:None,2014-02-19:/category-theory-at-strange-loop-2013.html</id><summary type="html">&lt;p&gt;&lt;img alt="diagram" src="/images/diagram.png" title="diagram"&gt;
+Back in September 2013 I gave a talk titled "Category Theory: An Abstraction for Anything" at the &lt;a href="https://thestrangeloop.com/"&gt;Strange Loop Conference&lt;/a&gt;. A few days ago, the &lt;a href="http://www.infoq.com/presentations/category-theory"&gt;video&lt;/a&gt; for my talk was released. &lt;/p&gt;
+&lt;p&gt;Additionally, I wrote a &lt;a href="http://engineering.richrelevance.com/closing-the-loop-on-category-theory-polymorphism-currying-and-more/"&gt;blog post&lt;/a&gt; about this talk that was published on my employer's blog. &lt;/p&gt;
+&lt;p&gt;Here's the talk …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="diagram" src="/images/diagram.png" title="diagram"&gt;
+Back in September 2013 I gave a talk titled "Category Theory: An Abstraction for Anything" at the &lt;a href="https://thestrangeloop.com/"&gt;Strange Loop Conference&lt;/a&gt;. A few days ago, the &lt;a href="http://www.infoq.com/presentations/category-theory"&gt;video&lt;/a&gt; for my talk was released. &lt;/p&gt;
+&lt;p&gt;Additionally, I wrote a &lt;a href="http://engineering.richrelevance.com/closing-the-loop-on-category-theory-polymorphism-currying-and-more/"&gt;blog post&lt;/a&gt; about this talk that was published on my employer's blog. &lt;/p&gt;
+&lt;p&gt;Here's the talk abstract, reproduced from the &lt;a href="https://thestrangeloop.com/sessions/category-theory-an-abstraction-for-anything"&gt;Strange Loop website&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Category theory provides a mathematically sound foundation on which we can create collections of objects and express morphisms between them. Together, along with a few simple rules, a collection of objects and morphisms forms a category to which we can apply many useful results, such as the uniqueness of an identity morphism. Furthermore, once we have a category in hand, we can formally explore the relationships it has with other categories, deducing powerful and practical abstractions.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;The power of category theory lies in the relative simplicity and accessibility of its definitions. From just a handful of straightforward concepts, we can formalize many concrete ideas such as directed acyclic graphs, currying, polymorphic functions, and Haskell itself. This talk will introduce the basics of category theory, while simultaneously diving into specific programming-related examples of categories, functors, and natural transformations. In addition to exploring profound and beautiful concepts, this talk aims to provide you with the tools necessary to recognize category-theoretical patterns in your own programming projects.&lt;/em&gt;&lt;/p&gt;</content><category term="misc"></category></entry><entry><title>Blog Setup</title><link href="/blog-setup.html" rel="alternate"></link><published>2014-02-08T00:00:00+00:00</published><updated>2014-02-08T00:00:00+00:00</updated><author><name>LuneTron</name></author><id>tag:None,2014-02-08:/blog-setup.html</id><summary type="html">&lt;p&gt;When I started my search for a static site generator, I first came across &lt;a href="https://github.com/jekyll/jekyll"&gt;Jekyll&lt;/a&gt;. I'm not particularly excited about learning Ruby, but I am excited about learning Haskell.
+&lt;img alt="HaskellRuby" src="/images/HaskellRuby.png" title="HaskellRuby"&gt;
+This quickly led me to &lt;a href="http://jaspervdj.be/hakyll/"&gt;Hakyll&lt;/a&gt;. Hakyll is easy to install with &lt;code&gt;cabal&lt;/code&gt;, though the first time I installed it I …&lt;/p&gt;</summary><content type="html">&lt;p&gt;When I started my search for a static site generator, I first came across &lt;a href="https://github.com/jekyll/jekyll"&gt;Jekyll&lt;/a&gt;. I'm not particularly excited about learning Ruby, but I am excited about learning Haskell.
+&lt;img alt="HaskellRuby" src="/images/HaskellRuby.png" title="HaskellRuby"&gt;
+This quickly led me to &lt;a href="http://jaspervdj.be/hakyll/"&gt;Hakyll&lt;/a&gt;. Hakyll is easy to install with &lt;code&gt;cabal&lt;/code&gt;, though the first time I installed it I had an old version of &lt;code&gt;cabal&lt;/code&gt;, and thus installed an apparently very old version of Hakyll. I remedied this as follows: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ ghc-pkg unregister hakyll
+$ cabal update
+$ cabal install hakyll
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;From there I followed the &lt;a href="http://jaspervdj.be/hakyll/tutorials.html"&gt;Tutorials&lt;/a&gt; on the Hakyll site and found them clear and up to date. Once I built the &lt;a href="http://jaspervdj.be/hakyll/tutorials/01-installation.html#building-the-example-site"&gt;Example Site&lt;/a&gt; locally, it was time to move the example code to &lt;a href="http://pages.github.com/"&gt;github pages&lt;/a&gt;. Blogging without version control was out of the question!&lt;/p&gt;
+&lt;p&gt;The most confusing part of github pages is the &lt;a href="https://help.github.com/articles/user-organization-and-project-pages"&gt;difference&lt;/a&gt; between User Pages and Project Pages. The difference is mostly confusing because you can have a &lt;code&gt;gh-pages&lt;/code&gt; branch in the repo &lt;code&gt;username/username.github.io&lt;/code&gt;. In that case github needs to make an undocumented choice about which branch to use. I decided to use User Pages, which is why you can find my blog at &lt;code&gt;http://alissapajer.github.io&lt;/code&gt;. This means that content from my &lt;code&gt;master&lt;/code&gt; branch will be used to build my website. Here is where things get a bit tricky.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Problem:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I need the contents of my site in the directory &lt;code&gt;alissapajer.github.io/&lt;/code&gt; on the &lt;code&gt;master&lt;/code&gt; branch. But Hakyll generates the website itself in &lt;code&gt;alissapajer.github.io/_site/&lt;/code&gt;, and places the Haskell code, markdown, and various other files in the top level directory. And of course I need to version control everything, generated and not!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solution:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I created a &lt;code&gt;source&lt;/code&gt; branch, which contains both the manually-created and the generated files. When I make a change to my website, I always commit on the &lt;code&gt;source&lt;/code&gt; branch, and I never manually edit files on &lt;code&gt;master&lt;/code&gt;. The idea is that &lt;code&gt;source&lt;/code&gt; will contain all of my code, and &lt;code&gt;master&lt;/code&gt; will contain just the generated files. Now all we need to do is to copy the contents of the &lt;code&gt;_site/&lt;/code&gt; directory to the &lt;code&gt;master&lt;/code&gt; branch. &lt;/p&gt;
+&lt;p&gt;To perform this copy, I use &lt;a href="https://github.com/davisp/ghp-import"&gt;ghp-import&lt;/a&gt; as follows, run from the &lt;code&gt;source&lt;/code&gt; branch:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ghp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;_site&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;commit message&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;There is an optional flag to push to &lt;code&gt;master&lt;/code&gt;, but I have been pushing manually so I can review the changes first. And that's it! The only thing I still need to do is the redirect to a domain I own. This is done using a &lt;code&gt;CNAME&lt;/code&gt; file on the &lt;code&gt;master&lt;/code&gt; branch. Since my &lt;code&gt;master&lt;/code&gt; branch is auto-generated I'll need to add this &lt;code&gt;CNAME&lt;/code&gt; in such a way that it's not deleted when I commit to &lt;code&gt;master&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;The only weird thing is that &lt;code&gt;source&lt;/code&gt; and &lt;code&gt;master&lt;/code&gt; will permanently diverge.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tips:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;While editing the webiste, I run&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ ./site watch
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This command registers changes to the &lt;code&gt;_site/&lt;/code&gt; directory and publishes the up-to-date website to &lt;code&gt;http://127.0.0.1:8000/&lt;/code&gt;. Very useful for immediate feedback!&lt;/p&gt;
+&lt;p&gt;Also, Hakyll allows you to write all your blog posts in markdown. I've found this &lt;a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"&gt;Markdown Cheatsheet&lt;/a&gt; essential.&lt;/p&gt;</content><category term="misc"></category></entry><entry><title>Site Properties</title><link href="/site-properties.html" rel="alternate"></link><published>2014-02-03T00:00:00+00:00</published><updated>2014-02-03T00:00:00+00:00</updated><author><name>LuneTron</name></author><id>tag:None,2014-02-03:/site-properties.html</id><content type="html">&lt;p&gt;This site contains all the things that don't contain themselves.&lt;/p&gt;</content><category term="misc"></category></entry><entry><title>Insights into Church-Rosser</title><link href="/insights-into-church-rosser.html" rel="alternate"></link><published>2013-03-26T00:00:00+00:00</published><updated>2013-03-26T00:00:00+00:00</updated><author><name>LuneTron</name></author><id>tag:None,2013-03-26:/insights-into-church-rosser.html</id><summary type="html">&lt;p&gt;&lt;em&gt;This post was originally published on the precog.com engineering blog.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Untyped lambda calculus is powerful. In fact, every computable function can be encoded into lambda calculus, and thus so can every bit of Scala code you've ever written. Though, anything more complicated than your basic combinator would be almost …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;This post was originally published on the precog.com engineering blog.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Untyped lambda calculus is powerful. In fact, every computable function can be encoded into lambda calculus, and thus so can every bit of Scala code you've ever written. Though, anything more complicated than your basic combinator would be almost indecipherable in its lambda calculus form. As an example, here's what the addition combinator for the Church numerals &lt;code&gt;c_n = λfx.fn(x)&lt;/code&gt; looks like in lambda calculus: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;A+ = λxypq.xp(ypq)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;At first glance it's by no means obvious that you're looking at a way to add natural numbers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Introductory Definitions:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Before we jump into some more examples, let's step back a minute so I can provide a quick and basic introduction to untyped lambda calculus. The rules are easily accessible, and given that lambda calculus is Turing complete, their simplicity astounds me. (As a side note, because cellular automata are really cool, Conway's Game of Life is another easily definable Turing complete system.)&lt;/p&gt;
+&lt;p&gt;Now, as promised, the introduction: We define the set &lt;code&gt;𝚲&lt;/code&gt; inductively as follows. Let &lt;code&gt;V&lt;/code&gt; be a set of variables &lt;code&gt;v'&lt;/code&gt;, &lt;code&gt;v''&lt;/code&gt;, etc.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;(i) If x ∈ V, then x ∈ 𝚲.&lt;/span&gt;
+&lt;span class="err"&gt;(ii) If M,N ∈ 𝚲, then MN ∈ 𝚲.&lt;/span&gt;
+&lt;span class="err"&gt;(iii) If x ∈ V and M ∈ 𝚲, then λx.M ∈ 𝚲.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In (ii), &lt;code&gt;MN&lt;/code&gt; denotes application, and you should think of &lt;code&gt;M&lt;/code&gt; as a method applied to &lt;code&gt;N&lt;/code&gt;. In (iii), the syntax &lt;code&gt;λx.M&lt;/code&gt; denotes an abstraction, i.e. a function &lt;code&gt;x -&amp;gt; M&lt;/code&gt;, where &lt;code&gt;M&lt;/code&gt; is not required to depend on &lt;code&gt;x&lt;/code&gt;. The most interesting terms in lambda calculus will include an abstraction followed by an application, like so:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nl"&gt;x&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;where &lt;code&gt;N&lt;/code&gt; is substituted for every free instance of &lt;code&gt;x&lt;/code&gt; in &lt;code&gt;M&lt;/code&gt;. This is known formally as β-reduction. In psuedo lambda calculus, (psuedo because integers are not terms in &lt;code&gt;V&lt;/code&gt;), we can consider the example &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;(λx.(2*x + 3))4 = 2*4 + 3 = 11&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Some Intuitions:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;So what's the benefit of thinking about lambda calculus? For me, lambda calculus provides the structure to represent the core of what a function really is: a rule that gets us from one bit of knowledge to another. And if we want to prove something about functions (functions in a generic sense), lambda calculus is the perfect place to come. So what should we prove? Well, intuitively we'd hope that, no matter the strategy (e.g. call by name, call by value, etc.) we use to evaluate our function, we obtain the same result. But wait! Can this always be true? What if our function is an ill-thought-out recursion that loops until we overflow the stack? Can we really guarantee that every call to a function will return a unique result, no matter what strategy we use to evaluate it? The answer is yes, with an added assumption.&lt;/p&gt;
+&lt;p&gt;To understand what this assumption should be, consider the famous &lt;code&gt;Ω&lt;/code&gt;-combinator: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;Ω = (λx.xx)(λx.xx)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Furthermore consider the lambda term &lt;code&gt;(λx.z)Ω&lt;/code&gt;. If we evaluate this term using a call-by-name strategy, then it's simply equal to the constant &lt;code&gt;z&lt;/code&gt;, since &lt;code&gt;λx.z&lt;/code&gt; is a constant function. But if we use a call-by-value strategy, then we'll never be able to further reduce it, since when we apply &lt;code&gt;λx.xx&lt;/code&gt; to itself we again obtain &lt;code&gt;Ω&lt;/code&gt;. So what we really want to prove is this: If we β-reduce a lambda term until we cannot reduce it any further, then that final reduced term is unique. Said more formally: If a lambda term has a normal form, then that normal form is unique.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Introduction to Church-Rosser:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ChurchRosserRight" src="/images/ChurchRosser1.png" title="ChurchRosser1"&gt;
+In summary, we cannot just pick an evaluation strategy and expect it to yield the same results as all other evaluation strategies, because, as the &lt;code&gt;Ω&lt;/code&gt;-combinator example showed us, a given evaluation strategy may never terminate. But, there is something we can prove for certain: a lambda term has at most one normal form. In order to prove this, we'll outline the proof of a more general theorem, known as the Church-Rosser Theorem. In picture form, it looks like the image to the right, where solid arrows are assumptions and dotted arrows are to be proven.&lt;/p&gt;
+&lt;p&gt;In word form it states: If a term &lt;code&gt;M&lt;/code&gt; β-reduces to two terms &lt;code&gt;N1&lt;/code&gt; and &lt;code&gt;N2&lt;/code&gt;, then there exists some &lt;code&gt;N3&lt;/code&gt; such that &lt;code&gt;N1&lt;/code&gt; and &lt;code&gt;N2&lt;/code&gt; each β-reduce to it.&lt;/p&gt;
+&lt;p&gt;Given Church-Rosser, our desired statement follows directly. If we let &lt;code&gt;N1&lt;/code&gt; and &lt;code&gt;N2&lt;/code&gt; in the diagram above be distinct normal forms of &lt;code&gt;M&lt;/code&gt;, then by Church-Rosser there exists some &lt;code&gt;N3&lt;/code&gt; such that &lt;code&gt;N1&lt;/code&gt; and &lt;code&gt;N2&lt;/code&gt; each β-reduce to it. But a normal form term can only β-reduce to itself, and thus &lt;code&gt;N1 = L&lt;/code&gt; and &lt;code&gt;N2 = L&lt;/code&gt;. Thus &lt;code&gt;M&lt;/code&gt; has at most one normal form, since &lt;code&gt;N1 = N2&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;Interestingly, we can also use Church-Rosser to prove the consistency of lambda calculus, that is, that true does not equal false. We define: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;T = λxy.x&lt;/span&gt;
+&lt;span class="err"&gt;F = λxy.y&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Note that &lt;code&gt;T&lt;/code&gt; and &lt;code&gt;F&lt;/code&gt; are written as an iterated abstraction, meaning that the abstraction is one of multiple variables (in this case &lt;code&gt;x&lt;/code&gt; and &lt;code&gt;y&lt;/code&gt;). Iterated abstraction is right associative; for example&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;λxyz.xyz&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;is shorthand for&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;λx.(λy.(λz.xyz))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now to understand these definitions, if &lt;code&gt;K&lt;/code&gt; is a lambda term that equals either &lt;code&gt;T&lt;/code&gt; or &lt;code&gt;F&lt;/code&gt;, the lambda term &lt;code&gt;KPQ&lt;/code&gt; is a way to represent “if &lt;code&gt;K&lt;/code&gt; then &lt;code&gt;P&lt;/code&gt; else &lt;code&gt;Q&lt;/code&gt;”. If &lt;code&gt;T = F&lt;/code&gt;, then we’d be able to perform a series of reductions connecting &lt;code&gt;T&lt;/code&gt; and &lt;code&gt;F&lt;/code&gt;. But since &lt;code&gt;T&lt;/code&gt; and &lt;code&gt;F&lt;/code&gt; are both normal forms, we cannot perform such reductions. Thus &lt;code&gt;T&lt;/code&gt; does not equal &lt;code&gt;F&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Strip Lemma Basics:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ChurchRosserRight" src="/images/ChurchRosser2.png" title="ChurchRosser2"&gt;
+Now in order to prove Church-Rosser, we'll prove a lemma first, namely the Strip Lemma. This lemma states that, if &lt;code&gt;M&lt;/code&gt; β-reduces to &lt;code&gt;N1&lt;/code&gt; in a single step, and &lt;code&gt;M&lt;/code&gt; β-reduces to &lt;code&gt;N2&lt;/code&gt; in any finite number of steps, there exists an &lt;code&gt;N3&lt;/code&gt; such that &lt;code&gt;N1&lt;/code&gt; and &lt;code&gt;N2&lt;/code&gt; each β-reduce to it. In diagram form, we have the diagram to the right, where a single arrow represents a single β-reduction, and a double arrow represents any finite number of β-reductions. &lt;/p&gt;
+&lt;p&gt;Note that once we've proven the Strip Lemma, Church-Rosser follows immediately by induction on the natural numbers. (First prove the statement for &lt;code&gt;n=1&lt;/code&gt;. Then prove that if the statement holds for an arbitrary &lt;code&gt;n&lt;/code&gt;, it holds for &lt;code&gt;n+1&lt;/code&gt;.) To see this visually, imagine filling in the Church-Rosser diagram with these strips. &lt;/p&gt;
+&lt;p&gt;Proceeding with the proof of the Strip Lemma, the correct question to ask is, how do we obtain a candidate &lt;code&gt;N3&lt;/code&gt;? Well, we know that &lt;code&gt;M&lt;/code&gt; β-reduces to &lt;code&gt;N1&lt;/code&gt; in a single step, so we'll consider this redex and mark it in &lt;code&gt;M&lt;/code&gt;. Now as we perform the multiple reductions on &lt;code&gt;M&lt;/code&gt; that ultimately reduce to &lt;code&gt;N2&lt;/code&gt;, we track this marked lambda term until we reach &lt;code&gt;N2&lt;/code&gt;. We now perform the β-reduction on this marked term in &lt;code&gt;N2&lt;/code&gt;, and that produces our candidate &lt;code&gt;N3&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Let's make this idea of marking more formal with some notation. Specifically, to keep track of a certain redex, we'll underline it like this: &lt;code&gt;(&lt;ins&gt;λ&lt;/ins&gt;x.M)N&lt;/code&gt;, and we'll keep that lambda underlined until we β-reduce it. With this new notation, here’s an example of the Strip Lemma with actual lambda terms. (We’ll introduce &lt;code&gt;φ&lt;/code&gt; in a couple of paragraphs; for now just think of it as a β-reduction.)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="/images/ChurchRosser3.png" title="ChurchRosser3"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details of the Proof:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Given that we now allow underlined lambdas in our set of allowed terms, what does this new set look like formally? Let's call it &lt;code&gt;&lt;ins&gt;𝚲&lt;/ins&gt;&lt;/code&gt;. We'll define it inductively, as we defined &lt;code&gt;𝚲&lt;/code&gt; earlier. The first three parts of the definition will be analogous to before, defining variables, application, and abstraction. In the fourth part we will include underlined lambdas only in the case when we have an abstraction followed by an application. This is because the only lambda-terms we need to trace are ones we know will be β-reduced.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(i) If x ∈ V, then x ∈ &lt;ins&gt;𝚲&lt;/ins&gt;.
+(ii) If M,N ∈ &lt;ins&gt;𝚲&lt;/ins&gt;, then MN ∈ &lt;ins&gt;𝚲&lt;/ins&gt;.
+(iii) If x ∈ V and M ∈ &lt;ins&gt;𝚲&lt;/ins&gt;, then λx.M ∈ &lt;ins&gt;𝚲&lt;/ins&gt;. 
+(iv) If x ∈ V and M, N ∈ &lt;ins&gt;𝚲&lt;/ins&gt;, then (&lt;ins&gt;λ&lt;/ins&gt;x.M)N ∈ &lt;ins&gt;𝚲&lt;/ins&gt;.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Consider the following diagram. Note that the front rectangle is the same as the diagram in the statement of the Strip Lemma. The other terms, namely &lt;code&gt;M'&lt;/code&gt; and &lt;code&gt;N2'&lt;/code&gt;, we construct for purposes of the proof.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="/images/ChurchRosser4.png" title="ChurchRosser4"&gt;&lt;/p&gt;
+&lt;p&gt;We construct &lt;code&gt;M'&lt;/code&gt; to be equivalent to &lt;code&gt;M&lt;/code&gt;, except that in it we underlined the &lt;code&gt;λ&lt;/code&gt; that was reduced to obtain &lt;code&gt;N1&lt;/code&gt;. The function &lt;code&gt;ψ: &lt;ins&gt;𝚲&lt;/ins&gt; -&amp;gt; 𝚲&lt;/code&gt; simply erases all underlines, so that&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ψ((&lt;ins&gt;λ&lt;/ins&gt;x.M)N) = (λx.ψ(M))ψ(N)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We can now apply beta-reductions to &lt;code&gt;M'&lt;/code&gt;, analogous to those applied to &lt;code&gt;M&lt;/code&gt;, in order to obtain &lt;code&gt;N2'&lt;/code&gt;. And now to formally obtain &lt;code&gt;N3&lt;/code&gt;, we apply the function &lt;code&gt;φ: &lt;ins&gt;𝚲&lt;/ins&gt; -&amp;gt; 𝚲&lt;/code&gt; to &lt;code&gt;N2'&lt;/code&gt;. And what is &lt;code&gt;φ&lt;/code&gt;? &lt;code&gt;φ&lt;/code&gt; is exactly what you'd expect: a function that β-reduces all underlined terms and keeps all others the same, meaning that&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;φ((&lt;ins&gt;λ&lt;/ins&gt;x.M)N) = φ(M)[x := φ(N)]&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that we have our candidate &lt;code&gt;N3&lt;/code&gt;, we only need to prove that we can draw solid lines in place of the dotted ones. I will outline a proof showing that &lt;code&gt;N2&lt;/code&gt; β-reduces to &lt;code&gt;N3&lt;/code&gt; and will leave the other part of the proof as an exercise for the reader. We will outline a proof of the following diagram, which is the front triangle in the previous diagram.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="/images/ChurchRosser5.png" title="ChurchRosser5"&gt;&lt;/p&gt;
+&lt;p&gt;In order to prove this, we will use the method of structural induction. Recall that initially we constructed &lt;code&gt;𝚲&lt;/code&gt; inductively. Thus in order to prove something general about all elements of &lt;code&gt;𝚲&lt;/code&gt;, we can use an induction technique that mimics the way in which we define &lt;code&gt;𝚲&lt;/code&gt;. This is called induction on the structure of &lt;code&gt;𝚲&lt;/code&gt;. Though note that in our case, &lt;code&gt;A ∈ &lt;ins&gt;𝚲&lt;/ins&gt;&lt;/code&gt;, so we'll use induction on the structure of &lt;code&gt;&lt;ins&gt;𝚲&lt;/ins&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;First, the base case:&lt;/p&gt;
+&lt;p&gt;(i) Let &lt;code&gt;A = x&lt;/code&gt; for some &lt;code&gt;x ∈ V&lt;/code&gt;. Then &lt;code&gt;ψ(x) = x&lt;/code&gt; and &lt;code&gt;φ(x) = x&lt;/code&gt;. And thus since &lt;code&gt;x&lt;/code&gt; β-reduces to &lt;code&gt;x&lt;/code&gt;, we're done.&lt;/p&gt;
+&lt;p&gt;For the next three cases, we assume the statement holds for the individual terms in &lt;code&gt;&lt;ins&gt;𝚲&lt;/ins&gt;&lt;/code&gt;, and prove that it holds for their application (or abstraction).&lt;/p&gt;
+&lt;p&gt;(ii) Let &lt;code&gt;A = PQ&lt;/code&gt; for &lt;code&gt;P, Q ∈ V&lt;/code&gt;. Assume that &lt;code&gt;ψ(P)&lt;/code&gt; β-reduces to &lt;code&gt;φ(P)&lt;/code&gt; and that &lt;code&gt;ψ(Q)&lt;/code&gt; β-reduces to &lt;code&gt;φ(Q)&lt;/code&gt;. By the definitions of &lt;code&gt;ψ&lt;/code&gt; and &lt;code&gt;φ&lt;/code&gt;, show that &lt;code&gt;ψ(PQ)&lt;/code&gt; β-reduces to &lt;code&gt;φ(PQ)&lt;/code&gt;.
+(iii) Let &lt;code&gt;A = λx.P&lt;/code&gt; for &lt;code&gt;P ∈ V&lt;/code&gt;. Assume that &lt;code&gt;ψ(P)&lt;/code&gt; β-reduces to &lt;code&gt;φ(P)&lt;/code&gt;. Using the definitions, show that &lt;code&gt;ψ(λx.P)&lt;/code&gt; β-reduces to &lt;code&gt;φ(λx.P)&lt;/code&gt;
+(iv) Let &lt;code&gt;A = (&lt;ins&gt;λ&lt;/ins&gt;x.P)Q&lt;/code&gt; for &lt;code&gt;P, Q ∈ V&lt;/code&gt;. Assume the statement holds for &lt;code&gt;P&lt;/code&gt; and &lt;code&gt;Q&lt;/code&gt;. Show that &lt;code&gt;ψ(A)&lt;/code&gt; β-reduces to &lt;code&gt;φ(A)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;And that's the outline of the proof of the Strip Lemma! &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Conclusion:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In summary, we gave the definition for a lambda-term, considered the &lt;code&gt;Ω&lt;/code&gt;-combinator as an example of a lambda-term without a normal form, and outlined a proof of the Church-Rosser Theorem. So what does Church-Rosser tell us? If a term has a normal form, then that normal form is unique. This means that if we evaluate a function using two different strategies, the results will be equal. Of course, this doesn't guarantee that every evaluation strategy will terminate. But one thing we know for certain: if we do obtain a result, then that result is unique. &lt;/p&gt;</content><category term="misc"></category></entry></feed>
