@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Alissa Pajer's Blorg - Alissa Pajer</title><link href="/" rel="alternate"></link><link href="/feeds/alissa-pajer.atom.xml" rel="self"></link><id>/</id><updated>2021-05-01T00:00:00-04:00</updated><entry><title>mathpost</title><link href="/posts/mathpost.html" rel="alternate"></link><published>2021-05-01T00:00:00-04:00</published><updated>2021-05-01T00:00:00-04:00</updated><author><name>Alissa Pajer</name></author><id>tag:None,2021-05-01:/posts/mathpost.html</id><summary type="html">&lt;p&gt;This post is to test math&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Alissa Pajer's Blorg - Alissa Pajer</title><link href="/" rel="alternate"></link><link href="/feeds/alissa-pajer.atom.xml" rel="self"></link><id>/</id><updated>2021-05-02T00:00:00-04:00</updated><entry><title>Research Resources</title><link href="/posts/research-resources.html" rel="alternate"></link><published>2021-05-02T00:00:00-04:00</published><updated>2021-05-02T00:00:00-04:00</updated><author><name>Alissa Pajer</name></author><id>tag:None,2021-05-02:/posts/research-resources.html</id><content type="html">&lt;h2&gt;TDA Theory&lt;/h2&gt;
+&lt;h2&gt;TDA Applications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://arxiv.org/abs/2102.09380"&gt;Topological data analysis of C. elegans locomotion and behavior&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;Feb 2021&lt;/li&gt;
+&lt;li&gt;Thomas, Ashleigh&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Functional Programming&lt;/h2&gt;</content><category term="misc"></category><category term="math"></category></entry><entry><title>mathpost</title><link href="/posts/mathpost.html" rel="alternate"></link><published>2021-05-01T00:00:00-04:00</published><updated>2021-05-01T00:00:00-04:00</updated><author><name>Alissa Pajer</name></author><id>tag:None,2021-05-01:/posts/mathpost.html</id><summary type="html">&lt;p&gt;This post is to test math&lt;/p&gt;
 &lt;div class="math"&gt;$$x = y^z$$&lt;/div&gt;
 &lt;p&gt;but can it do &lt;span class="math"&gt;\(i=n^{line}\)&lt;/span&gt; math?
 &lt;/p&gt;

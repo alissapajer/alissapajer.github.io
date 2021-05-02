@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Alissa Pajer's Blorg - Alissa Pajer</title><link>/</link><description></description><lastBuildDate>Sat, 01 May 2021 00:00:00 -0400</lastBuildDate><item><title>mathpost</title><link>/posts/mathpost.html</link><description>&lt;p&gt;This post is to test math&lt;/p&gt;
+<rss version="2.0"><channel><title>Alissa Pajer's Blorg - Alissa Pajer</title><link>/</link><description></description><lastBuildDate>Sun, 02 May 2021 00:00:00 -0400</lastBuildDate><item><title>Research Resources</title><link>/posts/research-resources.html</link><description>&lt;h2&gt;TDA Theory&lt;/h2&gt;
+&lt;h2&gt;TDA Applications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://arxiv.org/abs/2102.09380"&gt;Topological data analysis of C. elegans locomotion and behavior&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;Feb 2021&lt;/li&gt;
+&lt;li&gt;Thomas, Ashleigh&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Functional Programming&lt;/h2&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alissa Pajer</dc:creator><pubDate>Sun, 02 May 2021 00:00:00 -0400</pubDate><guid isPermaLink="false">tag:None,2021-05-02:/posts/research-resources.html</guid><category>misc</category><category>math</category></item><item><title>mathpost</title><link>/posts/mathpost.html</link><description>&lt;p&gt;This post is to test math&lt;/p&gt;
 &lt;div class="math"&gt;$$x = y^z$$&lt;/div&gt;
 &lt;p&gt;but can it do &lt;span class="math"&gt;\(i=n^{line}\)&lt;/span&gt; math?
 &lt;/p&gt;
