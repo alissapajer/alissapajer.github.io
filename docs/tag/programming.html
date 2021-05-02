@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>Alissa Pajer's Blorg - Haskell Fixity</title>
+        <title>Alissa Pajer's Blorg - programming tag</title>
         <meta charset="utf-8" />
         <meta name="generator" content="Pelican" />
         <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blorg Full Atom Feed" />
-        <link href="/feeds/misc.atom.xml" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blorg Categories Atom Feed" />
 
         <link rel="stylesheet" href="/theme/css/rdark.css" />
 	<link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
@@ -25,13 +24,6 @@
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
-
-
-
-
-    <meta name="tags" content="haskell" />
-    <meta name="tags" content="programming" />
-
 </head>
 
 <body id="index" class="home">
@@ -40,31 +32,47 @@
         </header><!-- /#banner -->
         <nav id="menu"><ul>
         </ul></nav><!-- /#menu -->
-<section id="content" class="body">
-  <header>
-    <h2 class="entry-title">
-      <a href="/posts/2014-03-15-haskellfixity.html" rel="bookmark"
-         title="Permalink to Haskell Fixity">Haskell Fixity</a></h2>
- 
-  </header>
-  <footer class="post-info">
-    <time class="published" datetime="2014-03-15T00:00:00+00:00">
-      Sat 15 March 2014
-    </time>
-    <address class="vcard author">
-      By           <a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a>
-    </address>
-    <div class="category">
-        Category: <a href="/category/misc.html">misc</a>
-    </div>
-    <div class="tags">
-        Tags:
-            <a href="/tag/haskell.html">haskell</a>
-            <a href="/tag/programming.html">programming</a>
-    </div>
-  </footer><!-- /.post-info -->
-  <div class="entry-content">
-    <p>Let's consider some Haskell. Here's a function:</p>
+<section id="content">
+
+<ul>
+      <a href="/tag/scala.html">scala</a>
+      <a href="/tag/programming.html">programming</a>
+      <a href="/tag/haskell.html">haskell</a>
+      <a href="/tag/math.html">math</a>
+      <a href="/tag/computers.html">computers</a>
+</ul>
+
+<!--<h2>Articles tagged with programming</h2>
+-->
+
+<ul id="post-list">
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-06-19-scalavariance.html" rel="bookmark" title="Permalink to Notions of Variance in Scala">
+                    Notions of Variance in Scala</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-06-19T00:00:00+00:00"> Thu 19 June 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>Here is a <a href="https://gist.github.com/alissapajer/50c912d739346c1f00dd">github gist</a> with some exercises explaining variance of functors in Scala. Additionally, it explains variance of types over their type parameters.</p>
+<p>I also wrote up a <a href="/images/FunctorMorphismPreservationProof.pdf">proof</a> that a given functor implementation preserves morphism composition.</p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-03-15-haskellfixity.html" rel="bookmark" title="Permalink to Haskell Fixity">
+                    Haskell Fixity</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-03-15T00:00:00+00:00"> Sat 15 March 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>Let's consider some Haskell. Here's a function:</p>
 <div class="highlight"><pre><span></span><code><span class="n">zipSum</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="p">(</span><span class="n">Num</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"></span>
 <span class="n">zipSum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zipWith</span><span class="w"> </span><span class="p">(</span><span class="o">+</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
@@ -128,9 +136,79 @@
 <span class="w">  </span><span class="k">where</span><span class="w"> </span><span class="n">summed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">\</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
 </code></pre></div>
 
-<p>Thanks to <a href="https://twitter.com/puffnfresh">\@puffnfresh</a> for pointing out that we can use <code>zipWith</code> to implement this function.</p>
-  </div><!-- /.entry-content -->
-</section>
+<p>Thanks to <a href="https://twitter.com/puffnfresh">\@puffnfresh</a> for pointing out that we can use <code>zipWith</code> to implement this function.</p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-02-22-haskellflip.html" rel="bookmark" title="Permalink to Haskell Flip">
+                    Haskell Flip</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-02-22T00:00:00+00:00"> Sat 22 February 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>How can we change the order of the arguments to a function? After I answered this question, I realized it's actually a very odd question to ask.</p>
+<p>I'm working my way though <a href="http://learnyouahaskell.com/">Learn You a Haskell for Great Good</a>, and in the <a href="http://learnyouahaskell.com/higher-order-functions#curried-functions">Curried Functions</a> section, the author describes the Haskell function <code>flip</code> like so: <em>"Flip simply takes a function and returns a function that is like our original function, only the first two arguments are flipped."</em> Without scrolling down further, I decided to implement <code>flip</code> based on this sentence alone.</p>
+<p>I started with the type signature </p>
+<div class="highlight"><pre><span></span><code><span class="err">myFlip :: (a -&gt; b -&gt; c) -&gt; (b -&gt; a -&gt; c)</span>
+</code></pre></div>
+
+<p>and my first attempt at implementation trailed off rather quickly:</p>
+<div class="highlight"><pre><span></span><code><span class="err">myFlip f = ...</span>
+</code></pre></div>
+
+<p>Given only a function <code>f :: a -&gt; b -&gt; c</code>, and nothing to apply to it, I had reached a dead end, so I decided to implement <code>f</code>, and then <code>flip</code> this implementation. I wanted the type variables <code>a</code>, <code>b</code>, and <code>c</code> to be distinct so I could easily keep track of them. Here's my function:</p>
+<div class="highlight"><pre><span></span><code><span class="err">myImpl :: Char -&gt; Bool -&gt; String</span>
+<span class="err">myImpl char bool = char : (show bool)</span>
+</code></pre></div>
+
+<p>And now to flip it!</p>
+<div class="highlight"><pre><span></span><code><span class="err">flippedMyImpl :: Bool -&gt; Char -&gt; String</span>
+<span class="err">flippedMyImpl bool char = myImpl char bool</span>
+</code></pre></div>
+
+<p>Well, that is simple enough. The types lead way! And suddenly I realized that I just might have access to type variables <code>a</code> and <code>b</code>. But I needed to implement the full signature of <code>myFlip</code> using these specific types to fully understand. I combined <code>myImpl</code> and <code>flippedMyImpl</code> to produce</p>
+<div class="highlight"><pre><span></span><code><span class="err">flipWithTypes :: (Char -&gt; Bool -&gt; String) -&gt; Bool -&gt; Char -&gt; String</span>
+<span class="err">flipWithTypes f bool char = f char bool</span>
+</code></pre></div>
+
+<p>My key realization was that I could remove the parentheses around <code>(Bool -&gt; Char -&gt; String)</code> without changing the type signature. Once I did this, I realized that I had access to two more function arguments! Before removing the parentheses, my mind had written off <code>(b -&gt; a -&gt; c)</code> as an impenetrable block.</p>
+<p>Once I wrote this last implementation, it was immediately clear that I had just written a non-parametric version of <code>myFlip</code>. There is nothing special about the types I had chosen; they could just as easily be type variables. And so we arrive at our solution:</p>
+<div class="highlight"><pre><span></span><code><span class="err">myFlip :: (a -&gt; b -&gt; c) -&gt; b -&gt; a -&gt; c</span>
+<span class="err">myFlip f y x = f x y</span>
+</code></pre></div>
+
+<p>To implement <code>myFlip</code>, we needed to determine how the function would handle itself when fully applied. But our goal in writing <code>myFlip</code> is to return another (partially applied) function with type <code>b -&gt; a -&gt; c</code>. The key to the implementation of <code>flip</code> that wasn't obvious at first is that we need to provide a full implementation in order to later partially apply it.</p>
+<p>In doing this exercise, my conception of a function changed. Now when I think of a function, I think of something linear, something in which each parameter must be applied in its prescribed order. And if that order is to be broken, another function must be applied to faciliate this change in order.</p>
+<p>Really, <code>flip</code> is a formalization of how we handle the permutations of function application orders in Haskell. In math, we've seen that given a function <code>f(x,y,z)</code>, we can consider <code>g(y,z) = f(3,y,z)</code> or <code>h(y) = f(5,y,6)</code> without any concern, because the order in which we provide values for our variables doesn't matter.</p>
+<p>But since in Haskell all functions take exactly one parameter, and thus multi-parameter functions are a semantic illusion, one must make explicit how to pass in parameters in a different order. Hence we arrive at the <code>flip</code> function.</p>
+<p>To tie up this post, it's odd, from a non-functional point of view, to ask how we can flip the order of function arguments because the question assumes that function arguments have an order in the first place! Though, once you recall the definitions of lambda calculus and think about different reduction rules, the fact that functions innately order their parameters seems almost intuitive. And then I realized: <a href="http://en.wikipedia.org/wiki/Church%E2%80%93Rosser_theorem">Church-Rosser</a>. And guess what? I've already written a <a href="/posts/2013-03-26-churchrosser.html">blog post</a> about that.</p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-02-19-categorytheorystrangeloop.html" rel="bookmark" title="Permalink to Category Theory at Strange Loop 2013">
+                    Category Theory at Strange Loop 2013</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-02-19T00:00:00+00:00"> Wed 19 February 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p><img alt="diagram" src="/images/diagram.png" title="diagram">
+Back in September 2013 I gave a talk titled "Category Theory: An Abstraction for Anything" at the <a href="https://thestrangeloop.com/">Strange Loop Conference</a>. A few days ago, the <a href="http://www.infoq.com/presentations/category-theory">video</a> for my talk was released. </p>
+<p>Additionally, I wrote a <a href="http://engineering.richrelevance.com/closing-the-loop-on-category-theory-polymorphism-currying-and-more/">blog post</a> about this talk that was published on my employer's blog. </p>
+<p>Here's the talk abstract, reproduced from the <a href="https://thestrangeloop.com/sessions/category-theory-an-abstraction-for-anything">Strange Loop website</a>:</p>
+<p><em>Category theory provides a mathematically sound foundation on which we can create collections of objects and express morphisms between them. Together, along with a few simple rules, a collection of objects and morphisms forms a category to which we can apply many useful results, such as the uniqueness of an identity morphism. Furthermore, once we have a category in hand, we can formally explore the relationships it has with other categories, deducing powerful and practical abstractions.</em></p>
+<p><em>The power of category theory lies in the relative simplicity and accessibility of its definitions. From just a handful of straightforward concepts, we can formalize many concrete ideas such as directed acyclic graphs, currying, polymorphic functions, and Haskell itself. This talk will introduce the basics of category theory, while simultaneously diving into specific programming-related examples of categories, functors, and natural transformations. In addition to exploring profound and beautiful concepts, this talk aims to provide you with the tools necessary to recognize category-theoretical patterns in your own programming projects.</em></p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+</ul><!-- /#posts-list -->
+</section><!-- /#content -->
         <footer id="contentinfo" class="body">
                 <address id="about" class="vcard body">
                 Proudly powered by <a href="https://getpelican.com/">Pelican</a>,

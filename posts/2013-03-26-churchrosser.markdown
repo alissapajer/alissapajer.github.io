@@ -3,6 +3,7 @@ title: Insights into Church-Rosser
 author: Alissa Pajer
 save_as: posts/2013-03-26-churchrosser.html
 url: posts/2013-03-26-churchrosser.html
+tags: math
 ---
 
 *This post was originally published on the precog.com engineering blog.*

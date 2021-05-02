@@ -7,6 +7,7 @@ SITEDESCRIPTION="this is a worb site"
 OUTPUT_PATH="docs/"
 ARTICLE_URL="posts/{slug}.html"
 ARTICLE_SAVE_AS="posts/{slug}.html"
+DISPLAY_CATEGORIES_ON_MENU=False
 
 #PLUGINS=['page-hierarchy']
 

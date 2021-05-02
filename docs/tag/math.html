@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>Alissa Pajer's Blorg - Insights into Church-Rosser</title>
+        <title>Alissa Pajer's Blorg - math tag</title>
         <meta charset="utf-8" />
         <meta name="generator" content="Pelican" />
         <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blorg Full Atom Feed" />
-        <link href="/feeds/misc.atom.xml" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blorg Categories Atom Feed" />
 
         <link rel="stylesheet" href="/theme/css/rdark.css" />
 	<link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
@@ -25,12 +24,6 @@
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
-
-
-
-
-    <meta name="tags" content="math" />
-
 </head>
 
 <body id="index" class="home">
@@ -39,30 +32,51 @@
         </header><!-- /#banner -->
         <nav id="menu"><ul>
         </ul></nav><!-- /#menu -->
-<section id="content" class="body">
-  <header>
-    <h2 class="entry-title">
-      <a href="/posts/2013-03-26-churchrosser.html" rel="bookmark"
-         title="Permalink to Insights into Church-Rosser">Insights into Church-Rosser</a></h2>
- 
-  </header>
-  <footer class="post-info">
-    <time class="published" datetime="2013-03-26T00:00:00+00:00">
-      Tue 26 March 2013
-    </time>
-    <address class="vcard author">
-      By           <a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a>
-    </address>
-    <div class="category">
-        Category: <a href="/category/misc.html">misc</a>
-    </div>
-    <div class="tags">
-        Tags:
-            <a href="/tag/math.html">math</a>
-    </div>
-  </footer><!-- /.post-info -->
-  <div class="entry-content">
-    <p><em>This post was originally published on the precog.com engineering blog.</em></p>
+<section id="content">
+
+<ul>
+      <a href="/tag/scala.html">scala</a>
+      <a href="/tag/programming.html">programming</a>
+      <a href="/tag/haskell.html">haskell</a>
+      <a href="/tag/math.html">math</a>
+      <a href="/tag/computers.html">computers</a>
+</ul>
+
+<!--<h2>Articles tagged with math</h2>
+-->
+
+<ul id="post-list">
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-02-19-categorytheorystrangeloop.html" rel="bookmark" title="Permalink to Category Theory at Strange Loop 2013">
+                    Category Theory at Strange Loop 2013</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-02-19T00:00:00+00:00"> Wed 19 February 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p><img alt="diagram" src="/images/diagram.png" title="diagram">
+Back in September 2013 I gave a talk titled "Category Theory: An Abstraction for Anything" at the <a href="https://thestrangeloop.com/">Strange Loop Conference</a>. A few days ago, the <a href="http://www.infoq.com/presentations/category-theory">video</a> for my talk was released. </p>
+<p>Additionally, I wrote a <a href="http://engineering.richrelevance.com/closing-the-loop-on-category-theory-polymorphism-currying-and-more/">blog post</a> about this talk that was published on my employer's blog. </p>
+<p>Here's the talk abstract, reproduced from the <a href="https://thestrangeloop.com/sessions/category-theory-an-abstraction-for-anything">Strange Loop website</a>:</p>
+<p><em>Category theory provides a mathematically sound foundation on which we can create collections of objects and express morphisms between them. Together, along with a few simple rules, a collection of objects and morphisms forms a category to which we can apply many useful results, such as the uniqueness of an identity morphism. Furthermore, once we have a category in hand, we can formally explore the relationships it has with other categories, deducing powerful and practical abstractions.</em></p>
+<p><em>The power of category theory lies in the relative simplicity and accessibility of its definitions. From just a handful of straightforward concepts, we can formalize many concrete ideas such as directed acyclic graphs, currying, polymorphic functions, and Haskell itself. This talk will introduce the basics of category theory, while simultaneously diving into specific programming-related examples of categories, functors, and natural transformations. In addition to exploring profound and beautiful concepts, this talk aims to provide you with the tools necessary to recognize category-theoretical patterns in your own programming projects.</em></p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2013-03-26-churchrosser.html" rel="bookmark" title="Permalink to Insights into Church-Rosser">
+                    Insights into Church-Rosser</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2013-03-26T00:00:00+00:00"> Tue 26 March 2013 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p><em>This post was originally published on the precog.com engineering blog.</em></p>
 <p>Untyped lambda calculus is powerful. In fact, every computable function can be encoded into lambda calculus, and thus so can every bit of Scala code you've ever written. Though, anything more complicated than your basic combinator would be almost indecipherable in its lambda calculus form. As an example, here's what the addition combinator for the Church numerals <code>c_n = λfx.fn(x)</code> looks like in lambda calculus: </p>
 <div class="highlight"><pre><span></span><code><span class="err">A+ = λxypq.xp(ypq)</span>
 </code></pre></div>
@@ -144,9 +158,11 @@ Now in order to prove Church-Rosser, we'll prove a lemma first, namely the Strip
 (iv) Let <code>A = (<ins>λ</ins>x.P)Q</code> for <code>P, Q ∈ V</code>. Assume the statement holds for <code>P</code> and <code>Q</code>. Show that <code>ψ(A)</code> β-reduces to <code>φ(A)</code>.</p>
 <p>And that's the outline of the proof of the Strip Lemma! </p>
 <p><strong>Conclusion:</strong></p>
-<p>In summary, we gave the definition for a lambda-term, considered the <code>Ω</code>-combinator as an example of a lambda-term without a normal form, and outlined a proof of the Church-Rosser Theorem. So what does Church-Rosser tell us? If a term has a normal form, then that normal form is unique. This means that if we evaluate a function using two different strategies, the results will be equal. Of course, this doesn't guarantee that every evaluation strategy will terminate. But one thing we know for certain: if we do obtain a result, then that result is unique. </p>
-  </div><!-- /.entry-content -->
-</section>
+<p>In summary, we gave the definition for a lambda-term, considered the <code>Ω</code>-combinator as an example of a lambda-term without a normal form, and outlined a proof of the Church-Rosser Theorem. So what does Church-Rosser tell us? If a term has a normal form, then that normal form is unique. This means that if we evaluate a function using two different strategies, the results will be equal. Of course, this doesn't guarantee that every evaluation strategy will terminate. But one thing we know for certain: if we do obtain a result, then that result is unique. </p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+</ul><!-- /#posts-list -->
+</section><!-- /#content -->
         <footer id="contentinfo" class="body">
                 <address id="about" class="vcard body">
                 Proudly powered by <a href="https://getpelican.com/">Pelican</a>,

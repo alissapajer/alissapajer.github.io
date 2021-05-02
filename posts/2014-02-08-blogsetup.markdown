@@ -3,6 +3,7 @@ title: Blog Setup
 author: Alissa Pajer
 save_as: posts/2014-02-08-blogsetup.html
 url: posts/2014-02-08-blogsetup.html
+tags: computers
 ---
 
 Edit 2021-05-01: This blog is no longer generated with Hackyll. It is generated with Pelican.
