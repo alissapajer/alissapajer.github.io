@@ -4,12 +4,12 @@
           <title>Alissa Pajer's Blorg - Insights into Church-Rosser</title>
         <meta charset="utf-8" />
         <meta name="generator" content="Pelican" />
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blorg Full Atom Feed" />
-        <link href="/feeds/misc.atom.xml" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blorg Categories Atom Feed" />
+        <link href="https://alissapajer.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blorg Full Atom Feed" />
+        <link href="https://alissapajer.github.io/feeds/misc.atom.xml" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blorg Categories Atom Feed" />
 
-        <link rel="stylesheet" href="/theme/css/rdark.css" />
-	<link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
-        <link href="/" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blorg ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <link rel="stylesheet" href="https://alissapajer.github.io/theme/css/rdark.css" />
+	<link rel="stylesheet" type="text/css" href="https://alissapajer.github.io/theme/css/main.css" />
+        <link href="https://alissapajer.github.io/" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blorg ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	
 <!-- Using MathJax, with the delimiters $ -->
 <!-- Conflict with pygments for the .mo and .mi -->
@@ -35,30 +35,30 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="/">Alissa Pajer's Blorg</a></h1>
+                <h1><a href="https://alissapajer.github.io/">Alissa Pajer's Blorg</a></h1>
         </header><!-- /#banner -->
         <nav id="menu"><ul>
         </ul></nav><!-- /#menu -->
 <section id="content" class="body">
   <header>
     <h2 class="entry-title">
-      <a href="/posts/2013-03-26-churchrosser.html" rel="bookmark"
+      <a href="https://alissapajer.github.io/posts/2013-03-26-churchrosser.html" rel="bookmark"
          title="Permalink to Insights into Church-Rosser">Insights into Church-Rosser</a></h2>
  
   </header>
   <footer class="post-info">
-    <time class="published" datetime="2013-03-26T00:00:00+00:00">
+    <time class="published" datetime="2013-03-26T00:00:00-04:00">
       Tue 26 March 2013
     </time>
     <address class="vcard author">
-      By           <a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a>
+      By           <a class="url fn" href="https://alissapajer.github.io/author/alissa-pajer.html">Alissa Pajer</a>
     </address>
     <div class="category">
-        Category: <a href="/category/misc.html">misc</a>
+        Category: <a href="https://alissapajer.github.io/category/misc.html">misc</a>
     </div>
     <div class="tags">
         Tags:
-            <a href="/tag/math.html">math</a>
+            <a href="https://alissapajer.github.io/tag/math.html">math</a>
     </div>
   </footer><!-- /.post-info -->
   <div class="entry-content">
@@ -116,7 +116,7 @@ Now in order to prove Church-Rosser, we'll prove a lemma first, namely the Strip
 <p>Note that once we've proven the Strip Lemma, Church-Rosser follows immediately by induction on the natural numbers. (First prove the statement for <code>n=1</code>. Then prove that if the statement holds for an arbitrary <code>n</code>, it holds for <code>n+1</code>.) To see this visually, imagine filling in the Church-Rosser diagram with these strips. </p>
 <p>Proceeding with the proof of the Strip Lemma, the correct question to ask is, how do we obtain a candidate <code>N3</code>? Well, we know that <code>M</code> β-reduces to <code>N1</code> in a single step, so we'll consider this redex and mark it in <code>M</code>. Now as we perform the multiple reductions on <code>M</code> that ultimately reduce to <code>N2</code>, we track this marked lambda term until we reach <code>N2</code>. We now perform the β-reduction on this marked term in <code>N2</code>, and that produces our candidate <code>N3</code>.</p>
 <p>Let's make this idea of marking more formal with some notation. Specifically, to keep track of a certain redex, we'll underline it like this: <code>(<ins>λ</ins>x.M)N</code>, and we'll keep that lambda underlined until we β-reduce it. With this new notation, here’s an example of the Strip Lemma with actual lambda terms. (We’ll introduce <code>φ</code> in a couple of paragraphs; for now just think of it as a β-reduction.)</p>
-<p><img alt="" src="/images/ChurchRosser3.png" title="ChurchRosser3"></p>
+<p><img alt="ChurchRosser3" src="/images/ChurchRosser3.png" title="ChurchRosser3"></p>
 <p><strong>Details of the Proof:</strong></p>
 <p>Given that we now allow underlined lambdas in our set of allowed terms, what does this new set look like formally? Let's call it <code><ins>𝚲</ins></code>. We'll define it inductively, as we defined <code>𝚲</code> earlier. The first three parts of the definition will be analogous to before, defining variables, application, and abstraction. In the fourth part we will include underlined lambdas only in the case when we have an abstraction followed by an application. This is because the only lambda-terms we need to trace are ones we know will be β-reduced.</p>
 <pre><code>(i) If x ∈ V, then x ∈ <ins>𝚲</ins>.
@@ -126,7 +126,7 @@ Now in order to prove Church-Rosser, we'll prove a lemma first, namely the Strip
 </code></pre>
 
 <p>Consider the following diagram. Note that the front rectangle is the same as the diagram in the statement of the Strip Lemma. The other terms, namely <code>M'</code> and <code>N2'</code>, we construct for purposes of the proof.</p>
-<p><img alt="" src="/images/ChurchRosser4.png" title="ChurchRosser4"></p>
+<p><img alt="ChruchRosser4" src="/images/ChurchRosser4.png" title="ChurchRosser4"></p>
 <p>We construct <code>M'</code> to be equivalent to <code>M</code>, except that in it we underlined the <code>λ</code> that was reduced to obtain <code>N1</code>. The function <code>ψ: <ins>𝚲</ins> -&gt; 𝚲</code> simply erases all underlines, so that</p>
 <pre><code>ψ((<ins>λ</ins>x.M)N) = (λx.ψ(M))ψ(N)</code></pre>
 
@@ -134,7 +134,7 @@ Now in order to prove Church-Rosser, we'll prove a lemma first, namely the Strip
 <pre><code>φ((<ins>λ</ins>x.M)N) = φ(M)[x := φ(N)]</code></pre>
 
 <p>Now that we have our candidate <code>N3</code>, we only need to prove that we can draw solid lines in place of the dotted ones. I will outline a proof showing that <code>N2</code> β-reduces to <code>N3</code> and will leave the other part of the proof as an exercise for the reader. We will outline a proof of the following diagram, which is the front triangle in the previous diagram.</p>
-<p><img alt="" src="/images/ChurchRosser5.png" title="ChurchRosser5"></p>
+<p><img alt="ChurchRosser5" src="/images/ChurchRosser5.png" title="ChurchRosser5"></p>
 <p>In order to prove this, we will use the method of structural induction. Recall that initially we constructed <code>𝚲</code> inductively. Thus in order to prove something general about all elements of <code>𝚲</code>, we can use an induction technique that mimics the way in which we define <code>𝚲</code>. This is called induction on the structure of <code>𝚲</code>. Though note that in our case, <code>A ∈ <ins>𝚲</ins></code>, so we'll use induction on the structure of <code><ins>𝚲</ins></code>.</p>
 <p>First, the base case:</p>
 <p>(i) Let <code>A = x</code> for some <code>x ∈ V</code>. Then <code>ψ(x) = x</code> and <code>φ(x) = x</code>. And thus since <code>x</code> β-reduces to <code>x</code>, we're done.</p>

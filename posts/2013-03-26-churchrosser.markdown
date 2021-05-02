@@ -81,7 +81,7 @@ Proceeding with the proof of the Strip Lemma, the correct question to ask is, ho
 
 Let's make this idea of marking more formal with some notation. Specifically, to keep track of a certain redex, we'll underline it like this: <code>(<ins>λ</ins>x.M)N</code>, and we'll keep that lambda underlined until we β-reduce it. With this new notation, here’s an example of the Strip Lemma with actual lambda terms. (We’ll introduce `φ` in a couple of paragraphs; for now just think of it as a β-reduction.)
 
-![](/images/ChurchRosser3.png "ChurchRosser3")
+![ChurchRosser3](/images/ChurchRosser3.png "ChurchRosser3")
 
 **Details of the Proof:**
 
@@ -95,7 +95,7 @@ Given that we now allow underlined lambdas in our set of allowed terms, what doe
 
 Consider the following diagram. Note that the front rectangle is the same as the diagram in the statement of the Strip Lemma. The other terms, namely `M'` and `N2'`, we construct for purposes of the proof.
 
-![](/images/ChurchRosser4.png "ChurchRosser4")
+![ChruchRosser4](/images/ChurchRosser4.png "ChurchRosser4")
 
 We construct `M'` to be equivalent to `M`, except that in it we underlined the `λ` that was reduced to obtain `N1`. The function <code>ψ: <ins>𝚲</ins> -> 𝚲</code> simply erases all underlines, so that
 
@@ -107,7 +107,7 @@ We can now apply beta-reductions to `M'`, analogous to those applied to `M`, in 
 
 Now that we have our candidate `N3`, we only need to prove that we can draw solid lines in place of the dotted ones. I will outline a proof showing that `N2` β-reduces to `N3` and will leave the other part of the proof as an exercise for the reader. We will outline a proof of the following diagram, which is the front triangle in the previous diagram.
 
-![](/images/ChurchRosser5.png "ChurchRosser5")
+![ChurchRosser5](/images/ChurchRosser5.png "ChurchRosser5")
 
 In order to prove this, we will use the method of structural induction. Recall that initially we constructed `𝚲` inductively. Thus in order to prove something general about all elements of `𝚲`, we can use an induction technique that mimics the way in which we define `𝚲`. This is called induction on the structure of `𝚲`. Though note that in our case, <code>A ∈ <ins>𝚲</ins></code>, so we'll use induction on the structure of <code><ins>𝚲</ins></code>.
 
