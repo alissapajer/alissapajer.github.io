@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Alissa Pajer's Blorg - Alissa Pajer</title><link href="/" rel="alternate"></link><link href="/feeds/alissa-pajer.atom.xml" rel="self"></link><id>/</id><updated>2021-05-01T00:00:00+00:00</updated><entry><title>mathpost</title><link href="/mathpost.html" rel="alternate"></link><published>2021-05-01T00:00:00+00:00</published><updated>2021-05-01T00:00:00+00:00</updated><author><name>Alissa Pajer</name></author><id>tag:None,2021-05-01:/mathpost.html</id><summary type="html">&lt;p&gt;This post is to test math&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Alissa Pajer's Blorg - Alissa Pajer</title><link href="/" rel="alternate"></link><link href="/feeds/alissa-pajer.atom.xml" rel="self"></link><id>/</id><updated>2021-05-01T00:00:00+00:00</updated><entry><title>mathpost</title><link href="/posts/mathpost.html" rel="alternate"></link><published>2021-05-01T00:00:00+00:00</published><updated>2021-05-01T00:00:00+00:00</updated><author><name>Alissa Pajer</name></author><id>tag:None,2021-05-01:/posts/mathpost.html</id><summary type="html">&lt;p&gt;This post is to test math&lt;/p&gt;
 &lt;div class="math"&gt;$$x = y^z$$&lt;/div&gt;
 &lt;p&gt;but can it do &lt;span class="math"&gt;\(i=n^{line}\)&lt;/span&gt; math?
 &lt;/p&gt;
@@ -137,7 +137,7 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="misc"></category></entry><entry><title>2016-03-26-lambdaconf</title><link href="/2016-03-26-lambdaconf.html" rel="alternate"></link><published>2016-03-26T00:00:00+00:00</published><updated>2016-03-26T00:00:00+00:00</updated><author><name>Alissa Pajer</name></author><id>tag:None,2016-03-26:/2016-03-26-lambdaconf.html</id><summary type="html">&lt;p&gt;Thoughts on LambdaConf 2016&lt;/p&gt;
+&lt;/script&gt;</content><category term="misc"></category></entry><entry><title>2016-03-26-lambdaconf</title><link href="/posts/2016-03-26-lambdaconf.html" rel="alternate"></link><published>2016-03-26T00:00:00+00:00</published><updated>2016-03-26T00:00:00+00:00</updated><author><name>Alissa Pajer</name></author><id>tag:None,2016-03-26:/posts/2016-03-26-lambdaconf.html</id><summary type="html">&lt;p&gt;Thoughts on LambdaConf 2016&lt;/p&gt;
 &lt;p&gt;This article is written in response to the article &lt;a href="http://degoes.net/articles/lambdaconf-inclusion"&gt;Wrestling With Inclusion at LambdaConf&lt;/a&gt;. Twitter hashtag #lambdaconf.&lt;/p&gt;
 &lt;p&gt;We need to understand the consequences of our decisions. You decide to take an action, and then consequences follow. In this case, a racist speaker was given a speaking …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Thoughts on LambdaConf 2016&lt;/p&gt;
 &lt;p&gt;This article is written in response to the article &lt;a href="http://degoes.net/articles/lambdaconf-inclusion"&gt;Wrestling With Inclusion at LambdaConf&lt;/a&gt;. Twitter hashtag #lambdaconf.&lt;/p&gt;
