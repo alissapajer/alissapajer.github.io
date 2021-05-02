@@ -57,16 +57,134 @@
             <abbr class="published" title="2021-05-02T00:00:00-04:00"> Sun 02 May 2021 </abbr>
             <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
         </footer><!-- /.post-info -->
-        <!--<div class="entry-content"> <h2>TDA Theory</h2>
-<h2>TDA Applications</h2>
+        <!--<div class="entry-content"> <h2>TDA Background</h2>
 <ul>
-<li><a href="https://arxiv.org/abs/2102.09380">Topological data analysis of C. elegans locomotion and behavior</a><ul>
-<li>Feb 2021</li>
-<li>Thomas, Ashleigh</li>
+<li>
+<p><a href="https://arxiv.org/abs/1207.6437">Statistical topological data analysis using persistence landscapes</a></p>
+<ul>
+<li><strong>date</strong>: Jul 2012</li>
+<li><strong>author</strong>: Peter Bubenik</li>
+<li><strong>summary</strong>: introduces persistence landscapes to the literature</li>
+</ul>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/2004.04108">Introductory Topological Data Analysis</a></p>
+<ul>
+<li><strong>date</strong>: Apr 2020</li>
+<li><strong>author</strong>: Dayten Sheffar</li>
+<li><strong>keywords</strong>: metric topology, <span class="math">\(p\)</span>-norm, <span class="math">\(\infty\)</span>-norm, abstract simplexes, simplicial complexes, homeomorphic and homotopy equivalence, nerve theorem, mapper algorithm, betti numbers, persistent homology</li>
+<li><strong>summary</strong>: high-level introduction to TDA</li>
 </ul>
 </li>
 </ul>
-<h2>Functional Programming</h2> </div>--><!-- /.entry-content   not article.summary--> 
+<h2>TDA Theory: Computation</h2>
+<ul>
+<li><a href="https://geometry.stanford.edu/papers/zc-cph-05/zc-cph-05.pdf">Computing Persistent Homology</a><ul>
+<li><strong>author</strong>: Afra Zomorodian and Gunnar Carlsson</li>
+<li><strong>date</strong>: Nov 2004</li>
+<li><strong>doi</strong>: <a href="https://doi.org/10.1007/s00454-004-1146-y">doi</a></li>
+<li><strong>summary</strong>: the persistent homology of a filtered <span class="math">\(d\)</span>-dimensional simplicial complex is the standard homology of a graded module over a polynomial ring; gives an algorithm for computing individual persistent homology groups over an arbitrary PID</li>
+</ul>
+</li>
+</ul>
+<h2>TDA Theory: Stability</h2>
+<ul>
+<li>
+<p><a href="https://arxiv.org/abs/2103.10723">Notes on an Elementary Proof for the Stability of Persistence Diagrams</a></p>
+<ul>
+<li><strong>date</strong>: Mar 2021</li>
+<li><strong>author</strong>: Primoz Skraba, Katharine Turner</li>
+<li><strong>summary</strong>: these notes are a self-contained short proof of the stability of persistence diagrams; the background needed for <a href="https://arxiv.org/abs/2006.16824">arxiv:2006.16824</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/2006.16824">Wasserstein Stability for Persistence Diagrams</a></p>
+<ul>
+<li><strong>date</strong>: June 2020</li>
+<li><strong>author</strong>: Primoz Skraba, Katharine Turner</li>
+</ul>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/1809.09654">An algebraic Wasserstein distance for generalized persistence modules</a></p>
+<ul>
+<li><strong>date</strong>: Sep 2018</li>
+<li><strong>author</strong>: Peter Bubenik</li>
+<li><strong>summary</strong>: persistence modules are the algebraic counterpart to persistence diagrams; defines the Wasserstein distance for persistence modules; proves that the distance of a persistence module and its persistence diagram agree</li>
+</ul>
+</li>
+</ul>
+<h2>TDA Applications</h2>
+<ul>
+<li><a href="https://arxiv.org/abs/2102.09380">Topological data analysis of C. elegans locomotion and behavior</a><ul>
+<li><strong>date</strong>: Feb 2021</li>
+<li><strong>author</strong>: Ashleigh Thomas</li>
+<li><strong>summary</strong>: uses a sliding-window embedding to turn time series data into a point cloud that remembers the temporal information; thorough and clear intro to persistence diagrams and persistence landscapes</li>
+</ul>
+</li>
+</ul>
+<h2>Functional Programming</h2>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script> </div>--><!-- /.entry-content   not article.summary--> 
     </article></li>
     <hr width=100%>
     <li><article class="hentry">

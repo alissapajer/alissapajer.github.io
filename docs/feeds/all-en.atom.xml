@@ -1,14 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Alissa Pajer's Blorg</title><link href="/" rel="alternate"></link><link href="/feeds/all-en.atom.xml" rel="self"></link><id>/</id><updated>2021-05-02T00:00:00-04:00</updated><entry><title>Research Resources</title><link href="/posts/research-resources.html" rel="alternate"></link><published>2021-05-02T00:00:00-04:00</published><updated>2021-05-02T00:00:00-04:00</updated><author><name>Alissa Pajer</name></author><id>tag:None,2021-05-02:/posts/research-resources.html</id><content type="html">&lt;h2&gt;TDA Theory&lt;/h2&gt;
-&lt;h2&gt;TDA Applications&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Alissa Pajer's Blorg</title><link href="/" rel="alternate"></link><link href="/feeds/all-en.atom.xml" rel="self"></link><id>/</id><updated>2021-05-02T00:00:00-04:00</updated><entry><title>Research Resources</title><link href="/posts/research-resources.html" rel="alternate"></link><published>2021-05-02T00:00:00-04:00</published><updated>2021-05-02T00:00:00-04:00</updated><author><name>Alissa Pajer</name></author><id>tag:None,2021-05-02:/posts/research-resources.html</id><summary type="html">&lt;h2&gt;TDA Background&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://arxiv.org/abs/2102.09380"&gt;Topological data analysis of C. elegans locomotion and behavior&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;Feb 2021&lt;/li&gt;
-&lt;li&gt;Thomas, Ashleigh&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://arxiv.org/abs/1207.6437"&gt;Statistical topological data analysis using persistence landscapes&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;date&lt;/strong&gt;: Jul 2012&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;author&lt;/strong&gt;: Peter Bubenik&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;: introduces persistence landscapes to the literature&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://arxiv.org/abs/2004.04108"&gt;Introductory Topological Data Analysis&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;date&lt;/strong&gt;: Apr 2020&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;author&lt;/strong&gt;: Dayten Sheffar&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;: metric topology, &lt;span class="math"&gt;\(p\)&lt;/span&gt;-norm, &lt;span class="math"&gt;\(\infty\)&lt;/span&gt;-norm, abstract simplexes, simplicial complexes, homeomorphic and homotopy equivalence, nerve theorem, mapper …&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;script type='text/javascript'&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><content type="html">&lt;h2&gt;TDA Background&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://arxiv.org/abs/1207.6437"&gt;Statistical topological data analysis using persistence landscapes&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;date&lt;/strong&gt;: Jul 2012&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;author&lt;/strong&gt;: Peter Bubenik&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;: introduces persistence landscapes to the literature&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://arxiv.org/abs/2004.04108"&gt;Introductory Topological Data Analysis&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;date&lt;/strong&gt;: Apr 2020&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;author&lt;/strong&gt;: Dayten Sheffar&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;: metric topology, &lt;span class="math"&gt;\(p\)&lt;/span&gt;-norm, &lt;span class="math"&gt;\(\infty\)&lt;/span&gt;-norm, abstract simplexes, simplicial complexes, homeomorphic and homotopy equivalence, nerve theorem, mapper algorithm, betti numbers, persistent homology&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;: high-level introduction to TDA&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Functional Programming&lt;/h2&gt;</content><category term="misc"></category><category term="math"></category></entry><entry><title>mathpost</title><link href="/posts/mathpost.html" rel="alternate"></link><published>2021-05-01T00:00:00-04:00</published><updated>2021-05-01T00:00:00-04:00</updated><author><name>Alissa Pajer</name></author><id>tag:None,2021-05-01:/posts/mathpost.html</id><summary type="html">&lt;p&gt;This post is to test math&lt;/p&gt;
+&lt;h2&gt;TDA Theory: Computation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://geometry.stanford.edu/papers/zc-cph-05/zc-cph-05.pdf"&gt;Computing Persistent Homology&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;author&lt;/strong&gt;: Afra Zomorodian and Gunnar Carlsson&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;date&lt;/strong&gt;: Nov 2004&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;doi&lt;/strong&gt;: &lt;a href="https://doi.org/10.1007/s00454-004-1146-y"&gt;doi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;: the persistent homology of a filtered &lt;span class="math"&gt;\(d\)&lt;/span&gt;-dimensional simplicial complex is the standard homology of a graded module over a polynomial ring; gives an algorithm for computing individual persistent homology groups over an arbitrary PID&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;TDA Theory: Stability&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://arxiv.org/abs/2103.10723"&gt;Notes on an Elementary Proof for the Stability of Persistence Diagrams&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;date&lt;/strong&gt;: Mar 2021&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;author&lt;/strong&gt;: Primoz Skraba, Katharine Turner&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;: these notes are a self-contained short proof of the stability of persistence diagrams; the background needed for &lt;a href="https://arxiv.org/abs/2006.16824"&gt;arxiv:2006.16824&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://arxiv.org/abs/2006.16824"&gt;Wasserstein Stability for Persistence Diagrams&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;date&lt;/strong&gt;: June 2020&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;author&lt;/strong&gt;: Primoz Skraba, Katharine Turner&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://arxiv.org/abs/1809.09654"&gt;An algebraic Wasserstein distance for generalized persistence modules&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;date&lt;/strong&gt;: Sep 2018&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;author&lt;/strong&gt;: Peter Bubenik&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;: persistence modules are the algebraic counterpart to persistence diagrams; defines the Wasserstein distance for persistence modules; proves that the distance of a persistence module and its persistence diagram agree&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;TDA Applications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://arxiv.org/abs/2102.09380"&gt;Topological data analysis of C. elegans locomotion and behavior&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;date&lt;/strong&gt;: Feb 2021&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;author&lt;/strong&gt;: Ashleigh Thomas&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;: uses a sliding-window embedding to turn time series data into a point cloud that remembers the temporal information; thorough and clear intro to persistence diagrams and persistence landscapes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Functional Programming&lt;/h2&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="misc"></category><category term="math"></category></entry><entry><title>mathpost</title><link href="/posts/mathpost.html" rel="alternate"></link><published>2021-05-01T00:00:00-04:00</published><updated>2021-05-01T00:00:00-04:00</updated><author><name>Alissa Pajer</name></author><id>tag:None,2021-05-01:/posts/mathpost.html</id><summary type="html">&lt;p&gt;This post is to test math&lt;/p&gt;
 &lt;div class="math"&gt;$$x = y^z$$&lt;/div&gt;
 &lt;p&gt;but can it do &lt;span class="math"&gt;\(i=n^{line}\)&lt;/span&gt; math?
 &lt;/p&gt;
