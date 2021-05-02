@@ -3,11 +3,6 @@ tags: math
 
 ## TDA Background
 
-- [Statistical topological data analysis using persistence landscapes](https://arxiv.org/abs/1207.6437)
-    - **date**: Jul 2012
-    - **author**: Peter Bubenik
-    - **summary**: introduces persistence landscapes to the literature
-
 - [Introductory Topological Data Analysis](https://arxiv.org/abs/2004.04108)
     - **date**: Apr 2020
     - **author**: Dayten Sheffar
@@ -20,6 +15,11 @@ tags: math
 - [Persistent Homology: Theory and Practice](https://pub.ist.ac.at/~edels/Papers/2012-P-11-PHTheoryPractice.pdf)
     - **author**: Herbert Edelsbrunner, Dmitriy Morozov
     - **summary**: persistent homology survey of methods and applications
+
+- [Statistical topological data analysis using persistence landscapes](https://arxiv.org/abs/1207.6437)
+    - **date**: Jul 2012
+    - **author**: Peter Bubenik
+    - **summary**: introduces persistence landscapes to the literature
 
 ## TDA Theory: Stability
 
@@ -80,8 +80,6 @@ tags: math
     - **date**: 1993
     - **author**: Philip Wadler
     - **DOI**: [DOI](https://doi.org/10.1007/978-3-662-02880-3_8)
-
-- [The Two Dualities of Computation: Negative and Fractional Types]()
 
 ## Computer Science: Parsing
 
