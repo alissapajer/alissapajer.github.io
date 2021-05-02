@@ -4,6 +4,7 @@ SITENAME="Alissa Pajer's Blorg"
 FIRST_NAME='Alissa'
 LAST_NAME='Blog'
 SITEDESCRIPTION="this is a worb site"
+OUTPUT_PATH="docs/"
 
 #PLUGINS=['pelican_katex']
 #KATEX={'output': 'mathml',
