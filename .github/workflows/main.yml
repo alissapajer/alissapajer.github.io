@@ -17,4 +17,5 @@ jobs:
     - uses: alissapajer/gh-pages-pelican-action@0.1.10
 
       env:
+        PELICAN_CONTENT_FOLDER: posts
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
