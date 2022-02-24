@@ -18,4 +18,5 @@ jobs:
 
       env:
         PELICAN_CONTENT_FOLDER: posts
+        PELICAN_THEME_FOLDER: theme/basic
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
