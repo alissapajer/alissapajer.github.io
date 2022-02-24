@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <link rel="stylesheet" href="/theme/css/rdark.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/css/luney.css" />
+        <link href="/" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blorg ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <title>Alissa Pajer's Blorg - Research Resources</title>
+        <meta charset="utf-8" />
+        <meta name="generator" content="Pelican" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blorg Full Atom Feed" />
+        <link href="/feeds/misc.atom.xml" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blorg Categories Atom Feed" />
+
+
+
+
+    <meta name="tags" content="math" />
+
+
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  "HTML-CSS": {
+  styles: {
+  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+  },
+  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+  });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Alissa Pajer's Blorg</a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+        </ul></nav><!-- /#menu -->
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="/posts/research-resources.html" rel="bookmark"
+         title="Permalink to Research Resources">Research Resources</a></h2>
+ 
+  </header>
+  <footer class="post-info">
+    <time class="published" datetime="2021-05-02T00:00:00-04:00">
+      Sun 02 May 2021
+    </time>
+    <!---->
+    <!--<address class="vcard author">-->
+    <!--  By -->
+    <!--      <a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a>-->
+    <!--    -->
+    <!--</address>-->
+    <!---->
+    <!---->
+    <!--<div class="category">-->
+    <!--    Category: <a href="/category/misc.html">misc</a>-->
+    <!--</div>-->
+    <!---->
+    <div class="tags">
+        Tags:
+            <a href="/tag/math.html">math</a>
+    </div>
+  </footer><!-- /.post-info -->
+  <div class="entry-content">
+    <h2>TDA Background</h2>
+<ul>
+<li>
+<p><a href="https://arxiv.org/abs/2004.04108">Introductory Topological Data Analysis</a></p>
+<ul>
+<li><strong>date</strong>: Apr 2020</li>
+<li><strong>author</strong>: Dayten Sheffar</li>
+<li><strong>summary</strong>: high-level introduction to: metric topology, $p$-norm, $\infty$-norm, abstract simplexes, simplicial complexes, homeomorphic and homotopy equivalence, nerve theorem, mapper algorithm, betti numbers, persistent homology</li>
+</ul>
+</li>
+<li>
+<p><a href="https://pub.ist.ac.at/~edels/Papers/2016-B-01-PersDM.pdf">Persistent Homology</a></p>
+<ul>
+<li><strong>author</strong>: Herbert Edelsbrunner and Dmitriy Morozov</li>
+<li><strong>summary</strong>: glossary of all things persistent homology</li>
+</ul>
+</li>
+<li>
+<p><a href="https://pub.ist.ac.at/~edels/Papers/2012-P-11-PHTheoryPractice.pdf">Persistent Homology: Theory and Practice</a></p>
+<ul>
+<li><strong>author</strong>: Herbert Edelsbrunner, Dmitriy Morozov</li>
+<li><strong>summary</strong>: persistent homology survey of methods and applications</li>
+</ul>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/1207.6437">Statistical topological data analysis using persistence landscapes</a></p>
+<ul>
+<li><strong>date</strong>: Jul 2012</li>
+<li><strong>author</strong>: Peter Bubenik</li>
+<li><strong>summary</strong>: introduces persistence landscapes to the literature</li>
+</ul>
+</li>
+</ul>
+<h2>TDA Theory: Stability</h2>
+<ul>
+<li>
+<p><a href="https://arxiv.org/abs/2103.10723">Notes on an Elementary Proof for the Stability of Persistence Diagrams</a></p>
+<ul>
+<li><strong>date</strong>: Mar 2021</li>
+<li><strong>author</strong>: Primoz Skraba, Katharine Turner</li>
+<li><strong>summary</strong>: these notes are a self-contained short proof of the stability of persistence diagrams; the background needed for <a href="https://arxiv.org/abs/2006.16824">arxiv:2006.16824</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/2006.16824">Wasserstein Stability for Persistence Diagrams</a></p>
+<ul>
+<li><strong>date</strong>: June 2020</li>
+<li><strong>author</strong>: Primoz Skraba, Katharine Turner</li>
+</ul>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/1809.09654">An algebraic Wasserstein distance for generalized persistence modules</a></p>
+<ul>
+<li><strong>date</strong>: Sep 2018</li>
+<li><strong>author</strong>: Peter Bubenik</li>
+<li><strong>summary</strong>: persistence modules are the algebraic counterpart to persistence diagrams; defines the Wasserstein distance for persistence modules; proves that the distance of a persistence module and its persistence diagram agree</li>
+</ul>
+</li>
+</ul>
+<h2>TDA Theory: Computation</h2>
+<ul>
+<li>
+<p><a href="https://geometry.stanford.edu/papers/zc-cph-05/zc-cph-05.pdf">Computing Persistent Homology</a></p>
+<ul>
+<li><strong>date</strong>: Nov 2004</li>
+<li><strong>author</strong>: Afra Zomorodian and Gunnar Carlsson</li>
+<li><strong>DOI</strong>: <a href="https://doi.org/10.1007/s00454-004-1146-y">DOI</a></li>
+<li><strong>summary</strong>: the persistent homology of a filtered $d$-dimensional simplicial complex is the standard homology of a graded module over a polynomial ring; gives an algorithm for computing individual persistent homology groups over an arbitrary PID</li>
+</ul>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/2103.05608">Dory: Overcoming Barriers to Computing Persistent Homology</a></p>
+<ul>
+<li><strong>date</strong>: Mar 2021</li>
+<li><strong>author</strong>: Manu Aggarwal, Vipul Periwal</li>
+</ul>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/2003.07989">GPU-Accelerated Computation of Vietoris-Rips Persistence Barcodes</a></p>
+<ul>
+<li><strong>date</strong>: Mar 2020</li>
+<li><strong>author</strong>: Simon Zhang, Mengbai Xiao, Hao Wang</li>
+</ul>
+</li>
+</ul>
+<h2>TDA Applications</h2>
+<ul>
+<li>
+<p><a href="https://arxiv.org/abs/2102.09380">Topological data analysis of C. elegans locomotion and behavior</a></p>
+<ul>
+<li><strong>date</strong>: Feb 2021</li>
+<li><strong>author</strong>: Ashleigh Thomas</li>
+<li><strong>summary</strong>: uses a sliding-window embedding to turn time series data into a point cloud that remembers the temporal information; thorough and clear intro to persistence diagrams and persistence landscapes</li>
+</ul>
+</li>
+<li>
+<p><a href="https://jmlr.org/papers/v21/20-345.html">Topology of Deep Neural Networks</a></p>
+<ul>
+<li><strong>date</strong>: Apr 2020</li>
+<li><strong>author</strong>: Gregory Naitzat, Andrey Zhitnikov, Lek-Heng Lim</li>
+</ul>
+</li>
+</ul>
+<h2>Computer Science: Functional Programming</h2>
+<ul>
+<li>
+<p><a href="https://www2.cs.sfu.ca/CourseCentral/831/burton/Notes/July14/free.pdf">Theorems for free!</a></p>
+<ul>
+<li><strong>date</strong>: June 1989</li>
+<li><strong>author</strong>: Philip Wadler</li>
+</ul>
+</li>
+<li>
+<p><a href="https://homepages.inf.ed.ac.uk/wadler/papers/lineartaste/lineartaste-revised.pdf">A taste of linear logic</a></p>
+<ul>
+<li><strong>date</strong>: 1993</li>
+<li><strong>author</strong>: Philip Wadler</li>
+<li><strong>DOI</strong>: <a href="https://doi.org/10.1007/3-540-57182-5_12">DOI</a></li>
+<li><strong>summary</strong>: an introduction to intuitionistic logic and linear logic; how they correspond to type systems for functional languages via the notion of 'Propositions as Type'</li>
+</ul>
+</li>
+<li>
+<p><a href="https://homepages.inf.ed.ac.uk/wadler/papers/marktoberdorf/baastad.pdf">Monads for functional programming</a></p>
+<ul>
+<li><strong>date</strong>: 1993</li>
+<li><strong>author</strong>: Philip Wadler</li>
+<li><strong>DOI</strong>: <a href="https://doi.org/10.1007/978-3-662-02880-3_8">DOI</a></li>
+</ul>
+</li>
+</ul>
+<h2>Computer Science: Parsing</h2>
+<ul>
+<li>
+<p><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/mison-vldb17.pdf">Mison: A Fast JSON Parser for Data Analytics</a></p>
+<ul>
+<li><strong>date</strong>: 2017</li>
+<li><strong>summary</strong>: push down projections and filters into the parser</li>
+</ul>
+</li>
+<li>
+<p><a href="http://www.vldb.org/pvldb/vol11/p1576-palkar.pdf">Filter Before You Parse: Faster Analytics on Raw Data with Sparser</a></p>
+<ul>
+<li><strong>date</strong>: Aug 2018</li>
+<li><strong>summary</strong>: filter pre-parsing</li>
+</ul>
+</li>
+</ul>
+<h2>Logic</h2>
+<ul>
+<li><a href="https://www.lix.polytechnique.fr/~lutz/papers/medial-kurz.pdf">What could a Boolean category be?</a><ul>
+<li><strong>date</strong>: Jul 2006</li>
+<li><strong>author</strong>: Lutz Straßburger</li>
+</ul>
+</li>
+</ul>
+<h2>Misc</h2>
+<ul>
+<li><a href="https://arxiv.org/abs/1904.09828">Magic: The Gathering is Turing Complete</a><ul>
+<li><strong>date</strong>: Mar 2019</li>
+<li><strong>author</strong>: Alex Churchill, Stella Biderman, Austin Herrick</li>
+</ul>
+</li>
+</ul>
+  </div><!-- /.entry-content -->
+</section>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="/theme/css/rdark.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/css/luney.css" />
+        <link href="/" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blorg ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <title>Alissa Pajer's Blorg - programming tag</title>
+        <meta charset="utf-8" />
+        <meta name="generator" content="Pelican" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blorg Full Atom Feed" />
+
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  "HTML-CSS": {
+  styles: {
+  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+  },
+  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+  });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Alissa Pajer's Blorg</a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+        </ul></nav><!-- /#menu -->
+<section id="content">
+
+<ul>
+      <a href="/tag/math.html">math</a>
+      <a href="/tag/scala.html">scala</a>
+      <a href="/tag/programming.html">programming</a>
+      <a href="/tag/haskell.html">haskell</a>
+      <a href="/tag/computers.html">computers</a>
+</ul>
+
+<!--<h2>Articles tagged with programming</h2>
+-->
+
+<ul id="post-list">
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-06-19-scalavariance.html" rel="bookmark" title="Permalink to Notions of Variance in Scala">
+                    Notions of Variance in Scala</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-06-19T00:00:00-04:00"> Thu 19 June 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>Here is a <a href="https://gist.github.com/alissapajer/50c912d739346c1f00dd">github gist</a> with some exercises explaining variance of functors in Scala. Additionally, it explains variance of types over their type parameters.</p>
+<p>I also wrote up a <a href="/images/FunctorMorphismPreservationProof.pdf">proof</a> that a given functor implementation preserves morphism composition.</p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-03-15-haskellfixity.html" rel="bookmark" title="Permalink to Haskell Fixity">
+                    Haskell Fixity</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-03-15T00:00:00-04:00"> Sat 15 March 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>Let's consider some Haskell. Here's a function:</p>
+<div class="highlight"><pre><span></span><span class="n">zipSum</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="p">(</span><span class="n">Num</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"></span>
+<span class="n">zipSum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zipWith</span><span class="w"> </span><span class="p">(</span><span class="o">+</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+
+
+<p>This function will zip the two provided lists and then sum the pairs of elements, returning a single list of <code>Num</code>. For example: </p>
+<div class="highlight"><pre><span></span><span class="err">*Main&gt; zipSum [1,2,3,4] [3,4]</span>
+<span class="err">[4,6]</span>
+</pre></div>
+
+
+<p>Great, so what happens if we apply <code>zipSum</code> as an infix function and also apply a list concatenation.</p>
+<div class="highlight"><pre><span></span><span class="o">*</span><span class="n">Main</span><span class="o">&gt;</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="o">++</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> <span class="ss">`zipSum`</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">]</span>
+</pre></div>
+
+
+<p>Interesting, so it looks like <code>zipSum</code> takes precedence over <code>(++)</code>, when we've applied them both as infix operators. Example noted. Now let's write our own list concat function called <code>myConcat</code>:</p>
+<div class="highlight"><pre><span></span><span class="n">myConcat</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"></span>
+<span class="n">myConcat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+
+
+<p>We can perform "the same" function applications again, using our new <code>myConcat</code> function:</p>
+<div class="highlight"><pre><span></span><span class="o">*</span><span class="n">Main</span><span class="o">&gt;</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="ss">`myConcat`</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> <span class="ss">`zipSum`</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">14</span><span class="p">,</span><span class="mi">16</span><span class="p">]</span>
+</pre></div>
+
+
+<p>Ummm, so what just happened? That is not the same result we computed last time. This time, the list concatenation took precedence. Thus, and this is surprising, <code>(++)</code> and <code>myConcat</code> are not acting equivalently in this seemingly equivalent situation.</p>
+<p>Now, let's take a step back into math and think about what it means for two functions to be equal. Two functions <code>f</code> and <code>g</code> are defined to be equal if they have the same domain, and for each element <code>x</code> in their domain, <code>f(x) = g(x)</code>. Now, consider our two functions <code>(++)</code> and <code>myConcat</code>. These functions have identical type signatures, and hence the same domain. And since <code>myConcat</code> is effectively just a wrapping around <code>(++)</code>, then for any lists <code>l1</code> and <code>l2</code> of the same type, </p>
+<div class="highlight"><pre><span></span><span class="n">l1</span> <span class="o">++</span> <span class="n">l2</span> <span class="o">==</span> <span class="n">l1</span> <span class="ss">`myConcat`</span> <span class="n">l2</span>
+</pre></div>
+
+
+<p>Thus, by this definition of function equality, <code>myConcat</code> and <code>(++)</code> are equal functions. But we have just seen that, when applied as infix operators in conjunction with <code>zipSum</code>, they do not operate equivalently! It seems our definition of a function isn't correct. Or that we're actually not dealing with functions. So what's going on?</p>
+<p>Well, the problem we're dealing with here is the inherent ambiguity of infix operators. By using a function as an infix operator, we're using it in a way that lambda calculus doesn't define. Hence we need to provide our own custom infix operator rules in order for infix operators to make sense.</p>
+<p>To evaluate an expression like </p>
+<div class="highlight"><pre><span></span><span class="err">4 + 5 * 6 * 7</span>
+</pre></div>
+
+
+<p>we need to first decide on some evaluation rules. For example, we could assume that all infix operators have the same precedence and that they are all left associative. In that case, the above expression would be evaluated as </p>
+<div class="highlight"><pre><span></span><span class="err">(((4 + 5) * 6) * 7)</span>
+</pre></div>
+
+
+<p>That's one solution. But from the high level view of a function, that solution is really just as arbitrary as assigning a random fixity to every operator.</p>
+<p>Now it's worth noting that if we choose not to assume any rules when given a series of infix function applications, then the only sane thing left to do would be to assume that we can apply the operations in any order. But a simple example of numeric addition and multiplication shows us that this approach can trivially yield non-equal results from the same initial expresion. This cannot possibly be the correct solution.</p>
+<p>So even if we remove this infix ambiguity by defining a set of non-ambiguous infix evaluation rules, these rules are still arbitrary from the point of view of a function that only knows its type signature. Specifying the infix precedence and associativity of a function adds semantic meaning to a type signature that otherwise knew nothing about its implementation. In short, function behavior should not be governed by a secret fixity, not present in its type signature. (A language which can specify fixity in the type signature? Now you have my attention!)</p>
+<p>In all fairness, fixity isn't entirely secret. In ghci you can inquire about the fixity of any function using <code>:info</code>. For example:</p>
+<div class="highlight"><pre><span></span><span class="o">*</span><span class="n">Main</span><span class="o">&gt;</span><span class="w"> </span><span class="err">:</span><span class="n">info</span><span class="w"> </span><span class="p">(</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="p">(</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w">   </span><span class="c1">-- Defined in `GHC.Base&#39;</span>
+<span class="n">infixr</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">++</span><span class="w"></span>
+</pre></div>
+
+
+<p>Here we learn that <code>(++)</code> has right associativity with precedence level 5. Why is the associativity right, and not left or neutral? Recall that <code>(++)</code> has time complexity that is linear in the length of its <em>first</em> argument. A quick picture shows clearly that performing a series of <code>(++)</code> infix applications is more efficient if you do so assuming right associativity. Thus, Haskell exposes an implementation detail of a function through that function's fixity. Yikes that seems dangerous. What if the implementation details change? This is the sort of hole that bugs crawl out of.</p>
+<p>Though, should it really be up to the programmer to know the time complexity of <code>(++)</code> and write their code accordingly? In some situations it seems quite tempting to encode function implementation details with fixity, because then we can write <code>3 + 4 * 5</code> and have it parse as <code>3 + (4 * 5)</code>, as expected. But I will maintain my point that hardcoding implementation details or implementation semantics into the behavior of functions is impure and dangerous. In the simple cases, functions will do what we expect. In more complex code, we'll introduce bugs.</p>
+<p>I want types that are implementation agnostic and possible to reason about without additional information. Haskell functions used as infix operators don't provide that. So what world are we left in if</p>
+<div class="highlight"><pre><span></span><span class="n">x</span> <span class="ss">`op1`</span> <span class="n">y</span> <span class="ss">`op2`</span> <span class="n">z</span>
+</pre></div>
+
+
+<p>always generates a parser error? Well, that would be a world full of parentheses! The user would be required to add parentheses around their infix operators always, and without exception, until all ambiguity is resolved.</p>
+<p>Let's again consider the case of numeric addition and multiplication. These operations have a universally accepted precedence, which is entirely sensical when you think of <code>5 * 3</code> as <code>5 + 5 + 5</code>. So can't we at least maintain this precedence for these numeric operations? I say, nah. The Haskell functions <code>(+)</code> and <code>(*)</code> really should know nothing of their semantics. There is no reason <code>(*)</code> should take precendece over <code>(+)</code>, unless you consider the meaning of its implementaion in the larger context of math.</p>
+<p>So, lesson learned: equal functions can be defined with non-equal infix operators. (Recall the example of <code>zipSum</code> used with both <code>(++)</code> and <code>myConcat</code>.) There is of course an obvious solution to this problem: never use Haskell infix operators. What do we lose? Readability. What do we gain? Correctness. And in all reality, a series of three or more infix applications really should be broken into shorter expressions anyway.</p>
+<p><strong>Update:</strong> The original version of <code>zipSum</code> looked like this:</p>
+<div class="highlight"><pre><span></span><span class="n">zipSum</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="p">(</span><span class="n">Num</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"></span>
+<span class="n">zipSum</span><span class="w"> </span><span class="n">xs</span><span class="w"> </span><span class="n">ys</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">map</span><span class="w"> </span><span class="n">summed</span><span class="w"> </span><span class="p">(</span><span class="n">zip</span><span class="w"> </span><span class="n">xs</span><span class="w"> </span><span class="n">ys</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="k">where</span><span class="w"> </span><span class="n">summed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">\</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+</pre></div>
+
+
+<p>Thanks to <a href="https://twitter.com/puffnfresh">\@puffnfresh</a> for pointing out that we can use <code>zipWith</code> to implement this function.</p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-02-22-haskellflip.html" rel="bookmark" title="Permalink to Haskell Flip">
+                    Haskell Flip</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-02-22T00:00:00-05:00"> Sat 22 February 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>How can we change the order of the arguments to a function? After I answered this question, I realized it's actually a very odd question to ask.</p>
+<p>I'm working my way though <a href="http://learnyouahaskell.com/">Learn You a Haskell for Great Good</a>, and in the <a href="http://learnyouahaskell.com/higher-order-functions#curried-functions">Curried Functions</a> section, the author describes the Haskell function <code>flip</code> like so: <em>"Flip simply takes a function and returns a function that is like our original function, only the first two arguments are flipped."</em> Without scrolling down further, I decided to implement <code>flip</code> based on this sentence alone.</p>
+<p>I started with the type signature </p>
+<div class="highlight"><pre><span></span><span class="err">myFlip :: (a -&gt; b -&gt; c) -&gt; (b -&gt; a -&gt; c)</span>
+</pre></div>
+
+
+<p>and my first attempt at implementation trailed off rather quickly:</p>
+<div class="highlight"><pre><span></span><span class="err">myFlip f = ...</span>
+</pre></div>
+
+
+<p>Given only a function <code>f :: a -&gt; b -&gt; c</code>, and nothing to apply to it, I had reached a dead end, so I decided to implement <code>f</code>, and then <code>flip</code> this implementation. I wanted the type variables <code>a</code>, <code>b</code>, and <code>c</code> to be distinct so I could easily keep track of them. Here's my function:</p>
+<div class="highlight"><pre><span></span><span class="err">myImpl :: Char -&gt; Bool -&gt; String</span>
+<span class="err">myImpl char bool = char : (show bool)</span>
+</pre></div>
+
+
+<p>And now to flip it!</p>
+<div class="highlight"><pre><span></span><span class="err">flippedMyImpl :: Bool -&gt; Char -&gt; String</span>
+<span class="err">flippedMyImpl bool char = myImpl char bool</span>
+</pre></div>
+
+
+<p>Well, that is simple enough. The types lead way! And suddenly I realized that I just might have access to type variables <code>a</code> and <code>b</code>. But I needed to implement the full signature of <code>myFlip</code> using these specific types to fully understand. I combined <code>myImpl</code> and <code>flippedMyImpl</code> to produce</p>
+<div class="highlight"><pre><span></span><span class="err">flipWithTypes :: (Char -&gt; Bool -&gt; String) -&gt; Bool -&gt; Char -&gt; String</span>
+<span class="err">flipWithTypes f bool char = f char bool</span>
+</pre></div>
+
+
+<p>My key realization was that I could remove the parentheses around <code>(Bool -&gt; Char -&gt; String)</code> without changing the type signature. Once I did this, I realized that I had access to two more function arguments! Before removing the parentheses, my mind had written off <code>(b -&gt; a -&gt; c)</code> as an impenetrable block.</p>
+<p>Once I wrote this last implementation, it was immediately clear that I had just written a non-parametric version of <code>myFlip</code>. There is nothing special about the types I had chosen; they could just as easily be type variables. And so we arrive at our solution:</p>
+<div class="highlight"><pre><span></span><span class="err">myFlip :: (a -&gt; b -&gt; c) -&gt; b -&gt; a -&gt; c</span>
+<span class="err">myFlip f y x = f x y</span>
+</pre></div>
+
+
+<p>To implement <code>myFlip</code>, we needed to determine how the function would handle itself when fully applied. But our goal in writing <code>myFlip</code> is to return another (partially applied) function with type <code>b -&gt; a -&gt; c</code>. The key to the implementation of <code>flip</code> that wasn't obvious at first is that we need to provide a full implementation in order to later partially apply it.</p>
+<p>In doing this exercise, my conception of a function changed. Now when I think of a function, I think of something linear, something in which each parameter must be applied in its prescribed order. And if that order is to be broken, another function must be applied to faciliate this change in order.</p>
+<p>Really, <code>flip</code> is a formalization of how we handle the permutations of function application orders in Haskell. In math, we've seen that given a function <code>f(x,y,z)</code>, we can consider <code>g(y,z) = f(3,y,z)</code> or <code>h(y) = f(5,y,6)</code> without any concern, because the order in which we provide values for our variables doesn't matter.</p>
+<p>But since in Haskell all functions take exactly one parameter, and thus multi-parameter functions are a semantic illusion, one must make explicit how to pass in parameters in a different order. Hence we arrive at the <code>flip</code> function.</p>
+<p>To tie up this post, it's odd, from a non-functional point of view, to ask how we can flip the order of function arguments because the question assumes that function arguments have an order in the first place! Though, once you recall the definitions of lambda calculus and think about different reduction rules, the fact that functions innately order their parameters seems almost intuitive. And then I realized: <a href="http://en.wikipedia.org/wiki/Church%E2%80%93Rosser_theorem">Church-Rosser</a>. And guess what? I've already written a <a href="/posts/2013-03-26-churchrosser.html">blog post</a> about that.</p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-02-19-categorytheorystrangeloop.html" rel="bookmark" title="Permalink to Category Theory at Strange Loop 2013">
+                    Category Theory at Strange Loop 2013</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-02-19T00:00:00-05:00"> Wed 19 February 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p><img alt="diagram" src="/images/diagram.png" title="diagram">
+Back in September 2013 I gave a talk titled "Category Theory: An Abstraction for Anything" at the <a href="https://thestrangeloop.com/">Strange Loop Conference</a>. A few days ago, the <a href="http://www.infoq.com/presentations/category-theory">video</a> for my talk was released. </p>
+<p>Additionally, I wrote a <a href="http://engineering.richrelevance.com/closing-the-loop-on-category-theory-polymorphism-currying-and-more/">blog post</a> about this talk that was published on my employer's blog. </p>
+<p>Here's the talk abstract, reproduced from the <a href="https://thestrangeloop.com/sessions/category-theory-an-abstraction-for-anything">Strange Loop website</a>:</p>
+<p><em>Category theory provides a mathematically sound foundation on which we can create collections of objects and express morphisms between them. Together, along with a few simple rules, a collection of objects and morphisms forms a category to which we can apply many useful results, such as the uniqueness of an identity morphism. Furthermore, once we have a category in hand, we can formally explore the relationships it has with other categories, deducing powerful and practical abstractions.</em></p>
+<p><em>The power of category theory lies in the relative simplicity and accessibility of its definitions. From just a handful of straightforward concepts, we can formalize many concrete ideas such as directed acyclic graphs, currying, polymorphic functions, and Haskell itself. This talk will introduce the basics of category theory, while simultaneously diving into specific programming-related examples of categories, functors, and natural transformations. In addition to exploring profound and beautiful concepts, this talk aims to provide you with the tools necessary to recognize category-theoretical patterns in your own programming projects.</em></p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+</ul><!-- /#posts-list -->
+</section><!-- /#content -->
+</body>
+</html>
