@@ -17,7 +17,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         repository: alissapajer/pelican-themes
-        path: './themes'
+        path: './theme'
     - uses: alissapajer/gh-pages-pelican-action@0.1.10
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
