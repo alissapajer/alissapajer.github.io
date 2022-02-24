@@ -21,7 +21,7 @@ jobs:
     - uses: alissapajer/gh-pages-pelican-action@0.1.10
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        GH_PAGES_BRANCH: main
+        GH_PAGES_BRANCH: gh_pages
         PELICAN_CONFIG_FILE: pelicanconf.py
         PELICAN_CONTENT_FOLDER: posts
         PELICAN_THEME_FOLDER: theme/basic
