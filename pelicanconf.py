@@ -1,5 +1,5 @@
 AUTHOR="Alissa Pajer"
-THEME="/home/apolune/Repos/pelican-themes/basic"
+THEME="themes/basic"
 SITENAME="Alissa Pajer's Blorg"
 #FIRST_NAME='Alissa'
 #LAST_NAME='Blog'
