@@ -17,11 +17,10 @@ jobs:
       with:
           submodules: recursive
     - uses: alissapajer/gh-pages-pelican-action@0.1.10
-      with:
+
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         GH_PAGES_BRANCH: main
         PELICAN_CONFIG_FILE: pelicanconf.py
         PELICAN_CONTENT_FOLDER: posts
         PELICAN_THEME_FOLDER: theme/basic
-
-      env:
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
