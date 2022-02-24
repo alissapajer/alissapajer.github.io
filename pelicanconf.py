@@ -1,5 +1,5 @@
 AUTHOR="Alissa Pajer"
-#THEME="theme/basic"
+THEME="theme/basic"
 SITENAME="Alissa Pajer's Blorg"
 #FIRST_NAME='Alissa'
 #LAST_NAME='Blog'
