@@ -1,12 +1,12 @@
 AUTHOR="Alissa Pajer"
 THEME="theme/basic"
-PATH="posts/"
 SITENAME="Alissa Pajer's Blorg"
 #FIRST_NAME='Alissa'
 #LAST_NAME='Blog'
 #SITEURL='https://alissapajer.github.io'
 #SITEDESCRIPTION="this is a worb site"
 TIMEZONE='America/New_York'
+PATH="posts/"
 OUTPUT_PATH="docs/"
 ARTICLE_URL="posts/{slug}.html"
 ARTICLE_SAVE_AS="posts/{slug}.html"
