@@ -1,6 +1,6 @@
 AUTHOR="Alissa Pajer"
 THEME="themes/basic"
-CONTENT="posts"
+PATH="posts"
 SITENAME="Alissa Pajer's Blorg"
 #FIRST_NAME='Alissa'
 #LAST_NAME='Blog'
