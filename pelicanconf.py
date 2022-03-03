@@ -15,6 +15,9 @@ DEFAULT_CATEGORY='misc'
 STATIC_PATHS=['images','extra']
 EXTRA_PATH_METADATA={'extra/favicon.ico': {'path': 'favicon.ico'}}
 
+PLUGIN_PATHS=['./render-math/pelican/plugins']
+PLUGINS = ['render_math']
+
 #PLUGINS=['page-hierarchy']
 
 # https://github.com/akhayyat/pelican-page-hierarchy
