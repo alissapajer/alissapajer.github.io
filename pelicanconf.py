@@ -29,4 +29,4 @@ PLUGINS = ['render_math']
 #KATEX={'output': 'mathml',
 #       'displayMode': 'true'}
 
-CSS_FILE = 'luney.css'
+# CSS_FILE = 'luney.css'
