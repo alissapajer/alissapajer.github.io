@@ -18,6 +18,10 @@ jobs:
       with:
         repository: alissapajer/pelican-themes
         path: './theme'
+    - uses: actions/checkout@v2
+      with:
+        repository: pelican-plugins/render-math
+        path: './render-math'
     - uses: alissapajer/gh-pages-pelican-action@0.1.10
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
