@@ -3,7 +3,7 @@ title: Haskell Flip
 author: Alissa Pajer
 save_as: posts/2014-02-22-haskellflip.html
 url: posts/2014-02-22-haskellflip.html
-tags: haskell, programming
+tags: programming
 ---
 
 How can we change the order of the arguments to a function? After I answered this question, I realized it's actually a very odd question to ask.

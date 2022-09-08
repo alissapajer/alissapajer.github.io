@@ -3,7 +3,7 @@ title: Haskell Fixity
 author: Alissa Pajer
 save_as: posts/2014-03-15-haskellfixity.html
 url: posts/2014-03-15-haskellfixity.html
-tags: haskell, programming
+tags: programming
 ---
 
 Let's consider some Haskell. Here's a function:
