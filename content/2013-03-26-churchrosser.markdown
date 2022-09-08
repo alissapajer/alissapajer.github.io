@@ -2,11 +2,9 @@
 title: Insights into Church-Rosser
 author: Alissa Pajer
 save_as: posts/2013-03-26-churchrosser.html
-url: posts/2013-03-26-churchrosser.html
+url: posts/lambdacalc.html
 tags: math
 ---
-
-*This post was originally published on the precog.com engineering blog.*
 
 Untyped lambda calculus is powerful. In fact, every computable function can be encoded into lambda calculus, and thus so can every bit of Scala code you've ever written. Though, anything more complicated than your basic combinator would be almost indecipherable in its lambda calculus form. As an example, here's what the addition combinator for the Church numerals `c_n = λfx.fn(x)` looks like in lambda calculus: 
 ```

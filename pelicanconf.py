@@ -1,6 +1,6 @@
 AUTHOR="Alissa Pajer"
 THEME="theme/basic"
-SITENAME="Alissa Pajer's Blorg"
+SITENAME="Alissa Pajer's Blog"
 #FIRST_NAME='Alissa'
 #LAST_NAME='Blog'
 #SITEURL='https://alissapajer.github.io'
