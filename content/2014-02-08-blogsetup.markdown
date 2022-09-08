@@ -9,7 +9,6 @@ tags: computers
 Edit 2021-05-01: This blog is no longer generated with Hackyll. It is generated with Pelican.
 
 When I started my search for a static site generator, I first came across [Jekyll](https://github.com/jekyll/jekyll). I'm not particularly excited about learning Ruby, but I am excited about learning Haskell.
-![HaskellRuby](/images/HaskellRuby.png "HaskellRuby")
 This quickly led me to [Hakyll](http://jaspervdj.be/hakyll/). Hakyll is easy to install with `cabal`, though the first time I installed it I had an old version of `cabal`, and thus installed an apparently very old version of Hakyll. I remedied this as follows: 
 ```
 $ ghc-pkg unregister hakyll
