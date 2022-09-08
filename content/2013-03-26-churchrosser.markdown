@@ -1,7 +1,7 @@
 ---
 title: Insights into Church-Rosser
 author: Alissa Pajer
-save_as: posts/2013-03-26-churchrosser.html
+save_as: posts/lambdacalc.html
 url: posts/lambdacalc.html
 tags: math
 ---
