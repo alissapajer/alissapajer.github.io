@@ -7,6 +7,8 @@ tags: math, programming
 ---
 
 ![diagram](/images/diagram.png "diagram")
+
+
 Back in September 2013 I gave a talk titled "Category Theory: An Abstraction for Anything" at the [Strange Loop Conference](https://thestrangeloop.com/). A few days ago, the [video](http://www.infoq.com/presentations/category-theory) for my talk was released. 
 
 Additionally, I wrote a [blog post](http://engineering.richrelevance.com/closing-the-loop-on-category-theory-polymorphism-currying-and-more/) about this talk that was published on my employer's blog. 
