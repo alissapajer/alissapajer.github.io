@@ -20,9 +20,7 @@ The jupyter for this [is here](https://github.com/skyldpod/jupyters/blob/main/te
 
 ![tetradirection](/images/tetradirection.png "tetradirection")
 
-$$\hat{r}_1 \cdot (\hat{r}_2 \times \hat{r}_3) > 0$$
-
-Vertex $s$ is counterclockwise (+).
+$\hat{r}_1 \cdot (\hat{r}_2 \times \hat{r}_3) > 0$ Thus vertex $s$ is counterclockwise (+).
 
 The purple vector is the cross product of the second-longest and longest edges (in that order, order matters). The sign of the dot product of [the third tetra edge and the cross product] determines vertex color (blue: counterclockwise; red: clockwise).
 
