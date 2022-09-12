@@ -15,6 +15,12 @@ the jupyter for this [is here](https://github.com/skyldpod/jupyters/blob/main/te
 
 blue never shows up! it would show up in the reflection over the x-y plane.
 
+tetratable! (colors unrelated to cross-section gif above)
+
+![tetratable](/images/tetratable.png "tetratable")
+
+table legs are cross product of two tetra sides. sign of dot product with third tetra side determines vertex color.
+
 next steps:
 
 - plot the same cross-sections but for each vertex (2 colors only)
