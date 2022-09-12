@@ -18,6 +18,6 @@ blue never shows up! it would show up in the reflection over the x-y plane.
 next steps:
 
 - plot the same cross-sections but for each vertex (2 colors only)
-- plot the same cross-section in a sphere with the base triangle in the equitorial plane
+- plot the same cross-section in a sphere with the base triangle in the equatorial plane
 - create histogram of parities given a fixed base triangle
 - create histogram of parities given arbitrary tetrahedra in variously shaped spaces (sphere, cube, etc.)
