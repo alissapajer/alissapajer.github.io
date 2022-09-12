@@ -3,7 +3,7 @@ Tags: math,programming
 
 ![tetrahedra](/images/movie_loopy.gif "tetrahedra")
 
-Each point in the moving cross-section creates a tetrahedron when connected to each vertex of the green triangle in the x-y plane. The color of each point in the cross-section corresponds to the tetrahedron's signature, which we define to be one of five computable values. The signature is computed by taking the sign of the scalar triple product at each vertex. Visually, this sign corresponds to whether we move "clockwise" or "counterclockwise" as we move from the shortest to the longest side, respectively (or anti-respectively?).
+Each point in the moving cross-section creates a tetrahedron when connected to each vertex of the green triangle in the x-y plane. The color of each point in the cross-section corresponds to the tetrahedron's signature, which we define to be one of five computable values. The signature is computed by taking the sign of the scalar triple product at each vertex. Visually, this sign corresponds to whether we move "clockwise" (-) or "counterclockwise" (+) as we move from the shortest to the longest side.
 
 ```
 # keyed by number of positive-signed vertices
@@ -22,11 +22,17 @@ ffmpeg -y -i 'figure_ii%4d.png' -c:v libx264 -pix_fmt yuv420p -vf scale=1024:768
 
 ### Image with Cross Products
 
-tetratable! (colors unrelated to cross-section gif above)
+(colors unrelated to cross-section gif above)
+
+![tetradirection](/images/tetradirection.png "tetradirection")
+
+$$\hat{r}_1 \cdot (\hat{r}_2 \times \hat{r}_3) > 0$$
+
+The purple vector is the cross product of the second-longest and longest edges (in that order, order matters). The sign of the dot product of [the third tetra edge and the cross product] determines vertex color (blue: counterclockwise; red: clockwise).
+
+And a tetratable!
 
 ![tetratable](/images/tetratable.png "tetratable")
-
-The table legs are the cross product of two tetra edges. The sign of the dot product of [the third tetra edge and the cross product] determines vertex color.
 
 ### Next Steps
 
