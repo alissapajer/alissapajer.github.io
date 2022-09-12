@@ -6,7 +6,7 @@ Tags: math,programming
 Each point in the moving cross-section creates a tetrahedron when connected to each vertex of the green triangle in the x-y plane. The color of each point in the cross-section corresponds to the tetrahedron's signature, which we define to be one of five computable values. The signature is computed by taking the sign of the scalar triple product at each vertex. Visually, this sign corresponds to whether we move "clockwise" or "counterclockwise" as we move from the shortest to the longest side, respectively (or anti-respectively?).
 
 ```
-# keyed by number of Trues
+# keyed by number of positive-signed vertices
 dict = { 0: 'blue', 1: 'red', 2: 'purple', 3: 'yellow', 4: 'orange' }
 ```
 
