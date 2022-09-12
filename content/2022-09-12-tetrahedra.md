@@ -28,6 +28,8 @@ ffmpeg -y -i 'figure_ii%4d.png' -c:v libx264 -pix_fmt yuv420p -vf scale=1024:768
 
 $$\hat{r}_1 \cdot (\hat{r}_2 \times \hat{r}_3) > 0$$
 
+Vertex $s$ is counterclockwise (+).
+
 The purple vector is the cross product of the second-longest and longest edges (in that order, order matters). The sign of the dot product of [the third tetra edge and the cross product] determines vertex color (blue: counterclockwise; red: clockwise).
 
 And a tetratable!
