@@ -22,7 +22,7 @@ The jupyter for this [is here](https://github.com/skyldpod/jupyters/blob/main/te
 
 $\hat{r}_1 \cdot (\hat{r}_2 \times \hat{r}_3) > 0$ Thus vertex $s$ is counterclockwise (+).
 
-The purple vector is the cross product of the second-longest and longest edges (in that order, order matters). The sign of the dot product of [the third tetra edge and the cross product] determines vertex color (blue: counterclockwise; red: clockwise).
+The purple vector is the cross product of the second-longest and longest edges (in that order, order matters). The sign of the dot product of [the third tetra edge and the cross product] determines vertex color (blue: clockwise; red: counterclockwise).
 
 And a tetratable!
 
