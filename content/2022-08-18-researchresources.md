@@ -81,6 +81,14 @@ tags: math
     - **author**: Philip Wadler
     - **DOI**: [DOI](https://doi.org/10.1007/978-3-662-02880-3_8)
 
+- [There is no Fork: an Abstraction for Efficient, Concurrent, and Concise Data Access](https://simonmar.github.io/bib/papers/haxl-icfp14.pdf)
+    - **date**: Sep 2014
+    - **summary**: functor concurrency
+
+- [Desugaring Haskell’s do-Notation into Applicative Operations](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/desugaring-haskell-haskell16.pdf)
+    - **date**: Sep 2016
+    - **summary**: applicative functors
+
 ## Computer Science: Parsing
 
 - [Mison: A Fast JSON Parser for Data Analytics](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/mison-vldb17.pdf)
