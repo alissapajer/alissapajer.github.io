@@ -19,4 +19,4 @@ at the end bring it all around to category theory - H_k is a "homology functor" 
 
 cohomology in the same context of quotient spaces
 
-covariant vs contravariant functors (homology vs cohomology functors)
+covariant vs contravariant functors (homology vs cohomology functors) - see AT by Thatcher for a good introduction
