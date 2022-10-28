@@ -1,4 +1,4 @@
-title: Slices of Topology
+title: Slices of Topology (Homology!)
 tags: math
 
 # Slices of Topology
@@ -12,5 +12,9 @@ This is basically a hollow donut with legs. Said differently, it's a shell of a 
 We are going to look at two different strategies we can use to slice this shape into smaller pieces. We'll then look at each piece individually and determine what shape it is. For example, each piece could be a point or a circle or a sphere or something else. We'll also take note of how many consecutive slices contain each particular shape.
 
 ## Slicing #1: Levelsets Zigzag Persistent Homology
+
+This slicing strategy considers each critical value ($a_1$ through $a_6$) and each region between adjacent critical values. So, we look at these regions: $[a_1, a_1]$, $(a_1, a_2)$. In this notation, a square brace $[$ or $]$ includes that value and a parenthese $($ or $)$ excludes that value.
+
+
 
 ## Slicing #2: Extended Persistent Homology
