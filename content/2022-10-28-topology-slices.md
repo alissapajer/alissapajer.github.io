@@ -13,7 +13,7 @@ We are going to look at two different strategies we can use to slice this shape 
 
 ## Slicing #1: Levelsets Zigzag Persistent Homology
 
-This slicing strategy considers each critical value ($a_1$ through $a_6$) and each region between adjacent critical values. So, there are the regions we will look at: $[a_1, a_1]$, $(a_1, a_2)$. In this notation, a square brace $[$ or $]$ includes that value and a parenthese $($ or $)$ excludes that value.
+This slicing strategy considers each critical value ( $a_1$ through $a_6$ ) and each region between adjacent critical values. So, there are the regions we will look at: $[a_1, a_1]$, $(a_1, a_2)$. In this notation, a square brace $[$ or $]$ includes that value and a parenthese $($ or $)$ excludes that value.
 
 We are going to keep track of three different categories of shapes: connected components ( $H_0$ ), loops ( $H_1$ ), and voids ( $H_2$ ). 
 
