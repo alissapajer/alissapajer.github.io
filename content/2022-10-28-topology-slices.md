@@ -17,9 +17,14 @@ This slicing strategy considers each critical value ( $a_1$ through $a_6$ ) and 
 
 We are going to keep track of three different categories of shapes: connected components ( $H_0$ ), loops ( $H_1$ ), and voids ( $H_2$ ). 
 
-- $a_1$ - This shape is a point. $H_0$: Something exists; thus our first connected component is born. 
-- $(a_1, a_2)$ - This shape is like a cylinder that's missing its top and bottom. $H_0$: Something still exists, so our connected component is still alive. $H_1$: Also, a loop is born; this is the loop you can create by drawing a circle around the outside of the cylinder.
-- $a_2$ - This is a point _and_ a circle. It's also a circle because we look at all values in line with $a_2$. $H_0$: A second thing exists; thus our second connected component is born. $H_1$: The loop is still alive.
+- $a_1$ - This shape is a point.
+  - $H_0$: Something exists; thus our first connected component is born. 
+- $(a_1, a_2)$ - This shape is like a cylinder that's missing its top and bottom.
+  - $H_0$: Something still exists, so our connected component is still alive.
+  - $H_1$: Also, a loop is born; this is the loop you can create by drawing a circle around the outside of the cylinder.
+- $a_2$ - This is a point _and_ a circle. It's a circle because we consider all values in line with $a_2$.
+  - $H_0$: A second thing exists; thus our second connected component is born.
+  - $H_1$: The loop is still alive.
 
 ## Slicing #2: Extended Persistent Homology
 
