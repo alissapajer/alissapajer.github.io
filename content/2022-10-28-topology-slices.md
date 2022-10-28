@@ -13,12 +13,12 @@ We are going to look at two different strategies we can use to slice this shape 
 
 ## Slicing #1: Levelsets Zigzag Persistent Homology
 
-This slicing strategy considers each critical value ( $a_1$ through $a_6$ ) and each region between adjacent critical values. So, there are the regions we will look at: $[a_1, a_1]$, $(a_1, a_2)$. In this notation, a square brace $[$ or $]$ includes that value and a parenthese $($ or $)$ excludes that value.
+This slicing strategy considers each critical value ( $a_1$ through $a_6$ ) and each region between adjacent critical values. 
 
 We are going to keep track of three different categories of shapes: connected components ( $H_0$ ), loops ( $H_1$ ), and voids ( $H_2$ ). 
 
-- $[a_1, a_1]$ - Something exists. Thus our first connected component is born. 
-- $(a_1, a_2)$ - This shape is like a cylinder that's missing its top and bottom. Something still exists, so our connected component is still alive. Also, We have a loop.
+- $a_1$ - This shape is a point. $H_0$: Something exists; thus our first connected component is born. 
+- $(a_1, a_2)$ - This shape is like a cylinder that's missing its top and bottom. $H_0$: Something still exists, so our connected component is still alive. $H_1$: Also, a loop is born; this is the loop you can create by drawing a circle around the outside of the cylinder.
 
 ## Slicing #2: Extended Persistent Homology
 
