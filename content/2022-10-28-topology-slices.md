@@ -28,8 +28,8 @@ We are going to keep track of three different categories of shapes: connected co
 
 ## Slicing #2: Extended Persistent Homology
 
-## Pairing up the Slices
+## Pairing up the Slicings
 
-Each of these horizontal line diagrams is called a barcode diagram. Each example has the same number of lines in its barcode. This is not a coincidence; this is a theorem, namely, the Pyramid Theorem.
+Each of these horizontal line diagrams is called a barcode diagram. Each diagram has the same number of barcode lines. This is not a coincidence; this is a theorem, namely, the Pyramid Theorem.
 
-The Pyramid Theorem says that, no matter what initial shape we draw, each of these two examples will always have the same number of barcode lines! Furthermore, we can pair them up such that we know how to map back and forth between them. This means that these two different slicings of the shape actually contain the same topological (homological) information!
+The Pyramid Theorem says that, no matter what initial shape we draw, each of these two slicings will always produce the same number of barcode lines! Furthermore, we can pair up the barcode lines such that we know how to map back and forth from one barcode diagram to the other. This means that these two different slicings of the shape actually contain the same topological (homological) information!
