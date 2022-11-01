@@ -38,4 +38,4 @@ The Pyramid Theorem says that, no matter what initial shape we draw, each of the
 
 I gave a talk about this topic at the weekly University of Florida [research group meeting](https://people.clas.ufl.edu/peterbubenik/intro-to-tda/) for Topological Data Analysis (TDA).
 
-[Here](content/images/Mayer-Vietoris_Pyramid.pdf) is a pdf of the slides I used for the talk.
+![Here is a pdf](/images/Mayer-Vietoris_Pyramid.pdf "slides") of the slides I used for the talk.
