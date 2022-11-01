@@ -18,7 +18,7 @@ This slicing strategy considers each horizontal slides through each critical val
 We are going to keep track of three different types of shapes: connected components ( $H_0$ ), loops ( $H_1$ ), and voids ( $H_2$ ). 
 
 - $a_1$. A single point.
-  - $H_0$: Something exists; thus our first connected component is born. 
+  - $H_0$: Something exists; thus our first connected component is born.
 - $(a_1, a_2)$. A cylinder that's missing its top and bottom.
   - $H_0$: Something still exists, so our connected component is still alive.
   - $H_1$: Also, a loop is born; this is the loop you can create by drawing a circle around the outside of the cylinder.
@@ -26,13 +26,31 @@ We are going to keep track of three different types of shapes: connected compone
   - $H_0$: A second thing exists; thus our second connected component is born.
   - $H_1$: The loop is still alive.
 - $(a_2, a_3)$. Two separate cylinders.
-- $a_3$. Two loops connected at a point. 
+  - $H_0$: There are two connected components.
+  - $H_1$: There are two loopos.
+- $a_3$. Two loops connected at a point.
+  - $H_0$:
+  - $H_1$: 
 - $(a_3, a_4)$. A single cylinder.
+  - $H_0$:
+  - $H_1$:
 - $a_4$. Two loops connected at a point.
+  - $H_0$:
+  - $H_1$:
 - $(a_4, a_5)$. Two separate cylinders.
+  - $H_0$:
+  - $H_1$:
 - $a_5$. Two loops connected at a point.
+  - $H_0$:
+  - $H_1$:
 - $(a_5, a_6)$. A single cylinder.
+  - $H_0$:
+  - $H_1$:
 - $a_6$. A single point.
+  - $H_0$:
+  - $H_1$:
+
+We can represent all of that information in a single barcode diagram. Given the barcode diagram, how different an original shape could you draw?
 
 ## Slicing #2: Extended Persistent Homology
 
