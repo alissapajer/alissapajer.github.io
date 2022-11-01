@@ -13,18 +13,26 @@ We are going to look at two different strategies we can use to slice this shape 
 
 ## Slicing #1: Levelsets Zigzag Persistent Homology
 
-This slicing strategy considers each critical value ( $a_1$ through $a_6$ ) and each region between adjacent critical values. 
+This slicing strategy considers each horizontal slides through each critical value ( $a_1$ through $a_6$ ) and each horizontal region between adjacent critical values. 
 
-We are going to keep track of three different categories of shapes: connected components ( $H_0$ ), loops ( $H_1$ ), and voids ( $H_2$ ). 
+We are going to keep track of three different types of shapes: connected components ( $H_0$ ), loops ( $H_1$ ), and voids ( $H_2$ ). 
 
-- $a_1$ - This shape is a point.
+- $a_1$. A single point.
   - $H_0$: Something exists; thus our first connected component is born. 
-- $(a_1, a_2)$ - This shape is like a cylinder that's missing its top and bottom.
+- $(a_1, a_2)$. A cylinder that's missing its top and bottom.
   - $H_0$: Something still exists, so our connected component is still alive.
   - $H_1$: Also, a loop is born; this is the loop you can create by drawing a circle around the outside of the cylinder.
-- $a_2$ - This is a point _and_ a circle. It's a circle because we consider all values in line with $a_2$.
+- $a_2$. A single point _and_ a loop.
   - $H_0$: A second thing exists; thus our second connected component is born.
   - $H_1$: The loop is still alive.
+- $(a_2, a_3)$. Two separate cylinders.
+- $a_3$. Two loops connected at a point. 
+- $(a_3, a_4)$. A single cylinder.
+- $a_4$. Two loops connected at a point.
+- $(a_4, a_5)$. Two separate cylinders.
+- $a_5$. Two loops connected at a point.
+- $(a_5, a_6)$. A single cylinder.
+- $a_6$. A single point.
 
 ## Slicing #2: Extended Persistent Homology
 
