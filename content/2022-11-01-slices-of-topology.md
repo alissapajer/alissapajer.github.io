@@ -3,7 +3,7 @@ tags: math
 
 # Slices of Topology
 
-No matter how you slice it and dice it, you get out the same information. Well, that's not exactly true. But I'll show you a couple different ways you can slice it.
+No matter how you slice it and dice it, you get out the same information. Well, that's not exactly true. But I'll show you one way you can look at individual slices of space in order to determine its overall topology.
 
 ## Set Up
 
