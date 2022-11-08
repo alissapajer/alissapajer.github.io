@@ -7,7 +7,7 @@ No matter how you slice it and dice it, you get out the same information. Well, 
 
 ## Set Up
 
-![Torus](/images/pyramid/torus.jpg "torus")
+![Torus](/images/pyramid/torus.jpg "torus"){ width=25% }
 
 This is basically a hollow donut with legs. Said differently, it's a shell of a sphere with a hole in it (so it's like a torus), with the lower bits stretched out. This three-dimensional shape has six total local minima and local maxima, which are called critical values. They are labelled as $a_1$ through $a_6$.
 
