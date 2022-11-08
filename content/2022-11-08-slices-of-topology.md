@@ -19,12 +19,12 @@ This slicing strategy considers each horizontal slides through each critical val
 
 We are going to keep track of three different types of shapes: connected components ( $H_0$ ), loops ( $H_1$ ), and voids ( $H_2$ ). 
 
-![a1](/images/pyramid/a1.jpg "a1"){ width=15% }
+![a1](/images/pyramid/a1.jpg "a1"){ width=5% }
 
 - $a_1$. A single point.
   - $H_0$: Something exists; thus our first connected component is born.
 
-![a1-a2](/images/pyramid/a1-a2.jpg "a1-a2"){ width=15% }
+![a1-a2](/images/pyramid/a1-a2.jpg "a1-a2"){ width=5% }
 
 - $(a_1, a_2)$. A cylinder that's missing its top and bottom.
   - $H_0$: Something still exists, so our connected component is still alive.
@@ -86,7 +86,7 @@ We are going to keep track of three different types of shapes: connected compone
 
 We can represent all of that information in a single barcode diagram. Given the barcode diagram, how different an original shape could you draw?
 
-![barcode](/images/pyramid/barcode.jpg "barcode"){ width=15% }
+![barcode](/images/pyramid/barcode.jpg "barcode"){ width=40% }
 
 ## Talk Slides
 
