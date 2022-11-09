@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <link rel="stylesheet" href="/theme/css/rdark.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/css/luney.css" />
+        <link href="/" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blog ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <title>Alissa Pajer's Blog - git Hacks</title>
+        <meta charset="utf-8" />
+        <meta name="generator" content="Pelican" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blog Full Atom Feed" />
+        <link href="/feeds/misc.atom.xml" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blog Categories Atom Feed" />
+
+
+
+
+    <meta name="tags" content="computers" />
+
+
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  "HTML-CSS": {
+  styles: {
+  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+  },
+  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+        
+        </head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Alissa Pajer's Blog</a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+        </ul></nav><!-- /#menu -->
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="/posts/git-hacks.html" rel="bookmark"
+         title="Permalink to git Hacks">git Hacks</a></h2>
+ 
+  </header>
+  <footer class="post-info">
+    <time class="published" datetime="2022-08-25T00:00:00-04:00">
+      Thu 25 August 2022
+    </time>
+    <!---->
+    <!--<address class="vcard author">-->
+    <!--  By -->
+    <!--      <a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a>-->
+    <!--    -->
+    <!--</address>-->
+    <!---->
+    <!---->
+    <!--<div class="category">-->
+    <!--    Category: <a href="/category/misc.html">misc</a>-->
+    <!--</div>-->
+    <!---->
+    <div class="tags">
+        Tags:
+            <a href="/tag/computers.html">computers</a>
+    </div>
+  </footer><!-- /.post-info -->
+  <div class="entry-content">
+    <h3>configuration</h3>
+<p>Start the ssh agent (add this to your <code>~/.zshrc</code>, for example):</p>
+<div class="highlight"><pre><span></span><span class="nb">eval</span> <span class="s2">&quot;</span><span class="k">$(</span>ssh-agent -s<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+
+
+<p>Add the following at the head of <code>~/.gitconfig</code> in order to specify a git configuration per path. These are called <em>conditional includes</em>:</p>
+<div class="highlight"><pre><span></span><span class="k">[includeIf &quot;gitdir:~/path/work/&quot;]</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="p">.</span><span class="n">gitconfig-work</span>
+<span class="k">[includeIf &quot;gitdir:~/path/play/&quot;]</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="p">.</span><span class="n">gitconfig-play</span>
+</pre></div>
+
+
+<p>Contents of <code>~/.gitconfig-work</code> or <code>~/.gitconfig-play</code>:</p>
+<div class="highlight"><pre><span></span><span class="p">[</span><span class="n">user</span><span class="p">]</span>    
+    <span class="n">name</span> <span class="o">=</span> <span class="n">A</span> <span class="n">B</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">ab</span>
+    <span class="n">email</span> <span class="o">=</span> <span class="n">ab</span><span class="err">@</span><span class="n">e</span><span class="p">.</span><span class="n">mail</span>
+<span class="p">[</span><span class="n">core</span><span class="p">]</span>      
+    <span class="n">sshCommand</span> <span class="o">=</span> <span class="n">ssh</span> <span class="err">-</span><span class="n">i</span> <span class="err">~/</span><span class="p">.</span><span class="n">ssh</span><span class="err">/</span><span class="n">id_ed25519-work</span> <span class="err">-</span><span class="n">F</span> <span class="n">none</span> <span class="err">-</span><span class="n">o</span> <span class="s">&quot;IdentitiesOnly=yes&quot;</span>
+</pre></div>
+
+
+<p><code>-F none</code> specifies that <code>ssh</code> shall not look any files, thus forcing (in theory) it to use the key specified with <code>-i</code>.</p>
+<p>But despite <code>-F none</code>, <code>-v</code> informed me it was still looking in <code>~/.ssh/known_hosts</code>. So, I added <code>-o "IdentitiesOnly=yes"</code> (see <a href="https://linux.die.net/man/5/ssh_config">man pages</a> here), which in practice does not look in my known hosts file.</p>
+<h3>debugging</h3>
+<p>List the source of each git configuration:</p>
+<div class="highlight"><pre><span></span>git config --list --show-origin
+</pre></div>
+
+
+<p>Unset credential helper:</p>
+<div class="highlight"><pre><span></span>git config --global --unset credential.helper
+</pre></div>
+
+
+<p>Show some in-scope git configurations:</p>
+<div class="highlight"><pre><span></span>git config user.email
+git config user.username
+git config core.sshCommand
+</pre></div>
+
+
+<p>See the full debugs logs of ssh to determine exactly where it's finding ssh keys:</p>
+<div class="highlight"><pre><span></span>ssh -v
+</pre></div>
+
+
+<p>git uses your ssh key to identify you. Determine which user git is authenticating you as:</p>
+<div class="highlight"><pre><span></span>ssh -T git@github.com
+</pre></div>
+
+
+<p>You can also give it all the options you're providing when sshing to git:</p>
+<div class="highlight"><pre><span></span>ssh -i ~/.ssh/id_ed25519 -F none -o <span class="s2">&quot;IdentitiesOnly=yes&quot;</span> -T git@github.com
+</pre></div>
+
+
+<p>For other setups, rather than specifying the exact ssh key, you can set various <code>IdentityFile</code> in <code>~/.ssh/config</code>. It's reasonable practice to specify the host rather than use a wildcard:</p>
+<div class="highlight"><pre><span></span><span class="err">Host *</span>
+<span class="err">    AddKeysToAgent yes</span>
+<span class="err">    UseKeychain yes</span>
+<span class="err">    IdentityFile ~/.ssh/id_ed25519-work</span>
+<span class="err">    IdentityFile ~/.ssh/id_ed25519-play</span>
+</pre></div>
+  </div><!-- /.entry-content -->
+</section>
+</body>
+</html>

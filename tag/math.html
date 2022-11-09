@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="/theme/css/rdark.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/css/luney.css" />
+        <link href="/" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blog ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <title>Alissa Pajer's Blog - math tag</title>
+        <meta charset="utf-8" />
+        <meta name="generator" content="Pelican" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blog Full Atom Feed" />
+
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  "HTML-CSS": {
+  styles: {
+  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+  },
+  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+        
+        </head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Alissa Pajer's Blog</a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+        </ul></nav><!-- /#menu -->
+<section id="content">
+
+<ul>
+      <a href="/tag/math.html">math</a>
+      <a href="/tag/programming.html">programming</a>
+      <a href="/tag/computers.html">computers</a>
+      <a href="/tag/literature.html">literature</a>
+</ul>
+
+<!--<h2>Articles tagged with math</h2>
+-->
+
+<ul id="post-list">
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/slices-of-topology-homology.html" rel="bookmark" title="Permalink to Slices of Topology (Homology!)">
+                    Slices of Topology (Homology!)</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2022-11-08T00:00:00-05:00"> Tue 08 November 2022 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <h1>Slices of Topology</h1>
+<p>No matter how you slice it and dice it, you get out the same information. Well, that's not exactly true. But I'll show you one way you can look at individual slices of a shape in order to determine its overall topology.</p>
+<h2>Set Up</h2>
+<p><img alt="Torus" src="/images/pyramid/torus.jpg" title="torus" width="25%"></p>
+<p>This is basically a hollow donut with legs. Said differently, it's a shell of a sphere with a hole in it (so it's like a torus), with the lower bits stretched out. This three-dimensional shape has six total local minima and local maxima, which are called critical values. They are labelled as <span class="math">\(a_1\)</span> through <span class="math">\(a_6\)</span>.</p>
+<p>We are going to look at one particular strategy we can use to slice this shape into smaller pieces. We'll then look at each piece individually and determine what shape it is. For example, each piece could be a point or a circle or a sphere or something else. We'll also take note of how many consecutive slices contain each particular shape.</p>
+<h2>Slicing: Levelsets Zigzag Persistent Homology</h2>
+<p>This slicing strategy considers each horizontal slides through each critical value ( <span class="math">\(a_1\)</span> through <span class="math">\(a_6\)</span> ) and each horizontal region between adjacent critical values. </p>
+<p>We are going to keep track of three different types of shapes: connected components ( <span class="math">\(H_0\)</span> ), loops ( <span class="math">\(H_1\)</span> ), and voids ( <span class="math">\(H_2\)</span> ). </p>
+<p><img alt="a1" src="/images/pyramid/a1.jpg" title="a1" width="4%"></p>
+<ul>
+<li><span class="math">\(a_1\)</span>. A single point.</li>
+<li><span class="math">\(H_0\)</span>: Something exists; thus our first connected component is born.</li>
+</ul>
+<p><img alt="a1-a2" src="/images/pyramid/a1-a2.jpg" title="a1-a2" width="8%"></p>
+<ul>
+<li><span class="math">\((a_1, a_2)\)</span>. A cylinder that's missing its top and bottom.</li>
+<li><span class="math">\(H_0\)</span>: Something still exists, so our connected component is still alive.</li>
+<li><span class="math">\(H_1\)</span>: Also, a loop is born; this is the loop you can create by drawing a circle around the outside of the cylinder.</li>
+</ul>
+<p><img alt="a2" src="/images/pyramid/a2.jpg" title="a2" width="15%"></p>
+<ul>
+<li><span class="math">\(a_2\)</span>. A single point <em>and</em> a loop.</li>
+<li><span class="math">\(H_0\)</span>: The original connected component still exists. Also, a second thing exists; thus our second connected component is born.</li>
+<li><span class="math">\(H_1\)</span>: The loop is still alive.</li>
+</ul>
+<p><img alt="a2-a3" src="/images/pyramid/a2-a3.jpg" title="a2-a3" width="15%"></p>
+<ul>
+<li><span class="math">\((a_2, a_3)\)</span>. Two separate cylinders.</li>
+<li><span class="math">\(H_0\)</span>: Two connected components.</li>
+<li><span class="math">\(H_1\)</span>: The previous loop still exists, and a second loop is born.</li>
+</ul>
+<p><img alt="a3" src="/images/pyramid/a3.jpg" title="a3" width="15%"></p>
+<ul>
+<li><span class="math">\(a_3\)</span>. Two loops connected at a point.</li>
+<li><span class="math">\(H_0\)</span>: Only one connected component remains.</li>
+<li><span class="math">\(H_1\)</span>: Both loops still exist.</li>
+</ul>
+<p><img alt="a3-a4" src="/images/pyramid/a3-a4.jpg" title="a3-a4" width="15%"></p>
+<ul>
+<li><span class="math">\((a_3, a_4)\)</span>. A single cylinder.</li>
+<li><span class="math">\(H_0\)</span>: A single connected component.</li>
+<li><span class="math">\(H_1\)</span>: Only one loop remains.</li>
+</ul>
+<p><img alt="a4" src="/images/pyramid/a4.jpg" title="a4" width="15%"></p>
+<ul>
+<li><span class="math">\(a_4\)</span>. Two loops connected at a point.</li>
+<li><span class="math">\(H_0\)</span>: Still have a single connected component.</li>
+<li><span class="math">\(H_1\)</span>: A second loop is alive again.</li>
+</ul>
+<p><img alt="a4-a5" src="/images/pyramid/a4-a5.jpg" title="a4-a5" width="30%"></p>
+<ul>
+<li><span class="math">\((a_4, a_5)\)</span>. Two separate cylinders.</li>
+<li><span class="math">\(H_0\)</span>: A second connected component is alive again.</li>
+<li><span class="math">\(H_1\)</span>: A second loop is alive again.</li>
+</ul>
+<p><img alt="a5" src="/images/pyramid/a5.jpg" title="a5" width="15%"></p>
+<ul>
+<li><span class="math">\(a_5\)</span>. Two loops connected at a point.</li>
+<li><span class="math">\(H_0\)</span>: Only one connected component remains.</li>
+<li><span class="math">\(H_1\)</span>: Still have both loops.</li>
+</ul>
+<p><img alt="a5-a6" src="/images/pyramid/a5-a6.jpg" title="a5-a6" width="15%"></p>
+<ul>
+<li><span class="math">\((a_5, a_6)\)</span>. A single cylinder.</li>
+<li><span class="math">\(H_0\)</span>: Still have a single connected component.</li>
+<li><span class="math">\(H_1\)</span>: Only one loop remains.</li>
+</ul>
+<p><img alt="a6" src="/images/pyramid/a6.jpg" title="a6" width="4%"></p>
+<ul>
+<li><span class="math">\(a_6\)</span>. A single point.</li>
+<li><span class="math">\(H_0\)</span>: A single connected component remains.</li>
+<li><span class="math">\(H_1\)</span>: There are no loops.</li>
+</ul>
+<p>We can represent all of that information in a single barcode diagram. Given the barcode diagram, how different an original shape could you draw?</p>
+<p><img alt="barcode" src="/images/pyramid/barcode.jpg" title="barcode" width="55%"></p>
+<h2>Talk Slides</h2>
+<p>I gave a talk about this topic at the weekly University of Florida <a href="https://people.clas.ufl.edu/peterbubenik/intro-to-tda/">research group meeting</a> for Topological Data Analysis (TDA).</p>
+<p><a href="/images/Mayer-Vietoris_Pyramid.pdf" title="slides">Here is a pdf</a> of the slides I used for the talk.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/math-defintions.html" rel="bookmark" title="Permalink to Math Defintions">
+                    Math Defintions</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2022-08-27T00:00:00-04:00"> Sat 27 August 2022 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p><em>(In Progress Eternally)</em></p>
+<h2>algebra</h2>
+<p>A <em>binary operation</em> on a set <span class="math">\(S\)</span> is a pairwise operation <span class="math">\(S \times S \rightarrow S\)</span>. The set is <em>closed</em> under the operation.</p>
+<p>A <em>semigroup</em> is a set of elements and an associative binary operation operating on the set.</p>
+<p>A <em>monoid</em> is a semigroup with an identity element.</p>
+<p>A <em>group</em> is a set of monoid such that for each element there exists an inverse element</p>
+<p>A <em>commutative group</em> (also known as an <em>abelian group</em>) is a group whose operation is commutative.</p>
+<p>A <em>ring</em> is a set of elements and two binary operations <span class="math">\((+)\)</span> and <span class="math">\((\times)\)</span> such that:</p>
+<ul>
+<li>it forms an abelian group under <span class="math">\((+)\)</span></li>
+<li>it forms a monoid under <span class="math">\((\times)\)</span></li>
+<li><span class="math">\((\times)\)</span> distributes over <span class="math">\((+)\)</span></li>
+</ul>
+<p>A <em>field</em> is a ring such that:</p>
+<ul>
+<li>for each nonzero element (where <span class="math">\(0\)</span> is the additive identity) there exists an inverse element</li>
+<li><span class="math">\((\times)\)</span> is commutative</li>
+</ul>
+<p>The integers <span class="math">\(\mathbb{Z}\)</span> are the cannonical example of a ring. The integers are not a field because some inverses are not contained in the set (e.g. 1/5).</p>
+<h2>topology</h2>
+<p>A <em>topological space</em> is a set equipped with a <em>topology</em>.</p>
+<p>A <em>topology</em> <span class="math">\(T\)</span> on a set <span class="math">\(X\)</span> is a collection of subsets of <span class="math">\(X\)</span> such that:</p>
+<ul>
+<li>the empty set and <span class="math">\(X\)</span> are elements of <span class="math">\(T\)</span></li>
+<li>arbitrary unions are elements of <span class="math">\(T\)</span></li>
+<li>finite intersections are elements of <span class="math">\(T\)</span></li>
+</ul>
+<p>The elements of <span class="math">\(T\)</span> are defined to be <em>open sets</em>. A subset that is a complement of a closed set is an <em>open set</em>.</p>
+<p>Why are the intersections finite and not arbitrary? How do we fit a counterexample into the frame of the subset definition?</p>
+<p>Using De Morgan's laws for set complements (union of complements is complement of intersection; intersection of complements is complement of union), we can rewrite these properties:</p>
+<ul>
+<li>the empty set and <span class="math">\(X\)</span> are closed</li>
+<li>the arbitrary intersection of closed sets is closed (i.e. the complement of the arbitrary intersection of closed sets is open)</li>
+<li>the finite union of closed sets is closed (i.e. the complement of the finite union of closed sets is open)</li>
+</ul>
+<p>There is also a definition based on neighborhoods of points.</p>
+<h2>category theory</h2>
+<p>A <em>category</em> consists of:</p>
+<ul>
+<li>a collection of objects</li>
+<li>for each pair of objects, a collection of morphisms (arrows) from one to the other</li>
+<li>for each pair of compatible morphisms, a binary operation called composition</li>
+</ul>
+<p>such that:</p>
+<ul>
+<li>if <span class="math">\(u: a \rightarrow b\)</span> and <span class="math">\(v: b \rightarrow c\)</span> then there is a morphism <span class="math">\(u \circle v: a \rightarrow c\)</span></li>
+<li>composition of morphisms is associative</li>
+<li>for each object <span class="math">\(a\)</span>, there is an identity morphism <span class="math">\(I_a\)</span> such that for any morphism <span class="math">\(u: a \rightarrow b\)</span>, <span class="math">\(I_a \circle u = u \circle I_b = u\)</span> </li>
+</ul>
+<h2>analysis</h2>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/topological-data-analysis-intro.html" rel="bookmark" title="Permalink to Topological Data Analysis Intro">
+                    Topological Data Analysis Intro</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2022-08-26T00:00:00-04:00"> Fri 26 August 2022 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <h3>summary</h3>
+<p>Start with some points. Determine a rule for incrementally connecting more and more of the points with lines, planes, solids, and so on. As points become connected, geometric structure emerges. As even more points become connected, geometric structure disappears. We quantify this structure, group it into classes, and observe when each class is born and dies. Lastly we compare the birth-death plots of various datasets to determine if the datasets share underlying structural similarities.</p>
+<h3>more-detailed-but-still-high-level summary</h3>
+<p>Topological Data Analysis (TDA) encompasses a variety of techniques which <a href="https://arxiv.org/abs/2004.07036">"connect the dots"</a>, thereby creating shapes whose topology can be understood. As a simple example, we can cover each of the dots in a point cloud with a circle of a given radius. As we increase that radius, we'll produce a shape with fewer and fewer "holes" until we're left with a mass with no holes. When the radii are too small to overlap, we gain no additional information. When the radii are large enough to encompass the entire point cloud, we loose all information. TDA aims to find the sweet-spot radius that will provide useful information about our data.</p>
+<p>In practice, most interesting datasets are complex enough that the radius technique (described above) <a href="https://www.ias.edu/ideas/2013/lesnick-topological-data-analysis">falls short</a>. It doesn't provide a rigorous way to determine which radius creates a topological space that best represents the underlying data. Additionally, it doesn't distinguish between major and minor features in the data. As a result, mathematicians have developed more advanced analysis techniques. One such technique is persistent homology whose core idea is to examine how the topological space changes as the radius changes. This approach smooths over noise in the data, as geometric structures created by noise will disappear quickly as the radius changes, while the structures created by the signal will be long-lived. </p>
+<p><a href="https://learning-analytics.info/index.php/JLA/article/view/5196/6089">Distance</a> is implicit in our discussion of radii. Said differently, in order to be able to draw circles of a given radius around points, we need to have defined a way to measure the length of a line originating from any point in the data. (As a philosophical aside, is this actually the same as being able to measure the distance <em>between</em> two points?) Thus we will always often to use a well-defined distance as we explore data topologically.</p>
+<p>To more formally study the geometric shape of data, we use simplicial complexes. For an <span class="math">\(n\)</span>-dimensional set of data points, we can connect any two points with a line, connect any three points with a plane, connect any four points with a solid, and so on. Any <span class="math">\(n\)</span> points comprise a simplex, which is a generalization of a line to a triangle to a tetrahedron to a 5-cell to a something even harder to visualize. A collection of simplices is a simplicial complex <span class="math">\(K\)</span> if:</p>
+<ol>
+<li>Every face of a simplex in <span class="math">\(K\)</span> is in <span class="math">\(K\)</span></li>
+<li>Every intersection of simplices <span class="math">\(A\)</span> and <span class="math">\(B\)</span> in <span class="math">\(K\)</span> is a face of both <span class="math">\(A\)</span> and <span class="math">\(B\)</span></li>
+</ol>
+<p><em>Counterexample to 1</em> (but not to 2): The singleton set <span class="math">\(X = \{ triangle \}\)</span> consisting of three points, the lines that connects them, and the area inside is not a simplicial complex because each of the three lines (faces) is not a member of <span class="math">\(X\)</span>.</p>
+<p><em>Counterexample to 2</em> (but not to 1): Draw four points in a square. Draw two lines connecting the points diagonal from each other (you've drawn an "X"). Each line is a simplex. Their intersection (at the center of the square) is not a face of either simplex.</p>
+<p><em>Failed Counterexample to 2</em>: (I was intersecting complexes and not simplices.) Complex <span class="math">\(A\)</span>: Draw four points; draw a line connecting one point <span class="math">\(c\)</span> to the other three <span class="math">\(x\)</span>, <span class="math">\(y\)</span>, <span class="math">\(z\)</span>. Complex <span class="math">\(B\)</span>: Draw a fifth point <span class="math">\(w\)</span>; draw a line connecting <span class="math">\(c\)</span> and <span class="math">\(w\)</span>; draw a line connecting <span class="math">\(x\)</span> to <span class="math">\(c\)</span> and connecting <span class="math">\(y\)</span> to <span class="math">\(z\)</span>. The intersection <span class="math">\(A \cap B\)</span> consists of <span class="math">\(c\)</span>, <span class="math">\(y\)</span>, <span class="math">\(z\)</span> and the two connecting lines.</p>
+<p>We can now construct an interesting simplicial complex: the Vietoris-Rips complex. Given a dataset consisting of <span class="math">\(n\)</span>-dimensional points, a metric (so we have distance), and a fixed value <span class="math">\(\delta &gt; 0\)</span>, connect all pairs of points that are within <span class="math">\(\delta\)</span> of each other. Whenever three or more points are connected, we additionally include the higher-dimensional simplex thus created. The collection of all such simplices is the Vietoris-Rips complex. By construction, requirements 1 and 2 are satisfied. (The proof for 2 probably uses triangle inequality: the intersection has to be within <span class="math">\(\delta\)</span> and therefore we'd already have connected the dots.)</p>
+<p>How do we determine which value(s) of <span class="math">\(\delta\)</span> create a complex that exhibits the underlying geometric structure of the data? We use persistence diagrams. A persistence diagram illustrates which topological features of a dataset persist as <span class="math">\(\delta\)</span> varies. In particular, we consider the homology of the complex as <span class="math">\(\delta\)</span> varies. Homology provides us with a formalized way to quantify the shape of a space in each dimension. For example, a solid torus has, modulo homotopy smooshing, one point, two loops, and one void. These values are called Betti numbers. They represent equivalence classes of points, loops, and voids.</p>
+<p>We are still on our way to understanding the persistence diagram. Let's consider all the classes of <span class="math">\(n\)</span>-dimensional "loops". As <span class="math">\(\delta\)</span> increases from 0, classes will emerge and classes will disappear. The <span class="math">\(\delta\)</span> value for which a class emerges is called its birth value <span class="math">\(b\)</span>, and the <span class="math">\(\delta\)</span> value for which a class disappears is called its death value <span class="math">\(d\)</span>. For each class, we have a tuple <span class="math">\((b,d)\)</span>. What can we do with tuples? Graph them! This graph is the persistence diagram. Traditionally <span class="math">\(b\)</span> is plotted on the horizontal axis and <span class="math">\(d\)</span> is plotted on the vertical axis. The further a point is from the line <span class="math">\(y=x\)</span>, the longer it persists. Thus the data's noise lives near the diagonal and the data's signal lives above the diagonal (for many applications).</p>
+<p>Now that we have a handful (or maybe many more!) of significant <span class="math">\((b,d)\)</span> pairs for a given dataset, we can compare two datasets to determine how geometrically similar they are. We make this comparison by matching points in one persistence diagram with points in the other persistence diagram. Two such ways to measure the distance (as a single value!) between two persistence diagrams are the bottleneck distance and the Wasserstein distance.</p>
+<p>Do we know that this distance is useful? We do, due to the stability theorem. This theorem proves that the distance between two persistence diagrams is less than the distance between the two corresponding datasets.</p>
+<h3>degrees of freedom (what choices can we make)</h3>
+<p>a. How do we draw the complex? Vietoris-Rips or something else?</p>
+<p>b. How do we measure the distance between the points in the persistence diagram? Bottleneck distance? Wasserstein distance? etc.</p>
+<p>c. Which distance do we use? Euclidean distance is not always the best tool for the task! (Thanks to <a href="https://people.clas.ufl.edu/hwagner/">Hubert Wagner</a> for pointing this out!)</p>
+<h3>next up</h3>
+<p>barcodes, linear-algebra-based computation, filtrations, persistence homology modules, module as a direct sum of barcode lines</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/research-resources.html" rel="bookmark" title="Permalink to Research Resources">
+                    Research Resources</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2022-08-18T00:00:00-04:00"> Thu 18 August 2022 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <h2>TDA Background</h2>
+<ul>
+<li>
+<p><a href="https://arxiv.org/abs/2004.04108">Introductory Topological Data Analysis</a></p>
+<ul>
+<li><strong>date</strong>: Apr 2020</li>
+<li><strong>author</strong>: Dayten Sheffar</li>
+<li><strong>summary</strong>: high-level introduction to: metric topology, <span class="math">\(p\)</span>-norm, <span class="math">\(\infty\)</span>-norm, abstract simplexes, simplicial complexes, homeomorphic and homotopy equivalence, nerve theorem, mapper algorithm, betti numbers, persistent homology</li>
+</ul>
+</li>
+<li>
+<p><a href="https://pub.ist.ac.at/~edels/Papers/2016-B-01-PersDM.pdf">Persistent Homology</a></p>
+<ul>
+<li><strong>author</strong>: Herbert Edelsbrunner and Dmitriy Morozov</li>
+<li><strong>summary</strong>: glossary of all things persistent homology</li>
+</ul>
+</li>
+<li>
+<p><a href="https://pub.ist.ac.at/~edels/Papers/2012-P-11-PHTheoryPractice.pdf">Persistent Homology: Theory and Practice</a></p>
+<ul>
+<li><strong>author</strong>: Herbert Edelsbrunner, Dmitriy Morozov</li>
+<li><strong>summary</strong>: persistent homology survey of methods and applications</li>
+</ul>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/1207.6437">Statistical topological data analysis using persistence landscapes</a></p>
+<ul>
+<li><strong>date</strong>: Jul 2012</li>
+<li><strong>author</strong>: Peter Bubenik</li>
+<li><strong>summary</strong>: introduces persistence landscapes to the literature</li>
+</ul>
+</li>
+</ul>
+<h2>TDA Theory: Stability</h2>
+<ul>
+<li>
+<p><a href="https://arxiv.org/abs/2103.10723">Notes on an Elementary Proof for the Stability of Persistence Diagrams</a></p>
+<ul>
+<li><strong>date</strong>: Mar 2021</li>
+<li><strong>author</strong>: Primoz Skraba, Katharine Turner</li>
+<li><strong>summary</strong>: these notes are a self-contained short proof of the stability of persistence diagrams; the background needed for <a href="https://arxiv.org/abs/2006.16824">arxiv:2006.16824</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/2006.16824">Wasserstein Stability for Persistence Diagrams</a></p>
+<ul>
+<li><strong>date</strong>: June 2020</li>
+<li><strong>author</strong>: Primoz Skraba, Katharine Turner</li>
+</ul>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/1809.09654">An algebraic Wasserstein distance for generalized persistence modules</a></p>
+<ul>
+<li><strong>date</strong>: Sep 2018</li>
+<li><strong>author</strong>: Peter Bubenik</li>
+<li><strong>summary</strong>: persistence modules are the algebraic counterpart to persistence diagrams; defines the Wasserstein distance for persistence modules; proves that the distance of a persistence module and its persistence diagram agree</li>
+</ul>
+</li>
+</ul>
+<h2>TDA Theory: Computation</h2>
+<ul>
+<li>
+<p><a href="https://geometry.stanford.edu/papers/zc-cph-05/zc-cph-05.pdf">Computing Persistent Homology</a></p>
+<ul>
+<li><strong>date</strong>: Nov 2004</li>
+<li><strong>author</strong>: Afra Zomorodian and Gunnar Carlsson</li>
+<li><strong>DOI</strong>: <a href="https://doi.org/10.1007/s00454-004-1146-y">DOI</a></li>
+<li><strong>summary</strong>: the persistent homology of a filtered <span class="math">\(d\)</span>-dimensional simplicial complex is the standard homology of a graded module over a polynomial ring; gives an algorithm for computing individual persistent homology groups over an arbitrary PID</li>
+</ul>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/2103.05608">Dory: Overcoming Barriers to Computing Persistent Homology</a></p>
+<ul>
+<li><strong>date</strong>: Mar 2021</li>
+<li><strong>author</strong>: Manu Aggarwal, Vipul Periwal</li>
+</ul>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/2003.07989">GPU-Accelerated Computation of Vietoris-Rips Persistence Barcodes</a></p>
+<ul>
+<li><strong>date</strong>: Mar 2020</li>
+<li><strong>author</strong>: Simon Zhang, Mengbai Xiao, Hao Wang</li>
+</ul>
+</li>
+</ul>
+<h2>TDA Applications</h2>
+<ul>
+<li>
+<p><a href="https://arxiv.org/abs/2102.09380">Topological data analysis of C. elegans locomotion and behavior</a></p>
+<ul>
+<li><strong>date</strong>: Feb 2021</li>
+<li><strong>author</strong>: Ashleigh Thomas</li>
+<li><strong>summary</strong>: uses a sliding-window embedding to turn time series data into a point cloud that remembers the temporal information; thorough and clear intro to persistence diagrams and persistence landscapes</li>
+</ul>
+</li>
+<li>
+<p><a href="https://jmlr.org/papers/v21/20-345.html">Topology of Deep Neural Networks</a></p>
+<ul>
+<li><strong>date</strong>: Apr 2020</li>
+<li><strong>author</strong>: Gregory Naitzat, Andrey Zhitnikov, Lek-Heng Lim</li>
+</ul>
+</li>
+</ul>
+<h2>Computer Science: Functional Programming</h2>
+<ul>
+<li>
+<p><a href="https://www2.cs.sfu.ca/CourseCentral/831/burton/Notes/July14/free.pdf">Theorems for free!</a></p>
+<ul>
+<li><strong>date</strong>: June 1989</li>
+<li><strong>author</strong>: Philip Wadler</li>
+</ul>
+</li>
+<li>
+<p><a href="https://homepages.inf.ed.ac.uk/wadler/papers/lineartaste/lineartaste-revised.pdf">A taste of linear logic</a></p>
+<ul>
+<li><strong>date</strong>: 1993</li>
+<li><strong>author</strong>: Philip Wadler</li>
+<li><strong>DOI</strong>: <a href="https://doi.org/10.1007/3-540-57182-5_12">DOI</a></li>
+<li><strong>summary</strong>: an introduction to intuitionistic logic and linear logic; how they correspond to type systems for functional languages via the notion of 'Propositions as Type'</li>
+</ul>
+</li>
+<li>
+<p><a href="https://homepages.inf.ed.ac.uk/wadler/papers/marktoberdorf/baastad.pdf">Monads for functional programming</a></p>
+<ul>
+<li><strong>date</strong>: 1993</li>
+<li><strong>author</strong>: Philip Wadler</li>
+<li><strong>DOI</strong>: <a href="https://doi.org/10.1007/978-3-662-02880-3_8">DOI</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://simonmar.github.io/bib/papers/haxl-icfp14.pdf">There is no Fork: an Abstraction for Efficient, Concurrent, and Concise Data Access</a></p>
+<ul>
+<li><strong>date</strong>: Sep 2014</li>
+<li><strong>summary</strong>: functor concurrency</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/desugaring-haskell-haskell16.pdf">Desugaring Haskell’s do-Notation into Applicative Operations</a></p>
+<ul>
+<li><strong>date</strong>: Sep 2016</li>
+<li><strong>summary</strong>: applicative functors</li>
+</ul>
+</li>
+</ul>
+<h2>Computer Science: Parsing</h2>
+<ul>
+<li>
+<p><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/mison-vldb17.pdf">Mison: A Fast JSON Parser for Data Analytics</a></p>
+<ul>
+<li><strong>date</strong>: 2017</li>
+<li><strong>summary</strong>: push down projections and filters into the parser</li>
+</ul>
+</li>
+<li>
+<p><a href="http://www.vldb.org/pvldb/vol11/p1576-palkar.pdf">Filter Before You Parse: Faster Analytics on Raw Data with Sparser</a></p>
+<ul>
+<li><strong>date</strong>: Aug 2018</li>
+<li><strong>summary</strong>: filter pre-parsing</li>
+</ul>
+</li>
+</ul>
+<h2>Logic</h2>
+<ul>
+<li><a href="https://www.lix.polytechnique.fr/~lutz/papers/medial-kurz.pdf">What could a Boolean category be?</a><ul>
+<li><strong>date</strong>: Jul 2006</li>
+<li><strong>author</strong>: Lutz Straßburger</li>
+</ul>
+</li>
+</ul>
+<h2>Misc</h2>
+<ul>
+<li><a href="https://arxiv.org/abs/1904.09828">Magic: The Gathering is Turing Complete</a><ul>
+<li><strong>date</strong>: Mar 2019</li>
+<li><strong>author</strong>: Alex Churchill, Stella Biderman, Austin Herrick</li>
+</ul>
+</li>
+</ul>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/test-latex-math-post.html" rel="bookmark" title="Permalink to Test Latex Math Post">
+                    Test Latex Math Post</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2022-08-18T00:00:00-04:00"> Thu 18 August 2022 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>This post is to test math</p>
+<div class="math">$$x = y^z$$</div>
+<p>but can it do <span class="math">\(i=n^{line}\)</span> math?
+</p>
+<div class="math">$$\int_{foo}^{bar} \delta d\delta = \infty \Pi_i \Sigma 3$$</div>
+<p>another eqn</p>
+<div class="math">$$f(x) = \int_{-\infty}^{\infty} \hat{f} (\Upsilon) e^{2\pi i x \xi}$$</div>
+<p>add some more text</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-02-19-categorytheorystrangeloop.html" rel="bookmark" title="Permalink to Category Theory at Strange Loop 2013">
+                    Category Theory at Strange Loop 2013</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-02-19T00:00:00-05:00"> Wed 19 February 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p><img alt="diagram" src="/images/diagram.png" title="diagram"></p>
+<p>Back in September 2013 I gave a talk titled "Category Theory: An Abstraction for Anything" at the <a href="https://thestrangeloop.com/">Strange Loop Conference</a>. A few days ago, the <a href="http://www.infoq.com/presentations/category-theory">video</a> for my talk was released. </p>
+<p>Additionally, I wrote a <a href="http://engineering.richrelevance.com/closing-the-loop-on-category-theory-polymorphism-currying-and-more/">blog post</a> about this talk that was published on my employer's blog. </p>
+<p>Here's the talk abstract, reproduced from the <a href="https://thestrangeloop.com/sessions/category-theory-an-abstraction-for-anything">Strange Loop website</a>:</p>
+<p><em>Category theory provides a mathematically sound foundation on which we can create collections of objects and express morphisms between them. Together, along with a few simple rules, a collection of objects and morphisms forms a category to which we can apply many useful results, such as the uniqueness of an identity morphism. Furthermore, once we have a category in hand, we can formally explore the relationships it has with other categories, deducing powerful and practical abstractions.</em></p>
+<p><em>The power of category theory lies in the relative simplicity and accessibility of its definitions. From just a handful of straightforward concepts, we can formalize many concrete ideas such as directed acyclic graphs, currying, polymorphic functions, and Haskell itself. This talk will introduce the basics of category theory, while simultaneously diving into specific programming-related examples of categories, functors, and natural transformations. In addition to exploring profound and beautiful concepts, this talk aims to provide you with the tools necessary to recognize category-theoretical patterns in your own programming projects.</em></p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-02-03-siteproperties.html" rel="bookmark" title="Permalink to Site Properties">
+                    Site Properties</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-02-03T00:00:00-05:00"> Mon 03 February 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>This site contains all the things that don't contain themselves.</p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/lambdacalc.html" rel="bookmark" title="Permalink to Insights into Church-Rosser">
+                    Insights into Church-Rosser</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2013-03-26T00:00:00-04:00"> Tue 26 March 2013 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>Untyped lambda calculus is powerful. In fact, every computable function can be encoded into lambda calculus, and thus so can every bit of Scala code you've ever written. Though, anything more complicated than your basic combinator would be almost indecipherable in its lambda calculus form. As an example, here's what the addition combinator for the Church numerals <code>c_n = λfx.fn(x)</code> looks like in lambda calculus: </p>
+<div class="highlight"><pre><span></span><span class="err">A+ = λxypq.xp(ypq)</span>
+</pre></div>
+
+
+<p>At first glance it's by no means obvious that you're looking at a way to add natural numbers.</p>
+<p><strong>Introductory Definitions:</strong></p>
+<p>Before we jump into some more examples, let's step back a minute so I can provide a quick and basic introduction to untyped lambda calculus. The rules are easily accessible, and given that lambda calculus is Turing complete, their simplicity astounds me. (As a side note, because cellular automata are really cool, Conway's Game of Life is another easily definable Turing complete system.)</p>
+<p>Now, as promised, the introduction: We define the set <code>𝚲</code> inductively as follows. Let <code>V</code> be a set of variables <code>v'</code>, <code>v''</code>, etc.</p>
+<div class="highlight"><pre><span></span><span class="err">(i) If x ∈ V, then x ∈ 𝚲.</span>
+<span class="err">(ii) If M,N ∈ 𝚲, then MN ∈ 𝚲.</span>
+<span class="err">(iii) If x ∈ V and M ∈ 𝚲, then λx.M ∈ 𝚲.</span>
+</pre></div>
+
+
+<p>In (ii), <code>MN</code> denotes application, and you should think of <code>M</code> as a method applied to <code>N</code>. In (iii), the syntax <code>λx.M</code> denotes an abstraction, i.e. a function <code>x -&gt; M</code>, where <code>M</code> is not required to depend on <code>x</code>. The most interesting terms in lambda calculus will include an abstraction followed by an application, like so:</p>
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="err">λ</span><span class="n">x</span><span class="p">.</span><span class="n">M</span><span class="p">)</span><span class="n">N</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="nl">x</span> <span class="p">:</span><span class="o">=</span> <span class="n">N</span><span class="p">]</span>
+</pre></div>
+
+
+<p>where <code>N</code> is substituted for every free instance of <code>x</code> in <code>M</code>. This is known formally as β-reduction. In psuedo lambda calculus, (psuedo because integers are not terms in <code>V</code>), we can consider the example </p>
+<div class="highlight"><pre><span></span><span class="err">(λx.(2*x + 3))4 = 2*4 + 3 = 11</span>
+</pre></div>
+
+
+<p><strong>Some Intuitions:</strong></p>
+<p>So what's the benefit of thinking about lambda calculus? For me, lambda calculus provides the structure to represent the core of what a function really is: a rule that gets us from one bit of knowledge to another. And if we want to prove something about functions (functions in a generic sense), lambda calculus is the perfect place to come. So what should we prove? Well, intuitively we'd hope that, no matter the strategy (e.g. call by name, call by value, etc.) we use to evaluate our function, we obtain the same result. But wait! Can this always be true? What if our function is an ill-thought-out recursion that loops until we overflow the stack? Can we really guarantee that every call to a function will return a unique result, no matter what strategy we use to evaluate it? The answer is yes, with an added assumption.</p>
+<p>To understand what this assumption should be, consider the famous <code>Ω</code>-combinator: </p>
+<div class="highlight"><pre><span></span><span class="err">Ω = (λx.xx)(λx.xx)</span>
+</pre></div>
+
+
+<p>Furthermore consider the lambda term <code>(λx.z)Ω</code>. If we evaluate this term using a call-by-name strategy, then it's simply equal to the constant <code>z</code>, since <code>λx.z</code> is a constant function. But if we use a call-by-value strategy, then we'll never be able to further reduce it, since when we apply <code>λx.xx</code> to itself we again obtain <code>Ω</code>. So what we really want to prove is this: If we β-reduce a lambda term until we cannot reduce it any further, then that final reduced term is unique. Said more formally: If a lambda term has a normal form, then that normal form is unique.</p>
+<p><strong>Introduction to Church-Rosser:</strong></p>
+<p><img alt="ChurchRosserRight" src="/images/ChurchRosser1.png" title="ChurchRosser1">
+In summary, we cannot just pick an evaluation strategy and expect it to yield the same results as all other evaluation strategies, because, as the <code>Ω</code>-combinator example showed us, a given evaluation strategy may never terminate. But, there is something we can prove for certain: a lambda term has at most one normal form. In order to prove this, we'll outline the proof of a more general theorem, known as the Church-Rosser Theorem. In picture form, it looks like the image to the right, where solid arrows are assumptions and dotted arrows are to be proven.</p>
+<p>In word form it states: If a term <code>M</code> β-reduces to two terms <code>N1</code> and <code>N2</code>, then there exists some <code>N3</code> such that <code>N1</code> and <code>N2</code> each β-reduce to it.</p>
+<p>Given Church-Rosser, our desired statement follows directly. If we let <code>N1</code> and <code>N2</code> in the diagram above be distinct normal forms of <code>M</code>, then by Church-Rosser there exists some <code>N3</code> such that <code>N1</code> and <code>N2</code> each β-reduce to it. But a normal form term can only β-reduce to itself, and thus <code>N1 = L</code> and <code>N2 = L</code>. Thus <code>M</code> has at most one normal form, since <code>N1 = N2</code>. </p>
+<p>Interestingly, we can also use Church-Rosser to prove the consistency of lambda calculus, that is, that true does not equal false. We define: </p>
+<div class="highlight"><pre><span></span><span class="err">T = λxy.x</span>
+<span class="err">F = λxy.y</span>
+</pre></div>
+
+
+<p>Note that <code>T</code> and <code>F</code> are written as an iterated abstraction, meaning that the abstraction is one of multiple variables (in this case <code>x</code> and <code>y</code>). Iterated abstraction is right associative; for example</p>
+<div class="highlight"><pre><span></span><span class="err">λxyz.xyz</span>
+</pre></div>
+
+
+<p>is shorthand for</p>
+<div class="highlight"><pre><span></span><span class="err">λx.(λy.(λz.xyz))</span>
+</pre></div>
+
+
+<p>Now to understand these definitions, if <code>K</code> is a lambda term that equals either <code>T</code> or <code>F</code>, the lambda term <code>KPQ</code> is a way to represent “if <code>K</code> then <code>P</code> else <code>Q</code>”. If <code>T = F</code>, then we’d be able to perform a series of reductions connecting <code>T</code> and <code>F</code>. But since <code>T</code> and <code>F</code> are both normal forms, we cannot perform such reductions. Thus <code>T</code> does not equal <code>F</code>.</p>
+<p><strong>Strip Lemma Basics:</strong></p>
+<p><img alt="ChurchRosserRight" src="/images/ChurchRosser2.png" title="ChurchRosser2">
+Now in order to prove Church-Rosser, we'll prove a lemma first, namely the Strip Lemma. This lemma states that, if <code>M</code> β-reduces to <code>N1</code> in a single step, and <code>M</code> β-reduces to <code>N2</code> in any finite number of steps, there exists an <code>N3</code> such that <code>N1</code> and <code>N2</code> each β-reduce to it. In diagram form, we have the diagram to the right, where a single arrow represents a single β-reduction, and a double arrow represents any finite number of β-reductions. </p>
+<p>Note that once we've proven the Strip Lemma, Church-Rosser follows immediately by induction on the natural numbers. (First prove the statement for <code>n=1</code>. Then prove that if the statement holds for an arbitrary <code>n</code>, it holds for <code>n+1</code>.) To see this visually, imagine filling in the Church-Rosser diagram with these strips. </p>
+<p>Proceeding with the proof of the Strip Lemma, the correct question to ask is, how do we obtain a candidate <code>N3</code>? Well, we know that <code>M</code> β-reduces to <code>N1</code> in a single step, so we'll consider this redex and mark it in <code>M</code>. Now as we perform the multiple reductions on <code>M</code> that ultimately reduce to <code>N2</code>, we track this marked lambda term until we reach <code>N2</code>. We now perform the β-reduction on this marked term in <code>N2</code>, and that produces our candidate <code>N3</code>.</p>
+<p>Let's make this idea of marking more formal with some notation. Specifically, to keep track of a certain redex, we'll underline it like this: <code>(<ins>λ</ins>x.M)N</code>, and we'll keep that lambda underlined until we β-reduce it. With this new notation, here’s an example of the Strip Lemma with actual lambda terms. (We’ll introduce <code>φ</code> in a couple of paragraphs; for now just think of it as a β-reduction.)</p>
+<p><img alt="ChurchRosser3" src="/images/ChurchRosser3.png" title="ChurchRosser3"></p>
+<p><strong>Details of the Proof:</strong></p>
+<p>Given that we now allow underlined lambdas in our set of allowed terms, what does this new set look like formally? Let's call it <code><ins>𝚲</ins></code>. We'll define it inductively, as we defined <code>𝚲</code> earlier. The first three parts of the definition will be analogous to before, defining variables, application, and abstraction. In the fourth part we will include underlined lambdas only in the case when we have an abstraction followed by an application. This is because the only lambda-terms we need to trace are ones we know will be β-reduced.</p>
+<pre><code>(i) If x ∈ V, then x ∈ <ins>𝚲</ins>.
+(ii) If M,N ∈ <ins>𝚲</ins>, then MN ∈ <ins>𝚲</ins>.
+(iii) If x ∈ V and M ∈ <ins>𝚲</ins>, then λx.M ∈ <ins>𝚲</ins>. 
+(iv) If x ∈ V and M, N ∈ <ins>𝚲</ins>, then (<ins>λ</ins>x.M)N ∈ <ins>𝚲</ins>.
+</code></pre>
+
+<p>Consider the following diagram. Note that the front rectangle is the same as the diagram in the statement of the Strip Lemma. The other terms, namely <code>M'</code> and <code>N2'</code>, we construct for purposes of the proof.</p>
+<p><img alt="ChruchRosser4" src="/images/ChurchRosser4.png" title="ChurchRosser4"></p>
+<p>We construct <code>M'</code> to be equivalent to <code>M</code>, except that in it we underlined the <code>λ</code> that was reduced to obtain <code>N1</code>. The function <code>ψ: <ins>𝚲</ins> -&gt; 𝚲</code> simply erases all underlines, so that</p>
+<pre><code>ψ((<ins>λ</ins>x.M)N) = (λx.ψ(M))ψ(N)</code></pre>
+
+<p>We can now apply beta-reductions to <code>M'</code>, analogous to those applied to <code>M</code>, in order to obtain <code>N2'</code>. And now to formally obtain <code>N3</code>, we apply the function <code>φ: <ins>𝚲</ins> -&gt; 𝚲</code> to <code>N2'</code>. And what is <code>φ</code>? <code>φ</code> is exactly what you'd expect: a function that β-reduces all underlined terms and keeps all others the same, meaning that</p>
+<pre><code>φ((<ins>λ</ins>x.M)N) = φ(M)[x := φ(N)]</code></pre>
+
+<p>Now that we have our candidate <code>N3</code>, we only need to prove that we can draw solid lines in place of the dotted ones. I will outline a proof showing that <code>N2</code> β-reduces to <code>N3</code> and will leave the other part of the proof as an exercise for the reader. We will outline a proof of the following diagram, which is the front triangle in the previous diagram.</p>
+<p><img alt="ChurchRosser5" src="/images/ChurchRosser5.png" title="ChurchRosser5"></p>
+<p>In order to prove this, we will use the method of structural induction. Recall that initially we constructed <code>𝚲</code> inductively. Thus in order to prove something general about all elements of <code>𝚲</code>, we can use an induction technique that mimics the way in which we define <code>𝚲</code>. This is called induction on the structure of <code>𝚲</code>. Though note that in our case, <code>A ∈ <ins>𝚲</ins></code>, so we'll use induction on the structure of <code><ins>𝚲</ins></code>.</p>
+<p>First, the base case:</p>
+<p>(i) Let <code>A = x</code> for some <code>x ∈ V</code>. Then <code>ψ(x) = x</code> and <code>φ(x) = x</code>. And thus since <code>x</code> β-reduces to <code>x</code>, we're done.</p>
+<p>For the next three cases, we assume the statement holds for the individual terms in <code><ins>𝚲</ins></code>, and prove that it holds for their application (or abstraction).</p>
+<p>(ii) Let <code>A = PQ</code> for <code>P, Q ∈ V</code>. Assume that <code>ψ(P)</code> β-reduces to <code>φ(P)</code> and that <code>ψ(Q)</code> β-reduces to <code>φ(Q)</code>. By the definitions of <code>ψ</code> and <code>φ</code>, show that <code>ψ(PQ)</code> β-reduces to <code>φ(PQ)</code>.
+(iii) Let <code>A = λx.P</code> for <code>P ∈ V</code>. Assume that <code>ψ(P)</code> β-reduces to <code>φ(P)</code>. Using the definitions, show that <code>ψ(λx.P)</code> β-reduces to <code>φ(λx.P)</code>
+(iv) Let <code>A = (<ins>λ</ins>x.P)Q</code> for <code>P, Q ∈ V</code>. Assume the statement holds for <code>P</code> and <code>Q</code>. Show that <code>ψ(A)</code> β-reduces to <code>φ(A)</code>.</p>
+<p>And that's the outline of the proof of the Strip Lemma! </p>
+<p><strong>Conclusion:</strong></p>
+<p>In summary, we gave the definition for a lambda-term, considered the <code>Ω</code>-combinator as an example of a lambda-term without a normal form, and outlined a proof of the Church-Rosser Theorem. So what does Church-Rosser tell us? If a term has a normal form, then that normal form is unique. This means that if we evaluate a function using two different strategies, the results will be equal. Of course, this doesn't guarantee that every evaluation strategy will terminate. But one thing we know for certain: if we do obtain a result, then that result is unique. </p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+</ul><!-- /#posts-list -->
+</section><!-- /#content -->
+</body>
+</html>

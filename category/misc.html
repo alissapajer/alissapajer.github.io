@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="/theme/css/rdark.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/css/luney.css" />
+        <link href="/" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blog ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <title>Alissa Pajer's Blog - misc category</title>
+        <meta charset="utf-8" />
+        <meta name="generator" content="Pelican" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blog Full Atom Feed" />
+        <link href="/feeds/misc.atom.xml" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blog Categories Atom Feed" />
+
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  "HTML-CSS": {
+  styles: {
+  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+  },
+  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+        
+        </head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Alissa Pajer's Blog</a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+        </ul></nav><!-- /#menu -->
+<section id="content">
+
+<ul>
+      <a href="/tag/math.html">math</a>
+      <a href="/tag/programming.html">programming</a>
+      <a href="/tag/computers.html">computers</a>
+      <a href="/tag/literature.html">literature</a>
+</ul>
+
+<!--<h2>Articles in the misc category</h2>
+-->
+
+<ul id="post-list">
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/slices-of-topology-homology.html" rel="bookmark" title="Permalink to Slices of Topology (Homology!)">
+                    Slices of Topology (Homology!)</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2022-11-08T00:00:00-05:00"> Tue 08 November 2022 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <h1>Slices of Topology</h1>
+<p>No matter how you slice it and dice it, you get out the same information. Well, that's not exactly true. But I'll show you one way you can look at individual slices of a shape in order to determine its overall topology.</p>
+<h2>Set Up</h2>
+<p><img alt="Torus" src="/images/pyramid/torus.jpg" title="torus" width="25%"></p>
+<p>This is basically a hollow donut with legs. Said differently, it's a shell of a sphere with a hole in it (so it's like a torus), with the lower bits stretched out. This three-dimensional shape has six total local minima and local maxima, which are called critical values. They are labelled as <span class="math">\(a_1\)</span> through <span class="math">\(a_6\)</span>.</p>
+<p>We are going to look at one particular strategy we can use to slice this shape into smaller pieces. We'll then look at each piece individually and determine what shape it is. For example, each piece could be a point or a circle or a sphere or something else. We'll also take note of how many consecutive slices contain each particular shape.</p>
+<h2>Slicing: Levelsets Zigzag Persistent Homology</h2>
+<p>This slicing strategy considers each horizontal slides through each critical value ( <span class="math">\(a_1\)</span> through <span class="math">\(a_6\)</span> ) and each horizontal region between adjacent critical values. </p>
+<p>We are going to keep track of three different types of shapes: connected components ( <span class="math">\(H_0\)</span> ), loops ( <span class="math">\(H_1\)</span> ), and voids ( <span class="math">\(H_2\)</span> ). </p>
+<p><img alt="a1" src="/images/pyramid/a1.jpg" title="a1" width="4%"></p>
+<ul>
+<li><span class="math">\(a_1\)</span>. A single point.</li>
+<li><span class="math">\(H_0\)</span>: Something exists; thus our first connected component is born.</li>
+</ul>
+<p><img alt="a1-a2" src="/images/pyramid/a1-a2.jpg" title="a1-a2" width="8%"></p>
+<ul>
+<li><span class="math">\((a_1, a_2)\)</span>. A cylinder that's missing its top and bottom.</li>
+<li><span class="math">\(H_0\)</span>: Something still exists, so our connected component is still alive.</li>
+<li><span class="math">\(H_1\)</span>: Also, a loop is born; this is the loop you can create by drawing a circle around the outside of the cylinder.</li>
+</ul>
+<p><img alt="a2" src="/images/pyramid/a2.jpg" title="a2" width="15%"></p>
+<ul>
+<li><span class="math">\(a_2\)</span>. A single point <em>and</em> a loop.</li>
+<li><span class="math">\(H_0\)</span>: The original connected component still exists. Also, a second thing exists; thus our second connected component is born.</li>
+<li><span class="math">\(H_1\)</span>: The loop is still alive.</li>
+</ul>
+<p><img alt="a2-a3" src="/images/pyramid/a2-a3.jpg" title="a2-a3" width="15%"></p>
+<ul>
+<li><span class="math">\((a_2, a_3)\)</span>. Two separate cylinders.</li>
+<li><span class="math">\(H_0\)</span>: Two connected components.</li>
+<li><span class="math">\(H_1\)</span>: The previous loop still exists, and a second loop is born.</li>
+</ul>
+<p><img alt="a3" src="/images/pyramid/a3.jpg" title="a3" width="15%"></p>
+<ul>
+<li><span class="math">\(a_3\)</span>. Two loops connected at a point.</li>
+<li><span class="math">\(H_0\)</span>: Only one connected component remains.</li>
+<li><span class="math">\(H_1\)</span>: Both loops still exist.</li>
+</ul>
+<p><img alt="a3-a4" src="/images/pyramid/a3-a4.jpg" title="a3-a4" width="15%"></p>
+<ul>
+<li><span class="math">\((a_3, a_4)\)</span>. A single cylinder.</li>
+<li><span class="math">\(H_0\)</span>: A single connected component.</li>
+<li><span class="math">\(H_1\)</span>: Only one loop remains.</li>
+</ul>
+<p><img alt="a4" src="/images/pyramid/a4.jpg" title="a4" width="15%"></p>
+<ul>
+<li><span class="math">\(a_4\)</span>. Two loops connected at a point.</li>
+<li><span class="math">\(H_0\)</span>: Still have a single connected component.</li>
+<li><span class="math">\(H_1\)</span>: A second loop is alive again.</li>
+</ul>
+<p><img alt="a4-a5" src="/images/pyramid/a4-a5.jpg" title="a4-a5" width="30%"></p>
+<ul>
+<li><span class="math">\((a_4, a_5)\)</span>. Two separate cylinders.</li>
+<li><span class="math">\(H_0\)</span>: A second connected component is alive again.</li>
+<li><span class="math">\(H_1\)</span>: A second loop is alive again.</li>
+</ul>
+<p><img alt="a5" src="/images/pyramid/a5.jpg" title="a5" width="15%"></p>
+<ul>
+<li><span class="math">\(a_5\)</span>. Two loops connected at a point.</li>
+<li><span class="math">\(H_0\)</span>: Only one connected component remains.</li>
+<li><span class="math">\(H_1\)</span>: Still have both loops.</li>
+</ul>
+<p><img alt="a5-a6" src="/images/pyramid/a5-a6.jpg" title="a5-a6" width="15%"></p>
+<ul>
+<li><span class="math">\((a_5, a_6)\)</span>. A single cylinder.</li>
+<li><span class="math">\(H_0\)</span>: Still have a single connected component.</li>
+<li><span class="math">\(H_1\)</span>: Only one loop remains.</li>
+</ul>
+<p><img alt="a6" src="/images/pyramid/a6.jpg" title="a6" width="4%"></p>
+<ul>
+<li><span class="math">\(a_6\)</span>. A single point.</li>
+<li><span class="math">\(H_0\)</span>: A single connected component remains.</li>
+<li><span class="math">\(H_1\)</span>: There are no loops.</li>
+</ul>
+<p>We can represent all of that information in a single barcode diagram. Given the barcode diagram, how different an original shape could you draw?</p>
+<p><img alt="barcode" src="/images/pyramid/barcode.jpg" title="barcode" width="55%"></p>
+<h2>Talk Slides</h2>
+<p>I gave a talk about this topic at the weekly University of Florida <a href="https://people.clas.ufl.edu/peterbubenik/intro-to-tda/">research group meeting</a> for Topological Data Analysis (TDA).</p>
+<p><a href="/images/Mayer-Vietoris_Pyramid.pdf" title="slides">Here is a pdf</a> of the slides I used for the talk.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/5x5-grids-of-english-words.html" rel="bookmark" title="Permalink to 5x5 Grids of English Words">
+                    5x5 Grids of English Words</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2022-10-14T00:00:00-04:00"> Fri 14 October 2022 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <h2>The Problem</h2>
+<p>Here's an example of a valid 5x5 grid. It contains 10 English words (5 across words and 5 down words).</p>
+<div class="highlight"><pre><span></span><span class="err">a w a r e</span>
+<span class="err">m o l a l</span>
+<span class="err">a v o i d</span>
+<span class="err">s e n s e</span>
+<span class="err">s n e e r</span>
+</pre></div>
+
+
+<p>This project aims to find all 5x5 grids of English words. The word list I'm using is the python library <code>from english_words import english_words_lower_alpha_set</code>. This set contains 3213 words. I removed the majority of the proper nouns and all of the non-words (I hope!), which brings the word count down to 2481.</p>
+<p>There are <span class="math">\(2481^5 = 9.4 \times 10^16 = 94\)</span> million billion possible groups of 5 non-unique words. If we can process 100 grids per second, then we'd need about <span class="math">\((2481^5) / 100\)</span> seconds (so, 29.8 million years!) to compute the set of all grids. This is back-of-the-napkin math, but it gives us a general sense of the orders of magnitudes we're dealing with here.</p>
+<p>Here is a naive implementation that finds all valid 5x5 grids (without excluding duplicate words).</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tqdm.notebook</span> <span class="kn">import</span> <span class="n">tqdm</span>
+
+<span class="k">def</span> <span class="nf">find_grids_slow</span><span class="p">(</span><span class="n">words</span><span class="p">):</span>
+    <span class="n">words2</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="c1"># checking set containment is faster than checking list containment</span>
+    <span class="k">for</span> <span class="n">a0</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">a1</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">a2</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">words</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">a3</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">a4</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+                        <span class="n">d0</span> <span class="o">=</span> <span class="n">a0</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">a1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">a2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">a3</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">a4</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                        <span class="n">d1</span> <span class="o">=</span> <span class="n">a0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">a1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">a2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">a3</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">a4</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                        <span class="n">d2</span> <span class="o">=</span> <span class="n">a0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">a1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">a2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">a3</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">a4</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+                        <span class="n">d3</span> <span class="o">=</span> <span class="n">a0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">a1</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">a2</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">a3</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">a4</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+                        <span class="n">d4</span> <span class="o">=</span> <span class="n">a0</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">a1</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">a2</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">a3</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">a4</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="n">d0</span> <span class="ow">in</span> <span class="n">words2</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">d1</span> <span class="ow">in</span> <span class="n">words2</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">d2</span> <span class="ow">in</span> <span class="n">words2</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">d3</span> <span class="ow">in</span> <span class="n">words2</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">d4</span> <span class="ow">in</span> <span class="n">words2</span><span class="p">):</span>
+                            <span class="n">grid</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="n">a0</span><span class="p">,</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">,</span><span class="n">a3</span><span class="p">,</span><span class="n">a4</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">))</span>
+                            <span class="k">return</span> <span class="n">grid</span>
+</pre></div>
+
+
+<p>I ran this function using a set of 3069 words. For <code>a0 = "sloth"</code>, it took 9 hours to run for each of the first two values of <code>a2</code>. (I didn't print out what those two values were). There are 3069 possible values for <code>a2</code>. So, it will take <span class="math">\(9 * 3069 = 27621\)</span> hours to complete the computation for all values of <code>a2</code>. Then we need to run that loop for each value of <code>a1</code> and each value of <code>a0</code>, bringing us to 260,155,597,581 hours, which is 29.7 million years. That's too long. Even if we improved this by a few orders of magnitude and ran it in parallel, the brute force approach isn't going to be viable.</p>
+<p>Note that this function processes <span class="math">\((3069^5) / (260,155,597,581 * 60 * 60) = 290\)</span> grids per second. </p>
+<h2>The Implementation</h2>
+<p>Starting out, I had a poor intuition for how uncommon 5x5 grids actually are. While it would be nice to compute all grids, a few hundred grids would suffice for my use case. So, I decided to start out by trying to compute just one grid. I fixed <code>a0</code>. Then I chose a random <code>d0</code> (starting with the first letter of <code>a0</code>). Then I chose a random <code>a1</code>. Then a random <code>d1</code>. Then a random <code>a2</code>. Such a grid looked like this.</p>
+<div class="highlight"><pre><span></span><span class="err">s t e e r</span>
+<span class="err">i r a t e</span>
+<span class="err">l a p s e</span>
+<span class="err">k c _ _ _</span>
+<span class="err">y e _ _ _</span>
+</pre></div>
+
+
+<p>There are no English words that can complete this grid. I ran this function enough times to convince myself that statistically I'd never find a complete grid using this method. And I definitely wouldn't find hundreds (if there even are hundreds!). </p>
+<p>Next I experimented with fixing <code>a0</code>, and then iterating over all valid <code>d0</code>s, for all valid <code>a1</code> words, for all valid <code>d1</code> words, etc. The indexing was kind of unweidly, and I realized I wasn't gaining anything from alternating between across words and down words.</p>
+<p>So, I decided to fix <code>a0</code>. Then loop over each <code>a1</code>, filtering out those values of <code>a1</code> for which there were not valid down words. Then loop over each <code>a2</code> in the same fashion. After running this function I noticed that, after fixing the first three across words, there were often only a handful of valid down words remaining. So, instead of iterating over the full set of words two more times (once for each of <code>a3</code> and <code>a4</code>), we can just consider the valid remaining down words, checking that the <code>a3</code> and <code>a4</code> they produce are valid.</p>
+<div class="highlight"><pre><span></span><span class="err">s t o v e</span>
+<span class="err">h a v e n</span>
+<span class="err">a l e r t</span>
+<span class="err">_ _ _ _ _ </span>
+<span class="err">_ _ _ _ _ </span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tqdm.notebook</span> <span class="kn">import</span> <span class="n">tqdm</span>
+
+<span class="k">def</span> <span class="nf">has_prefix</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">words</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">True</span>
+
+<span class="k">def</span> <span class="nf">filter_prefix</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">words</span><span class="p">):</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">out</span>
+
+<span class="k">def</span> <span class="nf">find_grids</span><span class="p">(</span><span class="n">a0_words</span><span class="p">,</span> <span class="n">all_words</span><span class="p">,</span> <span class="n">output_file</span><span class="p">):</span>
+    <span class="n">all_words_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">all_words</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">a0</span> <span class="ow">in</span> <span class="n">a0_words</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a0:&#39;</span><span class="p">,</span> <span class="n">a0</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">a1</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">all_words_set</span> <span class="o">-</span> <span class="p">{</span><span class="n">a0</span><span class="p">}):</span>
+            <span class="n">p0</span> <span class="o">=</span> <span class="n">a0</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">a1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">p1</span> <span class="o">=</span> <span class="n">a0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">a1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">p2</span> <span class="o">=</span> <span class="n">a0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">a1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+            <span class="n">p3</span> <span class="o">=</span> <span class="n">a0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">a1</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+            <span class="n">p4</span> <span class="o">=</span> <span class="n">a0</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">a1</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+            <span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="n">has_prefix</span><span class="p">(</span><span class="n">p0</span><span class="p">,</span> <span class="n">all_words_set</span><span class="p">)</span> <span class="ow">and</span> <span class="n">has_prefix</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">all_words_set</span><span class="p">)</span> <span class="ow">and</span> <span class="n">has_prefix</span><span class="p">(</span><span class="n">p2</span><span class="p">,</span> <span class="n">all_words_set</span><span class="p">)</span> <span class="ow">and</span> <span class="n">has_prefix</span><span class="p">(</span><span class="n">p3</span><span class="p">,</span> <span class="n">all_words_set</span><span class="p">)</span> <span class="ow">and</span> <span class="n">has_prefix</span><span class="p">(</span><span class="n">p4</span><span class="p">,</span> <span class="n">all_words_set</span><span class="p">)):</span>
+                <span class="k">continue</span>
+            <span class="k">for</span> <span class="n">a2</span> <span class="ow">in</span> <span class="n">all_words_set</span> <span class="o">-</span> <span class="p">{</span><span class="n">a0</span><span class="p">,</span><span class="n">a1</span><span class="p">}:</span>
+                <span class="n">p0</span> <span class="o">=</span> <span class="n">a0</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">a1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">a2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">p1</span> <span class="o">=</span> <span class="n">a0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">a1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">a2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">p2</span> <span class="o">=</span> <span class="n">a0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">a1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">a2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+                <span class="n">p3</span> <span class="o">=</span> <span class="n">a0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">a1</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">a2</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+                <span class="n">p4</span> <span class="o">=</span> <span class="n">a0</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">a1</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">a2</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+                <span class="c1"># precomputing downs rather than filtering by prefix first is maybe faster</span>
+                <span class="n">d0s</span> <span class="o">=</span> <span class="n">filter_prefix</span><span class="p">(</span><span class="n">p0</span><span class="p">,</span> <span class="n">all_words_set</span> <span class="o">-</span> <span class="p">{</span><span class="n">a0</span><span class="p">,</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">})</span>
+                <span class="n">d1s</span> <span class="o">=</span> <span class="n">filter_prefix</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">all_words_set</span> <span class="o">-</span> <span class="p">{</span><span class="n">a0</span><span class="p">,</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">})</span>
+                <span class="n">d2s</span> <span class="o">=</span> <span class="n">filter_prefix</span><span class="p">(</span><span class="n">p2</span><span class="p">,</span> <span class="n">all_words_set</span> <span class="o">-</span> <span class="p">{</span><span class="n">a0</span><span class="p">,</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">})</span>
+                <span class="n">d3s</span> <span class="o">=</span> <span class="n">filter_prefix</span><span class="p">(</span><span class="n">p3</span><span class="p">,</span> <span class="n">all_words_set</span> <span class="o">-</span> <span class="p">{</span><span class="n">a0</span><span class="p">,</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">})</span>
+                <span class="n">d4s</span> <span class="o">=</span> <span class="n">filter_prefix</span><span class="p">(</span><span class="n">p4</span><span class="p">,</span> <span class="n">all_words_set</span> <span class="o">-</span> <span class="p">{</span><span class="n">a0</span><span class="p">,</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">})</span>
+                <span class="k">if</span> <span class="ow">not</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">d0s</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">d1s</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">d2s</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">d3s</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">d4s</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)):</span>
+                    <span class="k">continue</span>
+                <span class="k">for</span> <span class="n">d0</span> <span class="ow">in</span> <span class="n">d0s</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">d1</span> <span class="ow">in</span> <span class="n">d1s</span><span class="p">:</span>
+                        <span class="k">for</span> <span class="n">d2</span> <span class="ow">in</span> <span class="n">d2s</span><span class="p">:</span>
+                            <span class="k">for</span> <span class="n">d3</span> <span class="ow">in</span> <span class="n">d3s</span><span class="p">:</span>
+                                <span class="k">for</span> <span class="n">d4</span> <span class="ow">in</span> <span class="n">d4s</span><span class="p">:</span>
+                                    <span class="n">a3</span> <span class="o">=</span> <span class="n">d0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">d1</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">d2</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">d3</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">d4</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+                                    <span class="n">a4</span> <span class="o">=</span> <span class="n">d0</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">d1</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">d2</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">d3</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">d4</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+                                    <span class="k">if</span> <span class="p">(</span><span class="n">a3</span> <span class="ow">in</span> <span class="n">all_words_set</span> <span class="o">-</span> <span class="p">{</span><span class="n">d0</span><span class="p">,</span><span class="n">d1</span><span class="p">,</span><span class="n">d2</span><span class="p">,</span><span class="n">d3</span><span class="p">,</span><span class="n">d4</span><span class="p">,</span><span class="n">a0</span><span class="p">,</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">})</span> <span class="ow">and</span> <span class="p">(</span><span class="n">a4</span> <span class="ow">in</span> <span class="n">all_words_set</span> <span class="o">-</span> <span class="p">{</span><span class="n">d0</span><span class="p">,</span><span class="n">d1</span><span class="p">,</span><span class="n">d2</span><span class="p">,</span><span class="n">d3</span><span class="p">,</span><span class="n">d4</span><span class="p">,</span><span class="n">a0</span><span class="p">,</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">,</span><span class="n">a3</span><span class="p">}):</span>
+                                        <span class="n">grid</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="n">a0</span><span class="p">,</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">,</span><span class="n">a3</span><span class="p">,</span><span class="n">a4</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">))</span>
+                                        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+                                            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">grid</span><span class="p">)</span>
+</pre></div>
+
+
+<p>(I'd be surprised if I couldn't rewrite this function in a more general way using fancy <code>numpy</code> array index tricks. But, this is fine for now. Also, I could improve this roughly 2x by not double-computing grid transposes (e.g. after computing a grid, store <code>d0</code> in a file and then check that file each time the function starts with a fresh <code>a0</code>), but that doesn't seem like a big enough win given the work involved.)</p>
+<p>I wrote this function so that I could run it in parallel (simply by running it at the same time in different jupyter notebook tabs) by passing in a subset of the full word set as <code>a0_words</code>. I divided the full word set into subsets of size 100 for this purpose.</p>
+<h2>The Results</h2>
+<p>I ran <code>find_grids</code> in 8 or 9 separate jupyter notebook tabs simultaneously. This was the first time I've heard the fan spin up loudly on my computer.</p>
+<p>I ran the first 800 words and the last 881 words using the above function. I ran the middle 800 words using a different function, which considered all down words after fixing only <code>a0</code> and <code>a1</code>. This was slower, but still completed.</p>
+<p>The outputs of the timing look like this.</p>
+<div class="highlight"><pre><span></span><span class="n">a0</span><span class="o">:</span> <span class="n">bless</span> 
+
+<span class="mi">100</span><span class="o">%</span>
+<span class="mi">2480</span><span class="sr">/2480 [08:00&lt;00:00, 7.16it/s</span><span class="o">]</span>
+
+<span class="n">a0</span><span class="o">:</span> <span class="n">lathe</span> 
+
+<span class="mi">100</span><span class="o">%</span>
+<span class="mi">2480</span><span class="sr">/2480 [03:07&lt;00:00, 12.77it/s</span><span class="o">]</span>
+</pre></div>
+
+
+<p>I ran <code>awk 'NR % 5 == 0' timedresults.txt</code> on that file to output every 5th row (the rows that contain the times). Then I removed everything but the times themselves in vim using <code>:%s/&lt;.*//</code>. The rows look like this.</p>
+<div class="highlight"><pre><span></span><span class="mi">00</span><span class="o">:</span><span class="mi">28</span>
+<span class="mi">08</span><span class="o">:</span><span class="mi">17</span>
+<span class="mi">04</span><span class="o">:</span><span class="mi">02</span>
+</pre></div>
+
+
+<h3>Faster Algorithm</h3>
+<p>Verify that all rows have length 5 (i.e. just minutes and seconds). Multiply the seconds by 60, and then sum them.</p>
+<div class="highlight"><pre><span></span><span class="nt">awk</span> <span class="s1">&#39;{print length}&#39;</span> <span class="nt">timedresults_first800_fast</span><span class="p">.</span><span class="nc">txt</span> <span class="o">|</span> <span class="nt">sort</span> <span class="nt">-n</span> <span class="o">|</span> <span class="nt">uniq</span> <span class="nt">-c</span>
+  <span class="nt">800</span> <span class="nt">5</span>
+
+<span class="nt">cat</span> <span class="nt">timedresults_first800_fast</span><span class="p">.</span><span class="nc">txt</span> <span class="o">|</span> <span class="nt">awk</span> <span class="nt">-F</span><span class="o">:</span> <span class="s1">&#39;{ print ($1 * 60) + $2 }&#39;</span> <span class="o">|</span> <span class="nt">awk</span> <span class="s1">&#39;{n += $1}; END{print n}&#39;</span>
+  <span class="nt">308379</span>
+
+<span class="nt">awk</span> <span class="s1">&#39;{print length}&#39;</span> <span class="nt">timedresults_third881_fast</span><span class="p">.</span><span class="nc">txt</span> <span class="o">|</span> <span class="nt">sort</span> <span class="nt">-n</span> <span class="o">|</span> <span class="nt">uniq</span> <span class="nt">-c</span> 
+  <span class="nt">881</span> <span class="nt">5</span>
+
+<span class="nt">cat</span> <span class="nt">timedresults_third881_fast</span><span class="p">.</span><span class="nc">txt</span> <span class="o">|</span> <span class="nt">awk</span> <span class="nt">-F</span><span class="o">:</span> <span class="s1">&#39;{ print ($1 * 60) + $2 }&#39;</span> <span class="o">|</span> <span class="nt">awk</span> <span class="s1">&#39;{n += $1}; END{print n}&#39;</span> 
+  <span class="nt">364620</span>
+</pre></div>
+
+
+<p>These 1681 values for <code>a0</code> took a total of <span class="math">\((308379 + 364620) / 3600 = 187\)</span> CPU hours to run. I ran them in 17 jupyter notebook tabs (of 100 <code>a0</code> values each (one tab had 81)), so each tab took on average 11 hours to complete.</p>
+<h3>Slower Algorithm</h3>
+<div class="highlight"><pre><span></span><span class="nt">awk</span> <span class="s1">&#39;{print length}&#39;</span> <span class="nt">timedresults_second800_slow_minutes</span><span class="p">.</span><span class="nc">txt</span> <span class="o">|</span> <span class="nt">sort</span> <span class="nt">-n</span> <span class="o">|</span> <span class="nt">uniq</span> <span class="nt">-c</span>
+  <span class="nt">758</span> <span class="nt">5</span>
+
+<span class="nt">cat</span> <span class="nt">timedresults_second800_slow_minutes</span><span class="p">.</span><span class="nc">txt</span> <span class="o">|</span> <span class="nt">awk</span> <span class="nt">-F</span><span class="o">:</span> <span class="s1">&#39;{ print ($1 * 60) + $2 }&#39;</span> <span class="o">|</span> <span class="nt">awk</span> <span class="s1">&#39;{n += $1}; END{print n}&#39;</span> 
+  <span class="nt">377945</span>
+
+<span class="nt">awk</span> <span class="s1">&#39;{print length}&#39;</span> <span class="nt">timedresults_second800_slow_hours</span><span class="p">.</span><span class="nc">txt</span> <span class="o">|</span> <span class="nt">sort</span> <span class="nt">-n</span> <span class="o">|</span> <span class="nt">uniq</span> <span class="nt">-c</span>
+  <span class="nt">42</span> <span class="nt">7</span>
+
+<span class="nt">cat</span> <span class="nt">timedresults_second800_slow_hours</span><span class="p">.</span><span class="nc">txt</span> <span class="o">|</span> <span class="nt">awk</span> <span class="nt">-F</span><span class="o">:</span> <span class="s1">&#39;{ print ($1 * 3600) + ($2 * 60) + $3 }&#39;</span> <span class="o">|</span> <span class="nt">awk</span> <span class="s1">&#39;{n += $1}; END{print n}&#39;</span>
+  <span class="nt">360329</span>
+</pre></div>
+
+
+<p>These 800 values for <code>a0</code> took a total of <span class="math">\((377945 + 360329) / 3600 = 205\)</span> CPU hours to run. I ran them in 8 juypter notebook tabs, so each tab took on average 25 hours to complete.</p>
+<p>These data have a wide tail. Here are the results greater than 2 hours.</p>
+<div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">:</span><span class="mi">01</span><span class="o">:</span><span class="mi">28</span>
+<span class="mi">2</span><span class="o">:</span><span class="mi">01</span><span class="o">:</span><span class="mi">48</span>
+<span class="mi">2</span><span class="o">:</span><span class="mi">06</span><span class="o">:</span><span class="mi">33</span>
+<span class="mi">2</span><span class="o">:</span><span class="mi">09</span><span class="o">:</span><span class="mi">05</span>
+<span class="mi">2</span><span class="o">:</span><span class="mi">11</span><span class="o">:</span><span class="mi">10</span>
+<span class="mi">2</span><span class="o">:</span><span class="mi">19</span><span class="o">:</span><span class="mi">48</span>
+<span class="mi">2</span><span class="o">:</span><span class="mi">36</span><span class="o">:</span><span class="mi">54</span>
+<span class="mi">2</span><span class="o">:</span><span class="mi">37</span><span class="o">:</span><span class="mi">35</span>
+<span class="mi">2</span><span class="o">:</span><span class="mi">52</span><span class="o">:</span><span class="mi">42</span>
+<span class="mi">3</span><span class="o">:</span><span class="mi">12</span><span class="o">:</span><span class="mi">39</span>
+<span class="mi">3</span><span class="o">:</span><span class="mi">12</span><span class="o">:</span><span class="mi">42</span>
+<span class="mi">3</span><span class="o">:</span><span class="mi">30</span><span class="o">:</span><span class="mi">57</span>
+<span class="mi">3</span><span class="o">:</span><span class="mi">33</span><span class="o">:</span><span class="mi">50</span>
+<span class="mi">3</span><span class="o">:</span><span class="mi">57</span><span class="o">:</span><span class="mi">20</span>
+<span class="mi">4</span><span class="o">:</span><span class="mi">40</span><span class="o">:</span><span class="mi">07</span>
+<span class="mi">6</span><span class="o">:</span><span class="mi">13</span><span class="o">:</span><span class="mi">06</span>
+<span class="mi">7</span><span class="o">:</span><span class="mi">20</span><span class="o">:</span><span class="mi">52</span>
+<span class="mi">9</span><span class="o">:</span><span class="mi">07</span><span class="o">:</span><span class="mi">59</span>
+</pre></div>
+
+
+<p>For those curious, <code>a0 = spasm</code> took <code>9:07:59</code>.</p>
+<h2>The Finale</h2>
+<p>If I'd used the faster function exclusively, it'd have taken approximately 276 CPU hours to compute all grids. This is a considerable improvement over 30 million years.</p>
+<p>There are 210 unique grids (excluding transposes). Far fewer than I expected!</p>
+<p>Optimization doesn't need to make things as fast as possible; it just needs to make things fast enough.</p>
+<p>Instead of making the fundamental operations faster, I executed far fewer operations.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/math-defintions.html" rel="bookmark" title="Permalink to Math Defintions">
+                    Math Defintions</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2022-08-27T00:00:00-04:00"> Sat 27 August 2022 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p><em>(In Progress Eternally)</em></p>
+<h2>algebra</h2>
+<p>A <em>binary operation</em> on a set <span class="math">\(S\)</span> is a pairwise operation <span class="math">\(S \times S \rightarrow S\)</span>. The set is <em>closed</em> under the operation.</p>
+<p>A <em>semigroup</em> is a set of elements and an associative binary operation operating on the set.</p>
+<p>A <em>monoid</em> is a semigroup with an identity element.</p>
+<p>A <em>group</em> is a set of monoid such that for each element there exists an inverse element</p>
+<p>A <em>commutative group</em> (also known as an <em>abelian group</em>) is a group whose operation is commutative.</p>
+<p>A <em>ring</em> is a set of elements and two binary operations <span class="math">\((+)\)</span> and <span class="math">\((\times)\)</span> such that:</p>
+<ul>
+<li>it forms an abelian group under <span class="math">\((+)\)</span></li>
+<li>it forms a monoid under <span class="math">\((\times)\)</span></li>
+<li><span class="math">\((\times)\)</span> distributes over <span class="math">\((+)\)</span></li>
+</ul>
+<p>A <em>field</em> is a ring such that:</p>
+<ul>
+<li>for each nonzero element (where <span class="math">\(0\)</span> is the additive identity) there exists an inverse element</li>
+<li><span class="math">\((\times)\)</span> is commutative</li>
+</ul>
+<p>The integers <span class="math">\(\mathbb{Z}\)</span> are the cannonical example of a ring. The integers are not a field because some inverses are not contained in the set (e.g. 1/5).</p>
+<h2>topology</h2>
+<p>A <em>topological space</em> is a set equipped with a <em>topology</em>.</p>
+<p>A <em>topology</em> <span class="math">\(T\)</span> on a set <span class="math">\(X\)</span> is a collection of subsets of <span class="math">\(X\)</span> such that:</p>
+<ul>
+<li>the empty set and <span class="math">\(X\)</span> are elements of <span class="math">\(T\)</span></li>
+<li>arbitrary unions are elements of <span class="math">\(T\)</span></li>
+<li>finite intersections are elements of <span class="math">\(T\)</span></li>
+</ul>
+<p>The elements of <span class="math">\(T\)</span> are defined to be <em>open sets</em>. A subset that is a complement of a closed set is an <em>open set</em>.</p>
+<p>Why are the intersections finite and not arbitrary? How do we fit a counterexample into the frame of the subset definition?</p>
+<p>Using De Morgan's laws for set complements (union of complements is complement of intersection; intersection of complements is complement of union), we can rewrite these properties:</p>
+<ul>
+<li>the empty set and <span class="math">\(X\)</span> are closed</li>
+<li>the arbitrary intersection of closed sets is closed (i.e. the complement of the arbitrary intersection of closed sets is open)</li>
+<li>the finite union of closed sets is closed (i.e. the complement of the finite union of closed sets is open)</li>
+</ul>
+<p>There is also a definition based on neighborhoods of points.</p>
+<h2>category theory</h2>
+<p>A <em>category</em> consists of:</p>
+<ul>
+<li>a collection of objects</li>
+<li>for each pair of objects, a collection of morphisms (arrows) from one to the other</li>
+<li>for each pair of compatible morphisms, a binary operation called composition</li>
+</ul>
+<p>such that:</p>
+<ul>
+<li>if <span class="math">\(u: a \rightarrow b\)</span> and <span class="math">\(v: b \rightarrow c\)</span> then there is a morphism <span class="math">\(u \circle v: a \rightarrow c\)</span></li>
+<li>composition of morphisms is associative</li>
+<li>for each object <span class="math">\(a\)</span>, there is an identity morphism <span class="math">\(I_a\)</span> such that for any morphism <span class="math">\(u: a \rightarrow b\)</span>, <span class="math">\(I_a \circle u = u \circle I_b = u\)</span> </li>
+</ul>
+<h2>analysis</h2>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/topological-data-analysis-intro.html" rel="bookmark" title="Permalink to Topological Data Analysis Intro">
+                    Topological Data Analysis Intro</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2022-08-26T00:00:00-04:00"> Fri 26 August 2022 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <h3>summary</h3>
+<p>Start with some points. Determine a rule for incrementally connecting more and more of the points with lines, planes, solids, and so on. As points become connected, geometric structure emerges. As even more points become connected, geometric structure disappears. We quantify this structure, group it into classes, and observe when each class is born and dies. Lastly we compare the birth-death plots of various datasets to determine if the datasets share underlying structural similarities.</p>
+<h3>more-detailed-but-still-high-level summary</h3>
+<p>Topological Data Analysis (TDA) encompasses a variety of techniques which <a href="https://arxiv.org/abs/2004.07036">"connect the dots"</a>, thereby creating shapes whose topology can be understood. As a simple example, we can cover each of the dots in a point cloud with a circle of a given radius. As we increase that radius, we'll produce a shape with fewer and fewer "holes" until we're left with a mass with no holes. When the radii are too small to overlap, we gain no additional information. When the radii are large enough to encompass the entire point cloud, we loose all information. TDA aims to find the sweet-spot radius that will provide useful information about our data.</p>
+<p>In practice, most interesting datasets are complex enough that the radius technique (described above) <a href="https://www.ias.edu/ideas/2013/lesnick-topological-data-analysis">falls short</a>. It doesn't provide a rigorous way to determine which radius creates a topological space that best represents the underlying data. Additionally, it doesn't distinguish between major and minor features in the data. As a result, mathematicians have developed more advanced analysis techniques. One such technique is persistent homology whose core idea is to examine how the topological space changes as the radius changes. This approach smooths over noise in the data, as geometric structures created by noise will disappear quickly as the radius changes, while the structures created by the signal will be long-lived. </p>
+<p><a href="https://learning-analytics.info/index.php/JLA/article/view/5196/6089">Distance</a> is implicit in our discussion of radii. Said differently, in order to be able to draw circles of a given radius around points, we need to have defined a way to measure the length of a line originating from any point in the data. (As a philosophical aside, is this actually the same as being able to measure the distance <em>between</em> two points?) Thus we will always often to use a well-defined distance as we explore data topologically.</p>
+<p>To more formally study the geometric shape of data, we use simplicial complexes. For an <span class="math">\(n\)</span>-dimensional set of data points, we can connect any two points with a line, connect any three points with a plane, connect any four points with a solid, and so on. Any <span class="math">\(n\)</span> points comprise a simplex, which is a generalization of a line to a triangle to a tetrahedron to a 5-cell to a something even harder to visualize. A collection of simplices is a simplicial complex <span class="math">\(K\)</span> if:</p>
+<ol>
+<li>Every face of a simplex in <span class="math">\(K\)</span> is in <span class="math">\(K\)</span></li>
+<li>Every intersection of simplices <span class="math">\(A\)</span> and <span class="math">\(B\)</span> in <span class="math">\(K\)</span> is a face of both <span class="math">\(A\)</span> and <span class="math">\(B\)</span></li>
+</ol>
+<p><em>Counterexample to 1</em> (but not to 2): The singleton set <span class="math">\(X = \{ triangle \}\)</span> consisting of three points, the lines that connects them, and the area inside is not a simplicial complex because each of the three lines (faces) is not a member of <span class="math">\(X\)</span>.</p>
+<p><em>Counterexample to 2</em> (but not to 1): Draw four points in a square. Draw two lines connecting the points diagonal from each other (you've drawn an "X"). Each line is a simplex. Their intersection (at the center of the square) is not a face of either simplex.</p>
+<p><em>Failed Counterexample to 2</em>: (I was intersecting complexes and not simplices.) Complex <span class="math">\(A\)</span>: Draw four points; draw a line connecting one point <span class="math">\(c\)</span> to the other three <span class="math">\(x\)</span>, <span class="math">\(y\)</span>, <span class="math">\(z\)</span>. Complex <span class="math">\(B\)</span>: Draw a fifth point <span class="math">\(w\)</span>; draw a line connecting <span class="math">\(c\)</span> and <span class="math">\(w\)</span>; draw a line connecting <span class="math">\(x\)</span> to <span class="math">\(c\)</span> and connecting <span class="math">\(y\)</span> to <span class="math">\(z\)</span>. The intersection <span class="math">\(A \cap B\)</span> consists of <span class="math">\(c\)</span>, <span class="math">\(y\)</span>, <span class="math">\(z\)</span> and the two connecting lines.</p>
+<p>We can now construct an interesting simplicial complex: the Vietoris-Rips complex. Given a dataset consisting of <span class="math">\(n\)</span>-dimensional points, a metric (so we have distance), and a fixed value <span class="math">\(\delta &gt; 0\)</span>, connect all pairs of points that are within <span class="math">\(\delta\)</span> of each other. Whenever three or more points are connected, we additionally include the higher-dimensional simplex thus created. The collection of all such simplices is the Vietoris-Rips complex. By construction, requirements 1 and 2 are satisfied. (The proof for 2 probably uses triangle inequality: the intersection has to be within <span class="math">\(\delta\)</span> and therefore we'd already have connected the dots.)</p>
+<p>How do we determine which value(s) of <span class="math">\(\delta\)</span> create a complex that exhibits the underlying geometric structure of the data? We use persistence diagrams. A persistence diagram illustrates which topological features of a dataset persist as <span class="math">\(\delta\)</span> varies. In particular, we consider the homology of the complex as <span class="math">\(\delta\)</span> varies. Homology provides us with a formalized way to quantify the shape of a space in each dimension. For example, a solid torus has, modulo homotopy smooshing, one point, two loops, and one void. These values are called Betti numbers. They represent equivalence classes of points, loops, and voids.</p>
+<p>We are still on our way to understanding the persistence diagram. Let's consider all the classes of <span class="math">\(n\)</span>-dimensional "loops". As <span class="math">\(\delta\)</span> increases from 0, classes will emerge and classes will disappear. The <span class="math">\(\delta\)</span> value for which a class emerges is called its birth value <span class="math">\(b\)</span>, and the <span class="math">\(\delta\)</span> value for which a class disappears is called its death value <span class="math">\(d\)</span>. For each class, we have a tuple <span class="math">\((b,d)\)</span>. What can we do with tuples? Graph them! This graph is the persistence diagram. Traditionally <span class="math">\(b\)</span> is plotted on the horizontal axis and <span class="math">\(d\)</span> is plotted on the vertical axis. The further a point is from the line <span class="math">\(y=x\)</span>, the longer it persists. Thus the data's noise lives near the diagonal and the data's signal lives above the diagonal (for many applications).</p>
+<p>Now that we have a handful (or maybe many more!) of significant <span class="math">\((b,d)\)</span> pairs for a given dataset, we can compare two datasets to determine how geometrically similar they are. We make this comparison by matching points in one persistence diagram with points in the other persistence diagram. Two such ways to measure the distance (as a single value!) between two persistence diagrams are the bottleneck distance and the Wasserstein distance.</p>
+<p>Do we know that this distance is useful? We do, due to the stability theorem. This theorem proves that the distance between two persistence diagrams is less than the distance between the two corresponding datasets.</p>
+<h3>degrees of freedom (what choices can we make)</h3>
+<p>a. How do we draw the complex? Vietoris-Rips or something else?</p>
+<p>b. How do we measure the distance between the points in the persistence diagram? Bottleneck distance? Wasserstein distance? etc.</p>
+<p>c. Which distance do we use? Euclidean distance is not always the best tool for the task! (Thanks to <a href="https://people.clas.ufl.edu/hwagner/">Hubert Wagner</a> for pointing this out!)</p>
+<h3>next up</h3>
+<p>barcodes, linear-algebra-based computation, filtrations, persistence homology modules, module as a direct sum of barcode lines</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/git-hacks.html" rel="bookmark" title="Permalink to git Hacks">
+                    git Hacks</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2022-08-25T00:00:00-04:00"> Thu 25 August 2022 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <h3>configuration</h3>
+<p>Start the ssh agent (add this to your <code>~/.zshrc</code>, for example):</p>
+<div class="highlight"><pre><span></span><span class="nb">eval</span> <span class="s2">&quot;</span><span class="k">$(</span>ssh-agent -s<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+
+
+<p>Add the following at the head of <code>~/.gitconfig</code> in order to specify a git configuration per path. These are called <em>conditional includes</em>:</p>
+<div class="highlight"><pre><span></span><span class="k">[includeIf &quot;gitdir:~/path/work/&quot;]</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="p">.</span><span class="n">gitconfig-work</span>
+<span class="k">[includeIf &quot;gitdir:~/path/play/&quot;]</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="p">.</span><span class="n">gitconfig-play</span>
+</pre></div>
+
+
+<p>Contents of <code>~/.gitconfig-work</code> or <code>~/.gitconfig-play</code>:</p>
+<div class="highlight"><pre><span></span><span class="p">[</span><span class="n">user</span><span class="p">]</span>    
+    <span class="n">name</span> <span class="o">=</span> <span class="n">A</span> <span class="n">B</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">ab</span>
+    <span class="n">email</span> <span class="o">=</span> <span class="n">ab</span><span class="err">@</span><span class="n">e</span><span class="p">.</span><span class="n">mail</span>
+<span class="p">[</span><span class="n">core</span><span class="p">]</span>      
+    <span class="n">sshCommand</span> <span class="o">=</span> <span class="n">ssh</span> <span class="err">-</span><span class="n">i</span> <span class="err">~/</span><span class="p">.</span><span class="n">ssh</span><span class="err">/</span><span class="n">id_ed25519-work</span> <span class="err">-</span><span class="n">F</span> <span class="n">none</span> <span class="err">-</span><span class="n">o</span> <span class="s">&quot;IdentitiesOnly=yes&quot;</span>
+</pre></div>
+
+
+<p><code>-F none</code> specifies that <code>ssh</code> shall not look any files, thus forcing (in theory) it to use the key specified with <code>-i</code>.</p>
+<p>But despite <code>-F none</code>, <code>-v</code> informed me it was still looking in <code>~/.ssh/known_hosts</code>. So, I added <code>-o "IdentitiesOnly=yes"</code> (see <a href="https://linux.die.net/man/5/ssh_config">man pages</a> here), which in practice does not look in my known hosts file.</p>
+<h3>debugging</h3>
+<p>List the source of each git configuration:</p>
+<div class="highlight"><pre><span></span>git config --list --show-origin
+</pre></div>
+
+
+<p>Unset credential helper:</p>
+<div class="highlight"><pre><span></span>git config --global --unset credential.helper
+</pre></div>
+
+
+<p>Show some in-scope git configurations:</p>
+<div class="highlight"><pre><span></span>git config user.email
+git config user.username
+git config core.sshCommand
+</pre></div>
+
+
+<p>See the full debugs logs of ssh to determine exactly where it's finding ssh keys:</p>
+<div class="highlight"><pre><span></span>ssh -v
+</pre></div>
+
+
+<p>git uses your ssh key to identify you. Determine which user git is authenticating you as:</p>
+<div class="highlight"><pre><span></span>ssh -T git@github.com
+</pre></div>
+
+
+<p>You can also give it all the options you're providing when sshing to git:</p>
+<div class="highlight"><pre><span></span>ssh -i ~/.ssh/id_ed25519 -F none -o <span class="s2">&quot;IdentitiesOnly=yes&quot;</span> -T git@github.com
+</pre></div>
+
+
+<p>For other setups, rather than specifying the exact ssh key, you can set various <code>IdentityFile</code> in <code>~/.ssh/config</code>. It's reasonable practice to specify the host rather than use a wildcard:</p>
+<div class="highlight"><pre><span></span><span class="err">Host *</span>
+<span class="err">    AddKeysToAgent yes</span>
+<span class="err">    UseKeychain yes</span>
+<span class="err">    IdentityFile ~/.ssh/id_ed25519-work</span>
+<span class="err">    IdentityFile ~/.ssh/id_ed25519-play</span>
+</pre></div> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/site-hacks.html" rel="bookmark" title="Permalink to Site Hacks">
+                    Site Hacks</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2022-08-25T00:00:00-04:00"> Thu 25 August 2022 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>Publish pelican site locally:</p>
+<div class="highlight"><pre><span></span><span class="err">pelican -r -l</span>
+</pre></div> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/who-said-this.html" rel="bookmark" title="Permalink to Who said this?">
+                    Who said this?</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2022-08-25T00:00:00-04:00"> Thu 25 August 2022 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>unnecessary foolishness is the consistency of a hobgoblin</p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/research-resources.html" rel="bookmark" title="Permalink to Research Resources">
+                    Research Resources</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2022-08-18T00:00:00-04:00"> Thu 18 August 2022 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <h2>TDA Background</h2>
+<ul>
+<li>
+<p><a href="https://arxiv.org/abs/2004.04108">Introductory Topological Data Analysis</a></p>
+<ul>
+<li><strong>date</strong>: Apr 2020</li>
+<li><strong>author</strong>: Dayten Sheffar</li>
+<li><strong>summary</strong>: high-level introduction to: metric topology, <span class="math">\(p\)</span>-norm, <span class="math">\(\infty\)</span>-norm, abstract simplexes, simplicial complexes, homeomorphic and homotopy equivalence, nerve theorem, mapper algorithm, betti numbers, persistent homology</li>
+</ul>
+</li>
+<li>
+<p><a href="https://pub.ist.ac.at/~edels/Papers/2016-B-01-PersDM.pdf">Persistent Homology</a></p>
+<ul>
+<li><strong>author</strong>: Herbert Edelsbrunner and Dmitriy Morozov</li>
+<li><strong>summary</strong>: glossary of all things persistent homology</li>
+</ul>
+</li>
+<li>
+<p><a href="https://pub.ist.ac.at/~edels/Papers/2012-P-11-PHTheoryPractice.pdf">Persistent Homology: Theory and Practice</a></p>
+<ul>
+<li><strong>author</strong>: Herbert Edelsbrunner, Dmitriy Morozov</li>
+<li><strong>summary</strong>: persistent homology survey of methods and applications</li>
+</ul>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/1207.6437">Statistical topological data analysis using persistence landscapes</a></p>
+<ul>
+<li><strong>date</strong>: Jul 2012</li>
+<li><strong>author</strong>: Peter Bubenik</li>
+<li><strong>summary</strong>: introduces persistence landscapes to the literature</li>
+</ul>
+</li>
+</ul>
+<h2>TDA Theory: Stability</h2>
+<ul>
+<li>
+<p><a href="https://arxiv.org/abs/2103.10723">Notes on an Elementary Proof for the Stability of Persistence Diagrams</a></p>
+<ul>
+<li><strong>date</strong>: Mar 2021</li>
+<li><strong>author</strong>: Primoz Skraba, Katharine Turner</li>
+<li><strong>summary</strong>: these notes are a self-contained short proof of the stability of persistence diagrams; the background needed for <a href="https://arxiv.org/abs/2006.16824">arxiv:2006.16824</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/2006.16824">Wasserstein Stability for Persistence Diagrams</a></p>
+<ul>
+<li><strong>date</strong>: June 2020</li>
+<li><strong>author</strong>: Primoz Skraba, Katharine Turner</li>
+</ul>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/1809.09654">An algebraic Wasserstein distance for generalized persistence modules</a></p>
+<ul>
+<li><strong>date</strong>: Sep 2018</li>
+<li><strong>author</strong>: Peter Bubenik</li>
+<li><strong>summary</strong>: persistence modules are the algebraic counterpart to persistence diagrams; defines the Wasserstein distance for persistence modules; proves that the distance of a persistence module and its persistence diagram agree</li>
+</ul>
+</li>
+</ul>
+<h2>TDA Theory: Computation</h2>
+<ul>
+<li>
+<p><a href="https://geometry.stanford.edu/papers/zc-cph-05/zc-cph-05.pdf">Computing Persistent Homology</a></p>
+<ul>
+<li><strong>date</strong>: Nov 2004</li>
+<li><strong>author</strong>: Afra Zomorodian and Gunnar Carlsson</li>
+<li><strong>DOI</strong>: <a href="https://doi.org/10.1007/s00454-004-1146-y">DOI</a></li>
+<li><strong>summary</strong>: the persistent homology of a filtered <span class="math">\(d\)</span>-dimensional simplicial complex is the standard homology of a graded module over a polynomial ring; gives an algorithm for computing individual persistent homology groups over an arbitrary PID</li>
+</ul>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/2103.05608">Dory: Overcoming Barriers to Computing Persistent Homology</a></p>
+<ul>
+<li><strong>date</strong>: Mar 2021</li>
+<li><strong>author</strong>: Manu Aggarwal, Vipul Periwal</li>
+</ul>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/2003.07989">GPU-Accelerated Computation of Vietoris-Rips Persistence Barcodes</a></p>
+<ul>
+<li><strong>date</strong>: Mar 2020</li>
+<li><strong>author</strong>: Simon Zhang, Mengbai Xiao, Hao Wang</li>
+</ul>
+</li>
+</ul>
+<h2>TDA Applications</h2>
+<ul>
+<li>
+<p><a href="https://arxiv.org/abs/2102.09380">Topological data analysis of C. elegans locomotion and behavior</a></p>
+<ul>
+<li><strong>date</strong>: Feb 2021</li>
+<li><strong>author</strong>: Ashleigh Thomas</li>
+<li><strong>summary</strong>: uses a sliding-window embedding to turn time series data into a point cloud that remembers the temporal information; thorough and clear intro to persistence diagrams and persistence landscapes</li>
+</ul>
+</li>
+<li>
+<p><a href="https://jmlr.org/papers/v21/20-345.html">Topology of Deep Neural Networks</a></p>
+<ul>
+<li><strong>date</strong>: Apr 2020</li>
+<li><strong>author</strong>: Gregory Naitzat, Andrey Zhitnikov, Lek-Heng Lim</li>
+</ul>
+</li>
+</ul>
+<h2>Computer Science: Functional Programming</h2>
+<ul>
+<li>
+<p><a href="https://www2.cs.sfu.ca/CourseCentral/831/burton/Notes/July14/free.pdf">Theorems for free!</a></p>
+<ul>
+<li><strong>date</strong>: June 1989</li>
+<li><strong>author</strong>: Philip Wadler</li>
+</ul>
+</li>
+<li>
+<p><a href="https://homepages.inf.ed.ac.uk/wadler/papers/lineartaste/lineartaste-revised.pdf">A taste of linear logic</a></p>
+<ul>
+<li><strong>date</strong>: 1993</li>
+<li><strong>author</strong>: Philip Wadler</li>
+<li><strong>DOI</strong>: <a href="https://doi.org/10.1007/3-540-57182-5_12">DOI</a></li>
+<li><strong>summary</strong>: an introduction to intuitionistic logic and linear logic; how they correspond to type systems for functional languages via the notion of 'Propositions as Type'</li>
+</ul>
+</li>
+<li>
+<p><a href="https://homepages.inf.ed.ac.uk/wadler/papers/marktoberdorf/baastad.pdf">Monads for functional programming</a></p>
+<ul>
+<li><strong>date</strong>: 1993</li>
+<li><strong>author</strong>: Philip Wadler</li>
+<li><strong>DOI</strong>: <a href="https://doi.org/10.1007/978-3-662-02880-3_8">DOI</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://simonmar.github.io/bib/papers/haxl-icfp14.pdf">There is no Fork: an Abstraction for Efficient, Concurrent, and Concise Data Access</a></p>
+<ul>
+<li><strong>date</strong>: Sep 2014</li>
+<li><strong>summary</strong>: functor concurrency</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/desugaring-haskell-haskell16.pdf">Desugaring Haskell’s do-Notation into Applicative Operations</a></p>
+<ul>
+<li><strong>date</strong>: Sep 2016</li>
+<li><strong>summary</strong>: applicative functors</li>
+</ul>
+</li>
+</ul>
+<h2>Computer Science: Parsing</h2>
+<ul>
+<li>
+<p><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/mison-vldb17.pdf">Mison: A Fast JSON Parser for Data Analytics</a></p>
+<ul>
+<li><strong>date</strong>: 2017</li>
+<li><strong>summary</strong>: push down projections and filters into the parser</li>
+</ul>
+</li>
+<li>
+<p><a href="http://www.vldb.org/pvldb/vol11/p1576-palkar.pdf">Filter Before You Parse: Faster Analytics on Raw Data with Sparser</a></p>
+<ul>
+<li><strong>date</strong>: Aug 2018</li>
+<li><strong>summary</strong>: filter pre-parsing</li>
+</ul>
+</li>
+</ul>
+<h2>Logic</h2>
+<ul>
+<li><a href="https://www.lix.polytechnique.fr/~lutz/papers/medial-kurz.pdf">What could a Boolean category be?</a><ul>
+<li><strong>date</strong>: Jul 2006</li>
+<li><strong>author</strong>: Lutz Straßburger</li>
+</ul>
+</li>
+</ul>
+<h2>Misc</h2>
+<ul>
+<li><a href="https://arxiv.org/abs/1904.09828">Magic: The Gathering is Turing Complete</a><ul>
+<li><strong>date</strong>: Mar 2019</li>
+<li><strong>author</strong>: Alex Churchill, Stella Biderman, Austin Herrick</li>
+</ul>
+</li>
+</ul>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/test-latex-math-post.html" rel="bookmark" title="Permalink to Test Latex Math Post">
+                    Test Latex Math Post</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2022-08-18T00:00:00-04:00"> Thu 18 August 2022 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>This post is to test math</p>
+<div class="math">$$x = y^z$$</div>
+<p>but can it do <span class="math">\(i=n^{line}\)</span> math?
+</p>
+<div class="math">$$\int_{foo}^{bar} \delta d\delta = \infty \Pi_i \Sigma 3$$</div>
+<p>another eqn</p>
+<div class="math">$$f(x) = \int_{-\infty}^{\infty} \hat{f} (\Upsilon) e^{2\pi i x \xi}$$</div>
+<p>add some more text</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2016-03-26-lambdaconf.html" rel="bookmark" title="Permalink to Thoughts on LambdaConf 2016">
+                    Thoughts on LambdaConf 2016</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2016-03-26T00:00:00-04:00"> Sat 26 March 2016 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>This article is written in response to the article <a href="http://degoes.net/articles/lambdaconf-inclusion">Wrestling With Inclusion at LambdaConf</a>. Twitter hashtag #lambdaconf.</p>
+<p>We need to understand the consequences of our decisions. You decide to take an action, and then consequences follow. In this case, a racist speaker was given a speaking slot at a tech conference. That was the action. What are the consequences?</p>
+<p>Racism is not to be taken lightly. Period. Racist words, spoken or written, are detrimentally painful to their targets. You don’t just recover from being told you are subhuman. This isn’t a mild injury, and the cumulative effects of racism at the individual and the institutional level traumatize people and deny them entry into society. A racist speaker being given a speaking slot at a conference must be seen in this light.</p>
+<p>Now, it must also be acknowledged that there is fear and pain on all sides of this discussion. Racism stems from fear of the “other”, and this is often assumed to be fear of someone because they are different, but really it’s the fear that they are the same. If you define your identity as opposed to someone else’s, if you define whiteness as not-blackness or blackness as not-whiteness, then your identity is threatened when the other group is acknowledged to be similar to you. We hold our identities so near and dear that we often take measures that deny others humanity only so we don’t have to change. To be clear, I’m not advocating for color-blindness; I’m advocating that a strong notion of “other” births fear.</p>
+<p>And so I invite everyone to realize that you could have been born anyone, anywhere, at any time past or future. Who you are born is a roll of the die. If you think the situation you were born into has anything to do with you, you are wrong. As we grow, we make decisions that shape our identities, but that’s not what I’m talking about. I’m talking about infant you, fresh out, being held for the first time, naked, on your parent’s chest.</p>
+<p>But now we’ve all grown up, and we’ve all made decisions, and those decisions all have consequences. By giving an individual a speaking slot at a conference, you are excluding the group of people who refuse to be in the same room as that person. If you give a speaking slot to a Black Lives Matter activist, you are excluding the group of people who refuse be in the same room as them. If you give speaking slot to Yarvin, you are excluding the group of people who refuse to be in the same room as him, and it’s important to view this group of people in the context of systemic racism.</p>
+<p>Thus a conference can be viewed as the ever-shifting intersection of these groups of people, of these bubbles. Each speaker you allow or disallow shifts the intersection of these bubbles, thereby both including and excluding various people. It is naive to think an “everyone is allowed to speak” policy is the ultimately inclusive policy, because by including any one person, you necessarily exclude others. And so the question to the conference organizer becomes, what do I want the intersection of these bubbles at my conference to look like? If I accept that I must exclude some people, who is it most important for me to include?</p>
+<p>If I were organizing LambdaConf, I would not invite Yarvin to speak, because I would rather include the people who disagree with him than include the people who agree with him. And so the self-centered individual wonders, what if I get rejected from a conference because of my viewpoint? And guess what, this very well may happen! If a conference organizer decides that they want to include the people who will not attend if you do, then they can and will decide to exclude you. But the thing is, you can have a public discussion about this! You can stand up for yourself and your viewpoints and others will stand up for you. And ultimately you will need to choose between your viewpoint and membership in that community, without forgetting that communities can and do change. You must fight for membership in communities that reject you, while simultaneously creating communities that accept you.</p>
+<p>We define community by deciding who we most want to include. And we cannot include people who exclude those who we must include. Every community operates at this level. Every community is an ever shifting overlap of bubbles, and no individual will have membership everywhere. Where and how each community draws these lines is completely up to them, and no community will draw them in exactly the same way.</p>
+<p>Additionally, it should be pointed out that a community can decide whether it separates behavior outside that community from behavior within it. For example, a conference may accept a speaker on the grounds that they not discuss their moral viewpoints at the conference. Or, a conference may decide that morals cannot be separated from the individual, even if they agree to only talk about tech. Both of these decisions exclude people, and the outrage I see on both sides stems from the terrifying reality of exclusion and loneliness.</p>
+<p>Then the question remains, how do you disagree with a community that you are not allowed to join? How do you discuss ideas with people who disagree with you? Doesn’t ostracism make the divides between us even greater? In this situation, ostracism only recognizes a divide that is already there, deep in society. One could, in theory, view a tech conference as a place to build a bridge across the abyss, a place where people from all sides can come together and find common ground in technology. The problem is, the divide is too great even for this. You cannot just forget about racism for the day, when a prominent racist is sitting right in front of you.</p>
+<p>So I call to all people on all sides who have the desire and the willingness to have the hard conversations, to do so and to do so frequently. But we must always remember that some people do not wish to engage in such conversations, and that is their right. And as such, if someone says they don’t want to talk to you, the conversation is over. There are many issues along which people become divided, and the depths of those divides vary greatly. Each divide is unique, and some can be bridged successfully at a tech conference, some cannot.</p>
+<p>There is no censorship happening here, no impingement on free speech. The excluded person may still express their views at other conferences and in other communities, and you are still free to engage them individually in discussion. You can create a community and invite everyone, no restrictions, just know that everyone won’t show up. In the end, we must recognize that some communities are constructed to allow us, and others are constructed to reject us. Choose your viewpoints, and then shape a set of communities, or choose your communities, and then recognize that you must hold certain viewpoints. And then by all means, adapt, learn, and admit to being wrong! You can always change your mind.</p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-06-19-scalavariance.html" rel="bookmark" title="Permalink to Notions of Variance in Scala">
+                    Notions of Variance in Scala</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-06-19T00:00:00-04:00"> Thu 19 June 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>Here is a <a href="https://gist.github.com/alissapajer/50c912d739346c1f00dd">github gist</a> with some exercises explaining variance of functors in Scala. Additionally, it explains variance of types over their type parameters.</p>
+<p>I also wrote up a <a href="/images/FunctorMorphismPreservationProof.pdf">proof</a> that a given functor implementation preserves morphism composition.</p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-03-15-haskellfixity.html" rel="bookmark" title="Permalink to Haskell Fixity">
+                    Haskell Fixity</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-03-15T00:00:00-04:00"> Sat 15 March 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>Let's consider some Haskell. Here's a function:</p>
+<div class="highlight"><pre><span></span><span class="n">zipSum</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="p">(</span><span class="n">Num</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"></span>
+<span class="n">zipSum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zipWith</span><span class="w"> </span><span class="p">(</span><span class="o">+</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+
+
+<p>This function will zip the two provided lists and then sum the pairs of elements, returning a single list of <code>Num</code>. For example: </p>
+<div class="highlight"><pre><span></span><span class="err">*Main&gt; zipSum [1,2,3,4] [3,4]</span>
+<span class="err">[4,6]</span>
+</pre></div>
+
+
+<p>Great, so what happens if we apply <code>zipSum</code> as an infix function and also apply a list concatenation.</p>
+<div class="highlight"><pre><span></span><span class="o">*</span><span class="n">Main</span><span class="o">&gt;</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="o">++</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> <span class="ss">`zipSum`</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">]</span>
+</pre></div>
+
+
+<p>Interesting, so it looks like <code>zipSum</code> takes precedence over <code>(++)</code>, when we've applied them both as infix operators. Example noted. Now let's write our own list concat function called <code>myConcat</code>:</p>
+<div class="highlight"><pre><span></span><span class="n">myConcat</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"></span>
+<span class="n">myConcat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+
+
+<p>We can perform "the same" function applications again, using our new <code>myConcat</code> function:</p>
+<div class="highlight"><pre><span></span><span class="o">*</span><span class="n">Main</span><span class="o">&gt;</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="ss">`myConcat`</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> <span class="ss">`zipSum`</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">14</span><span class="p">,</span><span class="mi">16</span><span class="p">]</span>
+</pre></div>
+
+
+<p>Ummm, so what just happened? That is not the same result we computed last time. This time, the list concatenation took precedence. Thus, and this is surprising, <code>(++)</code> and <code>myConcat</code> are not acting equivalently in this seemingly equivalent situation.</p>
+<p>Now, let's take a step back into math and think about what it means for two functions to be equal. Two functions <code>f</code> and <code>g</code> are defined to be equal if they have the same domain, and for each element <code>x</code> in their domain, <code>f(x) = g(x)</code>. Now, consider our two functions <code>(++)</code> and <code>myConcat</code>. These functions have identical type signatures, and hence the same domain. And since <code>myConcat</code> is effectively just a wrapping around <code>(++)</code>, then for any lists <code>l1</code> and <code>l2</code> of the same type, </p>
+<div class="highlight"><pre><span></span><span class="n">l1</span> <span class="o">++</span> <span class="n">l2</span> <span class="o">==</span> <span class="n">l1</span> <span class="ss">`myConcat`</span> <span class="n">l2</span>
+</pre></div>
+
+
+<p>Thus, by this definition of function equality, <code>myConcat</code> and <code>(++)</code> are equal functions. But we have just seen that, when applied as infix operators in conjunction with <code>zipSum</code>, they do not operate equivalently! It seems our definition of a function isn't correct. Or that we're actually not dealing with functions. So what's going on?</p>
+<p>Well, the problem we're dealing with here is the inherent ambiguity of infix operators. By using a function as an infix operator, we're using it in a way that lambda calculus doesn't define. Hence we need to provide our own custom infix operator rules in order for infix operators to make sense.</p>
+<p>To evaluate an expression like </p>
+<div class="highlight"><pre><span></span><span class="err">4 + 5 * 6 * 7</span>
+</pre></div>
+
+
+<p>we need to first decide on some evaluation rules. For example, we could assume that all infix operators have the same precedence and that they are all left associative. In that case, the above expression would be evaluated as </p>
+<div class="highlight"><pre><span></span><span class="err">(((4 + 5) * 6) * 7)</span>
+</pre></div>
+
+
+<p>That's one solution. But from the high level view of a function, that solution is really just as arbitrary as assigning a random fixity to every operator.</p>
+<p>Now it's worth noting that if we choose not to assume any rules when given a series of infix function applications, then the only sane thing left to do would be to assume that we can apply the operations in any order. But a simple example of numeric addition and multiplication shows us that this approach can trivially yield non-equal results from the same initial expresion. This cannot possibly be the correct solution.</p>
+<p>So even if we remove this infix ambiguity by defining a set of non-ambiguous infix evaluation rules, these rules are still arbitrary from the point of view of a function that only knows its type signature. Specifying the infix precedence and associativity of a function adds semantic meaning to a type signature that otherwise knew nothing about its implementation. In short, function behavior should not be governed by a secret fixity, not present in its type signature. (A language which can specify fixity in the type signature? Now you have my attention!)</p>
+<p>In all fairness, fixity isn't entirely secret. In ghci you can inquire about the fixity of any function using <code>:info</code>. For example:</p>
+<div class="highlight"><pre><span></span><span class="o">*</span><span class="n">Main</span><span class="o">&gt;</span><span class="w"> </span><span class="err">:</span><span class="n">info</span><span class="w"> </span><span class="p">(</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="p">(</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w">   </span><span class="c1">-- Defined in `GHC.Base&#39;</span>
+<span class="n">infixr</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">++</span><span class="w"></span>
+</pre></div>
+
+
+<p>Here we learn that <code>(++)</code> has right associativity with precedence level 5. Why is the associativity right, and not left or neutral? Recall that <code>(++)</code> has time complexity that is linear in the length of its <em>first</em> argument. A quick picture shows clearly that performing a series of <code>(++)</code> infix applications is more efficient if you do so assuming right associativity. Thus, Haskell exposes an implementation detail of a function through that function's fixity. Yikes that seems dangerous. What if the implementation details change? This is the sort of hole that bugs crawl out of.</p>
+<p>Though, should it really be up to the programmer to know the time complexity of <code>(++)</code> and write their code accordingly? In some situations it seems quite tempting to encode function implementation details with fixity, because then we can write <code>3 + 4 * 5</code> and have it parse as <code>3 + (4 * 5)</code>, as expected. But I will maintain my point that hardcoding implementation details or implementation semantics into the behavior of functions is impure and dangerous. In the simple cases, functions will do what we expect. In more complex code, we'll introduce bugs.</p>
+<p>I want types that are implementation agnostic and possible to reason about without additional information. Haskell functions used as infix operators don't provide that. So what world are we left in if</p>
+<div class="highlight"><pre><span></span><span class="n">x</span> <span class="ss">`op1`</span> <span class="n">y</span> <span class="ss">`op2`</span> <span class="n">z</span>
+</pre></div>
+
+
+<p>always generates a parser error? Well, that would be a world full of parentheses! The user would be required to add parentheses around their infix operators always, and without exception, until all ambiguity is resolved.</p>
+<p>Let's again consider the case of numeric addition and multiplication. These operations have a universally accepted precedence, which is entirely sensical when you think of <code>5 * 3</code> as <code>5 + 5 + 5</code>. So can't we at least maintain this precedence for these numeric operations? I say, nah. The Haskell functions <code>(+)</code> and <code>(*)</code> really should know nothing of their semantics. There is no reason <code>(*)</code> should take precendece over <code>(+)</code>, unless you consider the meaning of its implementaion in the larger context of math.</p>
+<p>So, lesson learned: equal functions can be defined with non-equal infix operators. (Recall the example of <code>zipSum</code> used with both <code>(++)</code> and <code>myConcat</code>.) There is of course an obvious solution to this problem: never use Haskell infix operators. What do we lose? Readability. What do we gain? Correctness. And in all reality, a series of three or more infix applications really should be broken into shorter expressions anyway.</p>
+<p><strong>Update:</strong> The original version of <code>zipSum</code> looked like this:</p>
+<div class="highlight"><pre><span></span><span class="n">zipSum</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="p">(</span><span class="n">Num</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"></span>
+<span class="n">zipSum</span><span class="w"> </span><span class="n">xs</span><span class="w"> </span><span class="n">ys</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">map</span><span class="w"> </span><span class="n">summed</span><span class="w"> </span><span class="p">(</span><span class="n">zip</span><span class="w"> </span><span class="n">xs</span><span class="w"> </span><span class="n">ys</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="k">where</span><span class="w"> </span><span class="n">summed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">\</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+</pre></div>
+
+
+<p>Thanks to <a href="https://twitter.com/puffnfresh">\@puffnfresh</a> for pointing out that we can use <code>zipWith</code> to implement this function.</p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-02-22-haskellflip.html" rel="bookmark" title="Permalink to Haskell Flip">
+                    Haskell Flip</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-02-22T00:00:00-05:00"> Sat 22 February 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>How can we change the order of the arguments to a function? After I answered this question, I realized it's actually a very odd question to ask.</p>
+<p>I'm working my way though <a href="http://learnyouahaskell.com/">Learn You a Haskell for Great Good</a>, and in the <a href="http://learnyouahaskell.com/higher-order-functions#curried-functions">Curried Functions</a> section, the author describes the Haskell function <code>flip</code> like so: <em>"Flip simply takes a function and returns a function that is like our original function, only the first two arguments are flipped."</em> Without scrolling down further, I decided to implement <code>flip</code> based on this sentence alone.</p>
+<p>I started with the type signature </p>
+<div class="highlight"><pre><span></span><span class="err">myFlip :: (a -&gt; b -&gt; c) -&gt; (b -&gt; a -&gt; c)</span>
+</pre></div>
+
+
+<p>and my first attempt at implementation trailed off rather quickly:</p>
+<div class="highlight"><pre><span></span><span class="err">myFlip f = ...</span>
+</pre></div>
+
+
+<p>Given only a function <code>f :: a -&gt; b -&gt; c</code>, and nothing to apply to it, I had reached a dead end, so I decided to implement <code>f</code>, and then <code>flip</code> this implementation. I wanted the type variables <code>a</code>, <code>b</code>, and <code>c</code> to be distinct so I could easily keep track of them. Here's my function:</p>
+<div class="highlight"><pre><span></span><span class="err">myImpl :: Char -&gt; Bool -&gt; String</span>
+<span class="err">myImpl char bool = char : (show bool)</span>
+</pre></div>
+
+
+<p>And now to flip it!</p>
+<div class="highlight"><pre><span></span><span class="err">flippedMyImpl :: Bool -&gt; Char -&gt; String</span>
+<span class="err">flippedMyImpl bool char = myImpl char bool</span>
+</pre></div>
+
+
+<p>Well, that is simple enough. The types lead way! And suddenly I realized that I just might have access to type variables <code>a</code> and <code>b</code>. But I needed to implement the full signature of <code>myFlip</code> using these specific types to fully understand. I combined <code>myImpl</code> and <code>flippedMyImpl</code> to produce</p>
+<div class="highlight"><pre><span></span><span class="err">flipWithTypes :: (Char -&gt; Bool -&gt; String) -&gt; Bool -&gt; Char -&gt; String</span>
+<span class="err">flipWithTypes f bool char = f char bool</span>
+</pre></div>
+
+
+<p>My key realization was that I could remove the parentheses around <code>(Bool -&gt; Char -&gt; String)</code> without changing the type signature. Once I did this, I realized that I had access to two more function arguments! Before removing the parentheses, my mind had written off <code>(b -&gt; a -&gt; c)</code> as an impenetrable block.</p>
+<p>Once I wrote this last implementation, it was immediately clear that I had just written a non-parametric version of <code>myFlip</code>. There is nothing special about the types I had chosen; they could just as easily be type variables. And so we arrive at our solution:</p>
+<div class="highlight"><pre><span></span><span class="err">myFlip :: (a -&gt; b -&gt; c) -&gt; b -&gt; a -&gt; c</span>
+<span class="err">myFlip f y x = f x y</span>
+</pre></div>
+
+
+<p>To implement <code>myFlip</code>, we needed to determine how the function would handle itself when fully applied. But our goal in writing <code>myFlip</code> is to return another (partially applied) function with type <code>b -&gt; a -&gt; c</code>. The key to the implementation of <code>flip</code> that wasn't obvious at first is that we need to provide a full implementation in order to later partially apply it.</p>
+<p>In doing this exercise, my conception of a function changed. Now when I think of a function, I think of something linear, something in which each parameter must be applied in its prescribed order. And if that order is to be broken, another function must be applied to faciliate this change in order.</p>
+<p>Really, <code>flip</code> is a formalization of how we handle the permutations of function application orders in Haskell. In math, we've seen that given a function <code>f(x,y,z)</code>, we can consider <code>g(y,z) = f(3,y,z)</code> or <code>h(y) = f(5,y,6)</code> without any concern, because the order in which we provide values for our variables doesn't matter.</p>
+<p>But since in Haskell all functions take exactly one parameter, and thus multi-parameter functions are a semantic illusion, one must make explicit how to pass in parameters in a different order. Hence we arrive at the <code>flip</code> function.</p>
+<p>To tie up this post, it's odd, from a non-functional point of view, to ask how we can flip the order of function arguments because the question assumes that function arguments have an order in the first place! Though, once you recall the definitions of lambda calculus and think about different reduction rules, the fact that functions innately order their parameters seems almost intuitive. And then I realized: <a href="http://en.wikipedia.org/wiki/Church%E2%80%93Rosser_theorem">Church-Rosser</a>. And guess what? I've already written a <a href="/posts/2013-03-26-churchrosser.html">blog post</a> about that.</p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-02-19-categorytheorystrangeloop.html" rel="bookmark" title="Permalink to Category Theory at Strange Loop 2013">
+                    Category Theory at Strange Loop 2013</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-02-19T00:00:00-05:00"> Wed 19 February 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p><img alt="diagram" src="/images/diagram.png" title="diagram"></p>
+<p>Back in September 2013 I gave a talk titled "Category Theory: An Abstraction for Anything" at the <a href="https://thestrangeloop.com/">Strange Loop Conference</a>. A few days ago, the <a href="http://www.infoq.com/presentations/category-theory">video</a> for my talk was released. </p>
+<p>Additionally, I wrote a <a href="http://engineering.richrelevance.com/closing-the-loop-on-category-theory-polymorphism-currying-and-more/">blog post</a> about this talk that was published on my employer's blog. </p>
+<p>Here's the talk abstract, reproduced from the <a href="https://thestrangeloop.com/sessions/category-theory-an-abstraction-for-anything">Strange Loop website</a>:</p>
+<p><em>Category theory provides a mathematically sound foundation on which we can create collections of objects and express morphisms between them. Together, along with a few simple rules, a collection of objects and morphisms forms a category to which we can apply many useful results, such as the uniqueness of an identity morphism. Furthermore, once we have a category in hand, we can formally explore the relationships it has with other categories, deducing powerful and practical abstractions.</em></p>
+<p><em>The power of category theory lies in the relative simplicity and accessibility of its definitions. From just a handful of straightforward concepts, we can formalize many concrete ideas such as directed acyclic graphs, currying, polymorphic functions, and Haskell itself. This talk will introduce the basics of category theory, while simultaneously diving into specific programming-related examples of categories, functors, and natural transformations. In addition to exploring profound and beautiful concepts, this talk aims to provide you with the tools necessary to recognize category-theoretical patterns in your own programming projects.</em></p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-02-08-blogsetup.html" rel="bookmark" title="Permalink to Blog Setup">
+                    Blog Setup</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-02-08T00:00:00-05:00"> Sat 08 February 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>Edit 2021-05-01: This blog is no longer generated with Hackyll. It is generated with Pelican.</p>
+<p>When I started my search for a static site generator, I first came across <a href="https://github.com/jekyll/jekyll">Jekyll</a>. I'm not particularly excited about learning Ruby, but I am excited about learning Haskell.
+This quickly led me to <a href="http://jaspervdj.be/hakyll/">Hakyll</a>. Hakyll is easy to install with <code>cabal</code>, though the first time I installed it I had an old version of <code>cabal</code>, and thus installed an apparently very old version of Hakyll. I remedied this as follows: </p>
+<div class="highlight"><pre><span></span>$ ghc-pkg unregister hakyll
+$ cabal update
+$ cabal install hakyll
+</pre></div>
+
+
+<p>From there I followed the <a href="http://jaspervdj.be/hakyll/tutorials.html">Tutorials</a> on the Hakyll site and found them clear and up to date. Once I built the <a href="http://jaspervdj.be/hakyll/tutorials/01-installation.html#building-the-example-site">Example Site</a> locally, it was time to move the example code to <a href="http://pages.github.com/">github pages</a>. Blogging without version control was out of the question!</p>
+<p>The most confusing part of github pages is the <a href="https://help.github.com/articles/user-organization-and-project-pages">difference</a> between User Pages and Project Pages. The difference is mostly confusing because you can have a <code>gh-pages</code> branch in the repo <code>username/username.github.io</code>. In that case github needs to make an undocumented choice about which branch to use. I decided to use User Pages, which is why you can find my blog at <code>http://alissapajer.github.io</code>. This means that content from my <code>master</code> branch will be used to build my website. Here is where things get a bit tricky.</p>
+<p><strong>Problem:</strong></p>
+<p>I need the contents of my site in the directory <code>alissapajer.github.io/</code> on the <code>master</code> branch. But Hakyll generates the website itself in <code>alissapajer.github.io/_site/</code>, and places the Haskell code, markdown, and various other files in the top level directory. And of course I need to version control everything, generated and not!</p>
+<p><strong>Solution:</strong></p>
+<p>I created a <code>source</code> branch, which contains both the manually-created and the generated files. When I make a change to my website, I always commit on the <code>source</code> branch, and I never manually edit files on <code>master</code>. The idea is that <code>source</code> will contain all of my code, and <code>master</code> will contain just the generated files. Now all we need to do is to copy the contents of the <code>_site/</code> directory to the <code>master</code> branch. </p>
+<p>To perform this copy, I use <a href="https://github.com/davisp/ghp-import">ghp-import</a> as follows, run from the <code>source</code> branch:</p>
+<div class="highlight"><pre><span></span><span class="err">$</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="nn">_site</span><span class="o">/</span> <span class="o">-</span><span class="n">b</span> <span class="n">master</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;commit message&quot;</span>
+</pre></div>
+
+
+<p>There is an optional flag to push to <code>master</code>, but I have been pushing manually so I can review the changes first. And that's it! The only thing I still need to do is the redirect to a domain I own. This is done using a <code>CNAME</code> file on the <code>master</code> branch. Since my <code>master</code> branch is auto-generated I'll need to add this <code>CNAME</code> in such a way that it's not deleted when I commit to <code>master</code>. </p>
+<p>The only weird thing is that <code>source</code> and <code>master</code> will permanently diverge.</p>
+<p><strong>Tips:</strong></p>
+<p>While editing the webiste, I run</p>
+<div class="highlight"><pre><span></span>$ ./site watch
+</pre></div>
+
+
+<p>This command registers changes to the <code>_site/</code> directory and publishes the up-to-date website to <code>http://127.0.0.1:8000/</code>. Very useful for immediate feedback!</p>
+<p>Also, Hakyll allows you to write all your blog posts in markdown. I've found this <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a> essential.</p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/2014-02-03-siteproperties.html" rel="bookmark" title="Permalink to Site Properties">
+                    Site Properties</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2014-02-03T00:00:00-05:00"> Mon 03 February 2014 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>This site contains all the things that don't contain themselves.</p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="/posts/lambdacalc.html" rel="bookmark" title="Permalink to Insights into Church-Rosser">
+                    Insights into Church-Rosser</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2013-03-26T00:00:00-04:00"> Tue 26 March 2013 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>Untyped lambda calculus is powerful. In fact, every computable function can be encoded into lambda calculus, and thus so can every bit of Scala code you've ever written. Though, anything more complicated than your basic combinator would be almost indecipherable in its lambda calculus form. As an example, here's what the addition combinator for the Church numerals <code>c_n = λfx.fn(x)</code> looks like in lambda calculus: </p>
+<div class="highlight"><pre><span></span><span class="err">A+ = λxypq.xp(ypq)</span>
+</pre></div>
+
+
+<p>At first glance it's by no means obvious that you're looking at a way to add natural numbers.</p>
+<p><strong>Introductory Definitions:</strong></p>
+<p>Before we jump into some more examples, let's step back a minute so I can provide a quick and basic introduction to untyped lambda calculus. The rules are easily accessible, and given that lambda calculus is Turing complete, their simplicity astounds me. (As a side note, because cellular automata are really cool, Conway's Game of Life is another easily definable Turing complete system.)</p>
+<p>Now, as promised, the introduction: We define the set <code>𝚲</code> inductively as follows. Let <code>V</code> be a set of variables <code>v'</code>, <code>v''</code>, etc.</p>
+<div class="highlight"><pre><span></span><span class="err">(i) If x ∈ V, then x ∈ 𝚲.</span>
+<span class="err">(ii) If M,N ∈ 𝚲, then MN ∈ 𝚲.</span>
+<span class="err">(iii) If x ∈ V and M ∈ 𝚲, then λx.M ∈ 𝚲.</span>
+</pre></div>
+
+
+<p>In (ii), <code>MN</code> denotes application, and you should think of <code>M</code> as a method applied to <code>N</code>. In (iii), the syntax <code>λx.M</code> denotes an abstraction, i.e. a function <code>x -&gt; M</code>, where <code>M</code> is not required to depend on <code>x</code>. The most interesting terms in lambda calculus will include an abstraction followed by an application, like so:</p>
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="err">λ</span><span class="n">x</span><span class="p">.</span><span class="n">M</span><span class="p">)</span><span class="n">N</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="nl">x</span> <span class="p">:</span><span class="o">=</span> <span class="n">N</span><span class="p">]</span>
+</pre></div>
+
+
+<p>where <code>N</code> is substituted for every free instance of <code>x</code> in <code>M</code>. This is known formally as β-reduction. In psuedo lambda calculus, (psuedo because integers are not terms in <code>V</code>), we can consider the example </p>
+<div class="highlight"><pre><span></span><span class="err">(λx.(2*x + 3))4 = 2*4 + 3 = 11</span>
+</pre></div>
+
+
+<p><strong>Some Intuitions:</strong></p>
+<p>So what's the benefit of thinking about lambda calculus? For me, lambda calculus provides the structure to represent the core of what a function really is: a rule that gets us from one bit of knowledge to another. And if we want to prove something about functions (functions in a generic sense), lambda calculus is the perfect place to come. So what should we prove? Well, intuitively we'd hope that, no matter the strategy (e.g. call by name, call by value, etc.) we use to evaluate our function, we obtain the same result. But wait! Can this always be true? What if our function is an ill-thought-out recursion that loops until we overflow the stack? Can we really guarantee that every call to a function will return a unique result, no matter what strategy we use to evaluate it? The answer is yes, with an added assumption.</p>
+<p>To understand what this assumption should be, consider the famous <code>Ω</code>-combinator: </p>
+<div class="highlight"><pre><span></span><span class="err">Ω = (λx.xx)(λx.xx)</span>
+</pre></div>
+
+
+<p>Furthermore consider the lambda term <code>(λx.z)Ω</code>. If we evaluate this term using a call-by-name strategy, then it's simply equal to the constant <code>z</code>, since <code>λx.z</code> is a constant function. But if we use a call-by-value strategy, then we'll never be able to further reduce it, since when we apply <code>λx.xx</code> to itself we again obtain <code>Ω</code>. So what we really want to prove is this: If we β-reduce a lambda term until we cannot reduce it any further, then that final reduced term is unique. Said more formally: If a lambda term has a normal form, then that normal form is unique.</p>
+<p><strong>Introduction to Church-Rosser:</strong></p>
+<p><img alt="ChurchRosserRight" src="/images/ChurchRosser1.png" title="ChurchRosser1">
+In summary, we cannot just pick an evaluation strategy and expect it to yield the same results as all other evaluation strategies, because, as the <code>Ω</code>-combinator example showed us, a given evaluation strategy may never terminate. But, there is something we can prove for certain: a lambda term has at most one normal form. In order to prove this, we'll outline the proof of a more general theorem, known as the Church-Rosser Theorem. In picture form, it looks like the image to the right, where solid arrows are assumptions and dotted arrows are to be proven.</p>
+<p>In word form it states: If a term <code>M</code> β-reduces to two terms <code>N1</code> and <code>N2</code>, then there exists some <code>N3</code> such that <code>N1</code> and <code>N2</code> each β-reduce to it.</p>
+<p>Given Church-Rosser, our desired statement follows directly. If we let <code>N1</code> and <code>N2</code> in the diagram above be distinct normal forms of <code>M</code>, then by Church-Rosser there exists some <code>N3</code> such that <code>N1</code> and <code>N2</code> each β-reduce to it. But a normal form term can only β-reduce to itself, and thus <code>N1 = L</code> and <code>N2 = L</code>. Thus <code>M</code> has at most one normal form, since <code>N1 = N2</code>. </p>
+<p>Interestingly, we can also use Church-Rosser to prove the consistency of lambda calculus, that is, that true does not equal false. We define: </p>
+<div class="highlight"><pre><span></span><span class="err">T = λxy.x</span>
+<span class="err">F = λxy.y</span>
+</pre></div>
+
+
+<p>Note that <code>T</code> and <code>F</code> are written as an iterated abstraction, meaning that the abstraction is one of multiple variables (in this case <code>x</code> and <code>y</code>). Iterated abstraction is right associative; for example</p>
+<div class="highlight"><pre><span></span><span class="err">λxyz.xyz</span>
+</pre></div>
+
+
+<p>is shorthand for</p>
+<div class="highlight"><pre><span></span><span class="err">λx.(λy.(λz.xyz))</span>
+</pre></div>
+
+
+<p>Now to understand these definitions, if <code>K</code> is a lambda term that equals either <code>T</code> or <code>F</code>, the lambda term <code>KPQ</code> is a way to represent “if <code>K</code> then <code>P</code> else <code>Q</code>”. If <code>T = F</code>, then we’d be able to perform a series of reductions connecting <code>T</code> and <code>F</code>. But since <code>T</code> and <code>F</code> are both normal forms, we cannot perform such reductions. Thus <code>T</code> does not equal <code>F</code>.</p>
+<p><strong>Strip Lemma Basics:</strong></p>
+<p><img alt="ChurchRosserRight" src="/images/ChurchRosser2.png" title="ChurchRosser2">
+Now in order to prove Church-Rosser, we'll prove a lemma first, namely the Strip Lemma. This lemma states that, if <code>M</code> β-reduces to <code>N1</code> in a single step, and <code>M</code> β-reduces to <code>N2</code> in any finite number of steps, there exists an <code>N3</code> such that <code>N1</code> and <code>N2</code> each β-reduce to it. In diagram form, we have the diagram to the right, where a single arrow represents a single β-reduction, and a double arrow represents any finite number of β-reductions. </p>
+<p>Note that once we've proven the Strip Lemma, Church-Rosser follows immediately by induction on the natural numbers. (First prove the statement for <code>n=1</code>. Then prove that if the statement holds for an arbitrary <code>n</code>, it holds for <code>n+1</code>.) To see this visually, imagine filling in the Church-Rosser diagram with these strips. </p>
+<p>Proceeding with the proof of the Strip Lemma, the correct question to ask is, how do we obtain a candidate <code>N3</code>? Well, we know that <code>M</code> β-reduces to <code>N1</code> in a single step, so we'll consider this redex and mark it in <code>M</code>. Now as we perform the multiple reductions on <code>M</code> that ultimately reduce to <code>N2</code>, we track this marked lambda term until we reach <code>N2</code>. We now perform the β-reduction on this marked term in <code>N2</code>, and that produces our candidate <code>N3</code>.</p>
+<p>Let's make this idea of marking more formal with some notation. Specifically, to keep track of a certain redex, we'll underline it like this: <code>(<ins>λ</ins>x.M)N</code>, and we'll keep that lambda underlined until we β-reduce it. With this new notation, here’s an example of the Strip Lemma with actual lambda terms. (We’ll introduce <code>φ</code> in a couple of paragraphs; for now just think of it as a β-reduction.)</p>
+<p><img alt="ChurchRosser3" src="/images/ChurchRosser3.png" title="ChurchRosser3"></p>
+<p><strong>Details of the Proof:</strong></p>
+<p>Given that we now allow underlined lambdas in our set of allowed terms, what does this new set look like formally? Let's call it <code><ins>𝚲</ins></code>. We'll define it inductively, as we defined <code>𝚲</code> earlier. The first three parts of the definition will be analogous to before, defining variables, application, and abstraction. In the fourth part we will include underlined lambdas only in the case when we have an abstraction followed by an application. This is because the only lambda-terms we need to trace are ones we know will be β-reduced.</p>
+<pre><code>(i) If x ∈ V, then x ∈ <ins>𝚲</ins>.
+(ii) If M,N ∈ <ins>𝚲</ins>, then MN ∈ <ins>𝚲</ins>.
+(iii) If x ∈ V and M ∈ <ins>𝚲</ins>, then λx.M ∈ <ins>𝚲</ins>. 
+(iv) If x ∈ V and M, N ∈ <ins>𝚲</ins>, then (<ins>λ</ins>x.M)N ∈ <ins>𝚲</ins>.
+</code></pre>
+
+<p>Consider the following diagram. Note that the front rectangle is the same as the diagram in the statement of the Strip Lemma. The other terms, namely <code>M'</code> and <code>N2'</code>, we construct for purposes of the proof.</p>
+<p><img alt="ChruchRosser4" src="/images/ChurchRosser4.png" title="ChurchRosser4"></p>
+<p>We construct <code>M'</code> to be equivalent to <code>M</code>, except that in it we underlined the <code>λ</code> that was reduced to obtain <code>N1</code>. The function <code>ψ: <ins>𝚲</ins> -&gt; 𝚲</code> simply erases all underlines, so that</p>
+<pre><code>ψ((<ins>λ</ins>x.M)N) = (λx.ψ(M))ψ(N)</code></pre>
+
+<p>We can now apply beta-reductions to <code>M'</code>, analogous to those applied to <code>M</code>, in order to obtain <code>N2'</code>. And now to formally obtain <code>N3</code>, we apply the function <code>φ: <ins>𝚲</ins> -&gt; 𝚲</code> to <code>N2'</code>. And what is <code>φ</code>? <code>φ</code> is exactly what you'd expect: a function that β-reduces all underlined terms and keeps all others the same, meaning that</p>
+<pre><code>φ((<ins>λ</ins>x.M)N) = φ(M)[x := φ(N)]</code></pre>
+
+<p>Now that we have our candidate <code>N3</code>, we only need to prove that we can draw solid lines in place of the dotted ones. I will outline a proof showing that <code>N2</code> β-reduces to <code>N3</code> and will leave the other part of the proof as an exercise for the reader. We will outline a proof of the following diagram, which is the front triangle in the previous diagram.</p>
+<p><img alt="ChurchRosser5" src="/images/ChurchRosser5.png" title="ChurchRosser5"></p>
+<p>In order to prove this, we will use the method of structural induction. Recall that initially we constructed <code>𝚲</code> inductively. Thus in order to prove something general about all elements of <code>𝚲</code>, we can use an induction technique that mimics the way in which we define <code>𝚲</code>. This is called induction on the structure of <code>𝚲</code>. Though note that in our case, <code>A ∈ <ins>𝚲</ins></code>, so we'll use induction on the structure of <code><ins>𝚲</ins></code>.</p>
+<p>First, the base case:</p>
+<p>(i) Let <code>A = x</code> for some <code>x ∈ V</code>. Then <code>ψ(x) = x</code> and <code>φ(x) = x</code>. And thus since <code>x</code> β-reduces to <code>x</code>, we're done.</p>
+<p>For the next three cases, we assume the statement holds for the individual terms in <code><ins>𝚲</ins></code>, and prove that it holds for their application (or abstraction).</p>
+<p>(ii) Let <code>A = PQ</code> for <code>P, Q ∈ V</code>. Assume that <code>ψ(P)</code> β-reduces to <code>φ(P)</code> and that <code>ψ(Q)</code> β-reduces to <code>φ(Q)</code>. By the definitions of <code>ψ</code> and <code>φ</code>, show that <code>ψ(PQ)</code> β-reduces to <code>φ(PQ)</code>.
+(iii) Let <code>A = λx.P</code> for <code>P ∈ V</code>. Assume that <code>ψ(P)</code> β-reduces to <code>φ(P)</code>. Using the definitions, show that <code>ψ(λx.P)</code> β-reduces to <code>φ(λx.P)</code>
+(iv) Let <code>A = (<ins>λ</ins>x.P)Q</code> for <code>P, Q ∈ V</code>. Assume the statement holds for <code>P</code> and <code>Q</code>. Show that <code>ψ(A)</code> β-reduces to <code>φ(A)</code>.</p>
+<p>And that's the outline of the proof of the Strip Lemma! </p>
+<p><strong>Conclusion:</strong></p>
+<p>In summary, we gave the definition for a lambda-term, considered the <code>Ω</code>-combinator as an example of a lambda-term without a normal form, and outlined a proof of the Church-Rosser Theorem. So what does Church-Rosser tell us? If a term has a normal form, then that normal form is unique. This means that if we evaluate a function using two different strategies, the results will be equal. Of course, this doesn't guarantee that every evaluation strategy will terminate. But one thing we know for certain: if we do obtain a result, then that result is unique. </p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+</ul><!-- /#posts-list -->
+</section><!-- /#content -->
+</body>
+</html>

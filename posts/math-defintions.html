@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <link rel="stylesheet" href="/theme/css/rdark.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/css/luney.css" />
+        <link href="/" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blog ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <title>Alissa Pajer's Blog - Math Defintions</title>
+        <meta charset="utf-8" />
+        <meta name="generator" content="Pelican" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blog Full Atom Feed" />
+        <link href="/feeds/misc.atom.xml" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blog Categories Atom Feed" />
+
+
+
+
+    <meta name="tags" content="math" />
+
+
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  "HTML-CSS": {
+  styles: {
+  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+  },
+  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+        
+        </head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Alissa Pajer's Blog</a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+        </ul></nav><!-- /#menu -->
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="/posts/math-defintions.html" rel="bookmark"
+         title="Permalink to Math Defintions">Math Defintions</a></h2>
+ 
+  </header>
+  <footer class="post-info">
+    <time class="published" datetime="2022-08-27T00:00:00-04:00">
+      Sat 27 August 2022
+    </time>
+    <!---->
+    <!--<address class="vcard author">-->
+    <!--  By -->
+    <!--      <a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a>-->
+    <!--    -->
+    <!--</address>-->
+    <!---->
+    <!---->
+    <!--<div class="category">-->
+    <!--    Category: <a href="/category/misc.html">misc</a>-->
+    <!--</div>-->
+    <!---->
+    <div class="tags">
+        Tags:
+            <a href="/tag/math.html">math</a>
+    </div>
+  </footer><!-- /.post-info -->
+  <div class="entry-content">
+    <p><em>(In Progress Eternally)</em></p>
+<h2>algebra</h2>
+<p>A <em>binary operation</em> on a set <span class="math">\(S\)</span> is a pairwise operation <span class="math">\(S \times S \rightarrow S\)</span>. The set is <em>closed</em> under the operation.</p>
+<p>A <em>semigroup</em> is a set of elements and an associative binary operation operating on the set.</p>
+<p>A <em>monoid</em> is a semigroup with an identity element.</p>
+<p>A <em>group</em> is a set of monoid such that for each element there exists an inverse element</p>
+<p>A <em>commutative group</em> (also known as an <em>abelian group</em>) is a group whose operation is commutative.</p>
+<p>A <em>ring</em> is a set of elements and two binary operations <span class="math">\((+)\)</span> and <span class="math">\((\times)\)</span> such that:</p>
+<ul>
+<li>it forms an abelian group under <span class="math">\((+)\)</span></li>
+<li>it forms a monoid under <span class="math">\((\times)\)</span></li>
+<li><span class="math">\((\times)\)</span> distributes over <span class="math">\((+)\)</span></li>
+</ul>
+<p>A <em>field</em> is a ring such that:</p>
+<ul>
+<li>for each nonzero element (where <span class="math">\(0\)</span> is the additive identity) there exists an inverse element</li>
+<li><span class="math">\((\times)\)</span> is commutative</li>
+</ul>
+<p>The integers <span class="math">\(\mathbb{Z}\)</span> are the cannonical example of a ring. The integers are not a field because some inverses are not contained in the set (e.g. 1/5).</p>
+<h2>topology</h2>
+<p>A <em>topological space</em> is a set equipped with a <em>topology</em>.</p>
+<p>A <em>topology</em> <span class="math">\(T\)</span> on a set <span class="math">\(X\)</span> is a collection of subsets of <span class="math">\(X\)</span> such that:</p>
+<ul>
+<li>the empty set and <span class="math">\(X\)</span> are elements of <span class="math">\(T\)</span></li>
+<li>arbitrary unions are elements of <span class="math">\(T\)</span></li>
+<li>finite intersections are elements of <span class="math">\(T\)</span></li>
+</ul>
+<p>The elements of <span class="math">\(T\)</span> are defined to be <em>open sets</em>. A subset that is a complement of a closed set is an <em>open set</em>.</p>
+<p>Why are the intersections finite and not arbitrary? How do we fit a counterexample into the frame of the subset definition?</p>
+<p>Using De Morgan's laws for set complements (union of complements is complement of intersection; intersection of complements is complement of union), we can rewrite these properties:</p>
+<ul>
+<li>the empty set and <span class="math">\(X\)</span> are closed</li>
+<li>the arbitrary intersection of closed sets is closed (i.e. the complement of the arbitrary intersection of closed sets is open)</li>
+<li>the finite union of closed sets is closed (i.e. the complement of the finite union of closed sets is open)</li>
+</ul>
+<p>There is also a definition based on neighborhoods of points.</p>
+<h2>category theory</h2>
+<p>A <em>category</em> consists of:</p>
+<ul>
+<li>a collection of objects</li>
+<li>for each pair of objects, a collection of morphisms (arrows) from one to the other</li>
+<li>for each pair of compatible morphisms, a binary operation called composition</li>
+</ul>
+<p>such that:</p>
+<ul>
+<li>if <span class="math">\(u: a \rightarrow b\)</span> and <span class="math">\(v: b \rightarrow c\)</span> then there is a morphism <span class="math">\(u \circle v: a \rightarrow c\)</span></li>
+<li>composition of morphisms is associative</li>
+<li>for each object <span class="math">\(a\)</span>, there is an identity morphism <span class="math">\(I_a\)</span> such that for any morphism <span class="math">\(u: a \rightarrow b\)</span>, <span class="math">\(I_a \circle u = u \circle I_b = u\)</span> </li>
+</ul>
+<h2>analysis</h2>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+  </div><!-- /.entry-content -->
+</section>
+</body>
+</html>

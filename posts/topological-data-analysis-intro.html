@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <link rel="stylesheet" href="/theme/css/rdark.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/css/luney.css" />
+        <link href="/" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blog ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <title>Alissa Pajer's Blog - Topological Data Analysis Intro</title>
+        <meta charset="utf-8" />
+        <meta name="generator" content="Pelican" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blog Full Atom Feed" />
+        <link href="/feeds/misc.atom.xml" type="application/atom+xml" rel="alternate" title="Alissa Pajer's Blog Categories Atom Feed" />
+
+
+
+
+    <meta name="tags" content="math" />
+
+
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  "HTML-CSS": {
+  styles: {
+  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+  },
+  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+        
+        </head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Alissa Pajer's Blog</a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+        </ul></nav><!-- /#menu -->
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="/posts/topological-data-analysis-intro.html" rel="bookmark"
+         title="Permalink to Topological Data Analysis Intro">Topological Data Analysis Intro</a></h2>
+ 
+  </header>
+  <footer class="post-info">
+    <time class="published" datetime="2022-08-26T00:00:00-04:00">
+      Fri 26 August 2022
+    </time>
+    <!---->
+    <!--<address class="vcard author">-->
+    <!--  By -->
+    <!--      <a class="url fn" href="/author/alissa-pajer.html">Alissa Pajer</a>-->
+    <!--    -->
+    <!--</address>-->
+    <!---->
+    <!---->
+    <!--<div class="category">-->
+    <!--    Category: <a href="/category/misc.html">misc</a>-->
+    <!--</div>-->
+    <!---->
+    <div class="tags">
+        Tags:
+            <a href="/tag/math.html">math</a>
+    </div>
+  </footer><!-- /.post-info -->
+  <div class="entry-content">
+    <h3>summary</h3>
+<p>Start with some points. Determine a rule for incrementally connecting more and more of the points with lines, planes, solids, and so on. As points become connected, geometric structure emerges. As even more points become connected, geometric structure disappears. We quantify this structure, group it into classes, and observe when each class is born and dies. Lastly we compare the birth-death plots of various datasets to determine if the datasets share underlying structural similarities.</p>
+<h3>more-detailed-but-still-high-level summary</h3>
+<p>Topological Data Analysis (TDA) encompasses a variety of techniques which <a href="https://arxiv.org/abs/2004.07036">"connect the dots"</a>, thereby creating shapes whose topology can be understood. As a simple example, we can cover each of the dots in a point cloud with a circle of a given radius. As we increase that radius, we'll produce a shape with fewer and fewer "holes" until we're left with a mass with no holes. When the radii are too small to overlap, we gain no additional information. When the radii are large enough to encompass the entire point cloud, we loose all information. TDA aims to find the sweet-spot radius that will provide useful information about our data.</p>
+<p>In practice, most interesting datasets are complex enough that the radius technique (described above) <a href="https://www.ias.edu/ideas/2013/lesnick-topological-data-analysis">falls short</a>. It doesn't provide a rigorous way to determine which radius creates a topological space that best represents the underlying data. Additionally, it doesn't distinguish between major and minor features in the data. As a result, mathematicians have developed more advanced analysis techniques. One such technique is persistent homology whose core idea is to examine how the topological space changes as the radius changes. This approach smooths over noise in the data, as geometric structures created by noise will disappear quickly as the radius changes, while the structures created by the signal will be long-lived. </p>
+<p><a href="https://learning-analytics.info/index.php/JLA/article/view/5196/6089">Distance</a> is implicit in our discussion of radii. Said differently, in order to be able to draw circles of a given radius around points, we need to have defined a way to measure the length of a line originating from any point in the data. (As a philosophical aside, is this actually the same as being able to measure the distance <em>between</em> two points?) Thus we will always often to use a well-defined distance as we explore data topologically.</p>
+<p>To more formally study the geometric shape of data, we use simplicial complexes. For an <span class="math">\(n\)</span>-dimensional set of data points, we can connect any two points with a line, connect any three points with a plane, connect any four points with a solid, and so on. Any <span class="math">\(n\)</span> points comprise a simplex, which is a generalization of a line to a triangle to a tetrahedron to a 5-cell to a something even harder to visualize. A collection of simplices is a simplicial complex <span class="math">\(K\)</span> if:</p>
+<ol>
+<li>Every face of a simplex in <span class="math">\(K\)</span> is in <span class="math">\(K\)</span></li>
+<li>Every intersection of simplices <span class="math">\(A\)</span> and <span class="math">\(B\)</span> in <span class="math">\(K\)</span> is a face of both <span class="math">\(A\)</span> and <span class="math">\(B\)</span></li>
+</ol>
+<p><em>Counterexample to 1</em> (but not to 2): The singleton set <span class="math">\(X = \{ triangle \}\)</span> consisting of three points, the lines that connects them, and the area inside is not a simplicial complex because each of the three lines (faces) is not a member of <span class="math">\(X\)</span>.</p>
+<p><em>Counterexample to 2</em> (but not to 1): Draw four points in a square. Draw two lines connecting the points diagonal from each other (you've drawn an "X"). Each line is a simplex. Their intersection (at the center of the square) is not a face of either simplex.</p>
+<p><em>Failed Counterexample to 2</em>: (I was intersecting complexes and not simplices.) Complex <span class="math">\(A\)</span>: Draw four points; draw a line connecting one point <span class="math">\(c\)</span> to the other three <span class="math">\(x\)</span>, <span class="math">\(y\)</span>, <span class="math">\(z\)</span>. Complex <span class="math">\(B\)</span>: Draw a fifth point <span class="math">\(w\)</span>; draw a line connecting <span class="math">\(c\)</span> and <span class="math">\(w\)</span>; draw a line connecting <span class="math">\(x\)</span> to <span class="math">\(c\)</span> and connecting <span class="math">\(y\)</span> to <span class="math">\(z\)</span>. The intersection <span class="math">\(A \cap B\)</span> consists of <span class="math">\(c\)</span>, <span class="math">\(y\)</span>, <span class="math">\(z\)</span> and the two connecting lines.</p>
+<p>We can now construct an interesting simplicial complex: the Vietoris-Rips complex. Given a dataset consisting of <span class="math">\(n\)</span>-dimensional points, a metric (so we have distance), and a fixed value <span class="math">\(\delta &gt; 0\)</span>, connect all pairs of points that are within <span class="math">\(\delta\)</span> of each other. Whenever three or more points are connected, we additionally include the higher-dimensional simplex thus created. The collection of all such simplices is the Vietoris-Rips complex. By construction, requirements 1 and 2 are satisfied. (The proof for 2 probably uses triangle inequality: the intersection has to be within <span class="math">\(\delta\)</span> and therefore we'd already have connected the dots.)</p>
+<p>How do we determine which value(s) of <span class="math">\(\delta\)</span> create a complex that exhibits the underlying geometric structure of the data? We use persistence diagrams. A persistence diagram illustrates which topological features of a dataset persist as <span class="math">\(\delta\)</span> varies. In particular, we consider the homology of the complex as <span class="math">\(\delta\)</span> varies. Homology provides us with a formalized way to quantify the shape of a space in each dimension. For example, a solid torus has, modulo homotopy smooshing, one point, two loops, and one void. These values are called Betti numbers. They represent equivalence classes of points, loops, and voids.</p>
+<p>We are still on our way to understanding the persistence diagram. Let's consider all the classes of <span class="math">\(n\)</span>-dimensional "loops". As <span class="math">\(\delta\)</span> increases from 0, classes will emerge and classes will disappear. The <span class="math">\(\delta\)</span> value for which a class emerges is called its birth value <span class="math">\(b\)</span>, and the <span class="math">\(\delta\)</span> value for which a class disappears is called its death value <span class="math">\(d\)</span>. For each class, we have a tuple <span class="math">\((b,d)\)</span>. What can we do with tuples? Graph them! This graph is the persistence diagram. Traditionally <span class="math">\(b\)</span> is plotted on the horizontal axis and <span class="math">\(d\)</span> is plotted on the vertical axis. The further a point is from the line <span class="math">\(y=x\)</span>, the longer it persists. Thus the data's noise lives near the diagonal and the data's signal lives above the diagonal (for many applications).</p>
+<p>Now that we have a handful (or maybe many more!) of significant <span class="math">\((b,d)\)</span> pairs for a given dataset, we can compare two datasets to determine how geometrically similar they are. We make this comparison by matching points in one persistence diagram with points in the other persistence diagram. Two such ways to measure the distance (as a single value!) between two persistence diagrams are the bottleneck distance and the Wasserstein distance.</p>
+<p>Do we know that this distance is useful? We do, due to the stability theorem. This theorem proves that the distance between two persistence diagrams is less than the distance between the two corresponding datasets.</p>
+<h3>degrees of freedom (what choices can we make)</h3>
+<p>a. How do we draw the complex? Vietoris-Rips or something else?</p>
+<p>b. How do we measure the distance between the points in the persistence diagram? Bottleneck distance? Wasserstein distance? etc.</p>
+<p>c. Which distance do we use? Euclidean distance is not always the best tool for the task! (Thanks to <a href="https://people.clas.ufl.edu/hwagner/">Hubert Wagner</a> for pointing this out!)</p>
+<h3>next up</h3>
+<p>barcodes, linear-algebra-based computation, filtrations, persistence homology modules, module as a direct sum of barcode lines</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+  </div><!-- /.entry-content -->
+</section>
+</body>
+</html>
