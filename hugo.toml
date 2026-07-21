@@ -26,6 +26,11 @@ buildFuture = false
 
 [markup]
   [markup.goldmark]
+    [markup.goldmark.parser]
+      # Let a standalone image receive a following { width=25% } attribute line.
+      wrapStandAloneImageWithinParagraph = false
+      [markup.goldmark.parser.attribute]
+        block = true
     [markup.goldmark.renderer]
       # Church-Rosser post embeds raw <ins>/<code>/<pre> HTML — keep it.
       unsafe = true
