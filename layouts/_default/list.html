@@ -1,0 +1,13 @@
+{{ define "main" }}
+<h1 class="list-title">
+  {{ if eq .Kind "term" }}#{{ .Title }}{{ else }}{{ .Title }}{{ end }}
+</h1>
+<ul class="post-list">
+  {{ range .Pages.ByDate.Reverse }}
+  <li>
+    <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
+  {{ with .Description | default site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/katex/katex.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  {{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">{{ end }}
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-title" href="/">{{ site.Title }}</a>
+    <nav>
+      <a href="/">Posts</a>
+      <a href="/tags/">Tags</a>
+    </nav>
+  </header>
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer class="site-footer">
+    <p>© {{ now.Year }} {{ site.Params.author }}</p>
+  </footer>
+</body>
+</html>
