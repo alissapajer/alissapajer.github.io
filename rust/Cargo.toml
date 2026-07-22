@@ -1,0 +1,10 @@
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+
+# Shared release profile for WASM artifacts: optimize for small binaries,
+# which is what matters when the .wasm ships to the browser.
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
