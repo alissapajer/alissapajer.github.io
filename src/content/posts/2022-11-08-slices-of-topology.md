@@ -92,7 +92,7 @@ We are going to keep track of three different types of shapes: connected compone
 We can represent all of that information in a single barcode diagram. Given the barcode diagram, how different an original shape could you draw?
 
 ![barcode](/images/pyramid/barcode.jpg "barcode")
-{width="50%"}
+{width="40%"}
 ## Talk Slides
 
 I gave a talk about this topic at the weekly University of Florida [research group meeting](https://people.clas.ufl.edu/peterbubenik/intro-to-tda/) for Topological Data Analysis (TDA).
