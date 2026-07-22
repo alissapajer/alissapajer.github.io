@@ -1,0 +1,46 @@
+baseURL = "https://alissapajer.github.io/"
+title = "Alissa Pajer's Blog"
+defaultContentLanguage = "en"
+
+[languages.en]
+  locale = "en-US"
+enableRobotsTXT = true
+
+# Show future-dated posts never; drafts only in dev
+buildDrafts = false
+buildFuture = false
+
+[author]
+  name = "Alissa Pajer"
+
+[params]
+  description = "Alissa Pajer's Blog"
+  author = "Alissa Pajer"
+
+[taxonomies]
+  tag = "tags"
+
+# Home page lists the most recent posts
+[pagination]
+  pagerSize = 50
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      # Let a standalone image receive a following { width=25% } attribute line.
+      wrapStandAloneImageWithinParagraph = false
+      [markup.goldmark.parser.attribute]
+        block = true
+    [markup.goldmark.renderer]
+      # Church-Rosser post embeds raw <ins>/<code>/<pre> HTML — keep it.
+      unsafe = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['$$', '$$'], ['\[', '\]']]
+          inline = [['$', '$'], ['\(', '\)']]
+  [markup.highlight]
+    noClasses = false
+    guessSyntax = false
+    tabWidth = 2

@@ -2,3 +2,8 @@ __pycache__
 
 *.swo
 *.swp
+
+# Hugo
+/public/
+/resources/_gen/
+.hugo_build.lock
