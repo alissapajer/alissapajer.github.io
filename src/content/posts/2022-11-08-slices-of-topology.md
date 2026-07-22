@@ -25,7 +25,7 @@ This slicing strategy considers each horizontal slides through each critical val
 We are going to keep track of three different types of shapes: connected components ( $H_0$ ), loops ( $H_1$ ), and voids ( $H_2$ ). 
 
 ![a1](/images/pyramid/a1.jpg "a1")
-{width="25%"}
+{width="20%"}
 - $a_1$. A single point.
   - $H_0$: Something exists; thus our first connected component is born.
 
@@ -60,7 +60,7 @@ We are going to keep track of three different types of shapes: connected compone
   - $H_1$: Only one loop remains.
 
 ![a4](/images/pyramid/a4.jpg "a4")
-{width="50%"}
+{width="75%"}
 - $a_4$. Two loops connected at a point.
   - $H_0$: Still have a single connected component.
   - $H_1$: A second loop is alive again.
@@ -84,7 +84,7 @@ We are going to keep track of three different types of shapes: connected compone
   - $H_1$: Only one loop remains.
 
 ![a6](/images/pyramid/a6.jpg "a6")
-{width="25%"}
+{width="20%"}
 - $a_6$. A single point.
   - $H_0$: A single connected component remains.
   - $H_1$: There are no loops.
@@ -92,7 +92,7 @@ We are going to keep track of three different types of shapes: connected compone
 We can represent all of that information in a single barcode diagram. Given the barcode diagram, how different an original shape could you draw?
 
 ![barcode](/images/pyramid/barcode.jpg "barcode")
-{width="40%"}
+{width="75%"}
 ## Talk Slides
 
 I gave a talk about this topic at the weekly University of Florida [research group meeting](https://people.clas.ufl.edu/peterbubenik/intro-to-tda/) for Topological Data Analysis (TDA).
