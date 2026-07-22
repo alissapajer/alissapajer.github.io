@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import { urlize, titleCase } from "../../site";
+
+const posts = await getCollection("posts");
+const counts = new Map<string, number>();
+for (const post of posts) {
+  for (const tag of post.data.tags) {
+    counts.set(tag, (counts.get(tag) ?? 0) + 1);
+  }
+}
+
+// Order by frequency (descending), then alphabetically.
+const tags = [...counts.entries()].sort(
+  (a, b) => b[1] - a[1] || a[0].localeCompare(b[0]),
+);
+---
+
+<Base title="Tags">
+  <h1 class="list-title">Tags</h1>
+  <ul class="tag-list">
+    {
+      tags.map(([tag, count]) => (
+        <li>
+          <a href={`/tags/${urlize(tag)}/`}>#{titleCase(tag)}</a>{" "}
+          <span class="tag-count">({count})</span>
+        </li>
+      ))
+    }
+  </ul>
+</Base>

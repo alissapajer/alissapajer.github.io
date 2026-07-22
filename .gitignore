@@ -1,9 +1,15 @@
-__pycache__
+# Astro build output
+dist/
+# Astro generated types
+.astro/
+# dependencies
+node_modules/
+# environment
+.env
+.env.production
 
+# editor / OS
 *.swo
 *.swp
-
-# Hugo
-/public/
-/resources/_gen/
-.hugo_build.lock
+.DS_Store
+__pycache__
