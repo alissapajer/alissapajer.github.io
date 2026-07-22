@@ -60,7 +60,7 @@ We are going to keep track of three different types of shapes: connected compone
   - $H_1$: Only one loop remains.
 
 ![a4](/images/pyramid/a4.jpg "a4")
-{width="75%"}
+{width="100%"}
 - $a_4$. Two loops connected at a point.
   - $H_0$: Still have a single connected component.
   - $H_1$: A second loop is alive again.
