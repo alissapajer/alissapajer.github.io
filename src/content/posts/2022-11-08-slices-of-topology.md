@@ -25,7 +25,7 @@ This slicing strategy considers each horizontal slides through each critical val
 We are going to keep track of three different types of shapes: connected components ( $H_0$ ), loops ( $H_1$ ), and voids ( $H_2$ ). 
 
 ![a1](/images/pyramid/a1.jpg "a1")
-{width="50%"}
+{width="25%"}
 - $a_1$. A single point.
   - $H_0$: Something exists; thus our first connected component is born.
 
@@ -84,7 +84,7 @@ We are going to keep track of three different types of shapes: connected compone
   - $H_1$: Only one loop remains.
 
 ![a6](/images/pyramid/a6.jpg "a6")
-{width="50%"}
+{width="25%"}
 - $a_6$. A single point.
   - $H_0$: A single connected component remains.
   - $H_1$: There are no loops.
