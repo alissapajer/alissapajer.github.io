@@ -1,6 +1,0 @@
-{{- /* Honor Markdown image attributes like { width=25% } (Pelican attr_list style). */ -}}
-{{- $style := "" -}}
-{{- with .Attributes.width }}{{ $style = printf "width:%s;" . }}{{ end -}}
-<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}"
-  {{- with .Title }} title="{{ . }}"{{ end }}
-  {{- with $style }} style="{{ . | safeCSS }}"{{ end }}>

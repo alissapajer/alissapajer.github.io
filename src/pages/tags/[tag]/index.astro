@@ -1,0 +1,54 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../../layouts/Base.astro";
+import { urlize, titleCase } from "../../../site";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("posts");
+  const byTag = new Map<string, typeof posts>();
+  for (const post of posts) {
+    for (const tag of post.data.tags) {
+      const list = byTag.get(tag) ?? [];
+      list.push(post);
+      byTag.set(tag, list);
+    }
+  }
+  return [...byTag.entries()].map(([tag, tagPosts]) => ({
+    params: { tag: urlize(tag) },
+    props: {
+      display: titleCase(tag),
+      posts: tagPosts.sort(
+        (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+      ),
+    },
+  }));
+}
+
+const { display, posts } = Astro.props;
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    timeZone: "UTC",
+  });
+---
+
+<Base title={display}>
+  <h1 class="list-title">#{display}</h1>
+  <ul class="post-list">
+    {
+      posts.map((post) => (
+        <li>
+          <a class="post-link" href={post.data.url}>
+            {post.data.title}
+          </a>
+          <time datetime={post.data.date.toISOString().slice(0, 10)}>
+            {fmt(post.data.date)}
+          </time>
+        </li>
+      ))
+    }
+  </ul>
+</Base>
