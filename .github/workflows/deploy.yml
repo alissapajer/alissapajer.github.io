@@ -25,8 +25,11 @@ jobs:
         uses: actions/checkout@v4
       - name: Build with Astro
         uses: withastro/action@v3
+        with:
+          # Astro 7 requires Node >= 22.12.
+          node-version: 22
         # Installs dependencies, runs `astro build`, and uploads ./dist as the
-        # Pages artifact. Node and package manager are auto-detected.
+        # Pages artifact. Package manager is auto-detected.
 
   deploy:
     environment:
