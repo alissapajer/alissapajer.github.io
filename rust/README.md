@@ -10,7 +10,7 @@ blog (algorithm visualizations, etc.). Each interactive is its own crate under
 rust/
 ├── rust-toolchain.toml   # pins Rust 1.97.1 + the wasm32 target (rustup auto-installs)
 ├── Cargo.toml            # workspace; small-binary release profile
-├── build.sh              # builds each crate to an ES-module pkg/ for Astro
+├── build.sh              # builds each crate to src/wasm/<crate>/ for Astro
 └── crates/
     └── binary-search/
         ├── Cargo.toml
@@ -44,28 +44,37 @@ cd rust
 ./build.sh binary-search   # just one
 ```
 
-This runs `wasm-pack build --target web`, producing `crates/<name>/pkg/`
-(gitignored) containing:
+This runs `wasm-pack build --target web`, writing each crate's output to
+`src/wasm/<name>/` (gitignored — it's generated) containing:
 
 - `<name>_bg.wasm` — the compiled module
 - `<name>.js` — ES-module glue with an async `init()` default export and your
   exported functions
+- `<name>.d.ts` — TypeScript types
 
 ## Using it from Astro
 
-`--target web` output is a plain ES module. From a `.astro` component or a
-client script:
+Output goes to `src/wasm/<crate>/` and is imported via the **`@wasm/<crate>`**
+alias, wired up in both `astro.config.mjs` (Vite `resolve.alias`) and
+`tsconfig.json` (`paths`, for editor types). From a client `<script>` in an
+`.astro` component:
 
-```js
-import init, { ping } from "../../rust/crates/binary-search/pkg/binary_search.js";
-
-await init();          // loads and instantiates the .wasm
-console.log(ping());
+```astro
+<script>
+  import init, { ping } from "@wasm/binary-search";
+  await init();          // fetches + instantiates the .wasm
+  console.log(ping());
+</script>
 ```
 
-When the Astro session lands, we'll decide where the built `pkg/` should live
-relative to Astro's `src/` (a symlink, a copy step, or pointing Vite at this
-path). Nothing here assumes a particular Astro layout yet.
+Vite bundles the glue and emits the `.wasm` as a fingerprinted asset under
+`dist/_astro/`, so there's no manual copy step and nothing to put in `public/`.
+Rebuild the Rust (`./build.sh`) whenever the crate changes; `astro dev` picks up
+the regenerated `src/wasm/` files on its own.
+
+> Note: import from a **client** `<script>` (runs in the browser), not the
+> component frontmatter (runs at build time in Node) — the `--target web` glue
+> is browser-oriented.
 
 ## Returning structured data (e.g. a "step") to JS
 

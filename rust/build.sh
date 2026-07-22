@@ -1,21 +1,23 @@
 #!/usr/bin/env bash
 #
-# Build every crate under crates/ to an ES-module `pkg/` that Astro can import.
+# Build every crate under crates/ to an ES module that Astro imports via the
+# `@wasm/<crate>` alias (configured in astro.config.mjs + tsconfig.json).
 #
 #   ./build.sh              # build all crates
 #   ./build.sh binary-search  # build just one crate
 #
-# Each crate's output lands in crates/<name>/pkg/ (gitignored). Astro imports
-# the generated JS glue, which fetches the sibling .wasm at runtime.
+# Output lands in <repo>/src/wasm/<crate>/ (gitignored). The generated JS glue
+# fetches its sibling .wasm at runtime; Vite bundles and fingerprints both.
 set -euo pipefail
 cd "$(dirname "$0")"
+ROOT="$(cd .. && pwd)"
 
 build_one() {
   local dir="$1"
   local name
   name="$(basename "$dir")"
-  echo ">>> building $name"
-  wasm-pack build "$dir" --target web --out-dir pkg --release
+  echo ">>> building $name -> src/wasm/$name"
+  wasm-pack build "$dir" --target web --out-dir "$ROOT/src/wasm/$name" --release
 }
 
 if [[ $# -gt 0 ]]; then

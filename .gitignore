@@ -1,3 +1,6 @@
+# Generated WASM (built from rust/ by rust/build.sh)
+src/wasm/
+
 # Astro build output
 dist/
 # Astro generated types
