@@ -1,4 +1,5 @@
 // @ts-check
+import { fileURLToPath } from "node:url";
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import remarkMath from "remark-math";
@@ -15,6 +16,17 @@ export default defineConfig({
   trailingSlash: "ignore",
 
   integrations: [sitemap()],
+
+  vite: {
+    resolve: {
+      // WASM interactives (built by rust/build.sh into src/wasm/<crate>/) are
+      // imported as `@wasm/<crate>`. Vite bundles the JS glue and emits the
+      // sibling .wasm as a fingerprinted asset.
+      alias: {
+        "@wasm": fileURLToPath(new URL("./src/wasm", import.meta.url)),
+      },
+    },
+  },
 
   markdown: {
     // Render math at build time (no client-side JavaScript), matching the

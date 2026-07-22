@@ -1,0 +1,7 @@
+[toolchain]
+# Pinned to the latest stable Rust. rustup auto-installs this toolchain
+# (and the wasm target below) the first time you run cargo in this tree.
+# To bump: `rustup update stable`, then set channel to the new version.
+channel = "1.97.1"
+components = ["rustfmt", "clippy"]
+targets = ["wasm32-unknown-unknown"]

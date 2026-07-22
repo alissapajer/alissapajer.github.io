@@ -1,0 +1,13 @@
+[package]
+name = "binary-search"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[lib]
+# cdylib -> the .wasm that ships to the browser.
+# rlib   -> lets you `cargo test` the algorithm as plain Rust, no wasm needed.
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
