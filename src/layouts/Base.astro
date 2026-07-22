@@ -1,0 +1,47 @@
+---
+import { SITE } from "../site";
+
+interface Props {
+  title?: string;
+  description?: string;
+  isHome?: boolean;
+}
+
+const { title, description = SITE.description, isHome = false } = Astro.props;
+const pageTitle = isHome || !title ? SITE.title : `${title} · ${SITE.title}`;
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/katex/katex.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      href="/index.xml"
+      title={SITE.title}
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-title" href="/">{SITE.title}</a>
+      <nav>
+        <a href="/">Posts</a>
+        <a href="/tags/">Tags</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <p>© {year} {SITE.author}</p>
+    </footer>
+  </body>
+</html>
